@@ -8,10 +8,11 @@ const Header = () => {
     const navigate = useNavigate();
     const navigateToLogin = () => navigate('/login')
     const navigateToSignIn = () => navigate('/Register')
+    const navigateToHome = () => navigate('/')
     return (
         <header className='header'>
             <div className='header-logo'>
-                <img src={loginBg} alt="logo" className='header-logo-img'/>
+                <img src={loginBg} alt="logo" className='header-logo-img' onClick={navigateToHome}/>
                 <p className='header-name'>GO TO WIN</p>
             </div>
             <div className="header-actions">
