@@ -1,0 +1,68 @@
+.login {
+  padding-top: 125px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 554px;
+  height: 100%;
+  padding: 24px 37px 45px;
+  background: #FFFFFF;
+  border-radius: 38px;
+
+  &-back {
+    width: 60px;
+    height: 60px;
+    background: #3672E9;
+    border-radius: 32px;
+    margin-right: auto;
+    margin-bottom: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-title {
+    text-align: center;
+    color: #0D0D0D;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  &-subtitle {
+    text-align: center;
+    color: #999999;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.form {
+  padding: 42px 71px 0 71px;
+
+  &-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  &-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &-text {
+      text-align: center;
+      letter-spacing: -0.011em;
+      font-size: 16px;
+      line-height: 24px;
+      color: #A0A0A0;
+    }
+  }
+}
+

@@ -1,0 +1,113 @@
+.pricing {
+  height: 950px;
+  background: #0D0D2B;
+  &-headline {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-header {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #FFFFFF;
+
+    &-icon {
+      height: 50px;
+      width: 53px;
+      position: relative;
+      top: -10px;
+    }
+  }
+
+  &-subheader {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    color: #E6E6E6;
+  }
+
+  &-bg {
+    padding: 40px 60px 0;
+    background-image: url("../../assets/pricing-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 693px;
+  }
+
+  &-cards {
+    margin: 89px 61px 89px 102px;
+    display: flex;
+    gap: 34px;
+    justify-content: center;
+  }
+
+}
+
+.winer {
+  &-list {
+    top: -75px;
+    position: relative;
+    gap: 2px;
+    margin: 0 19px;
+    //margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+
+    &-item {
+      width: 154px;
+      height: 192px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px;
+    }
+  }
+
+  &-item {
+    &-avatar {
+      width: 130px;
+      height: 117px;
+      border-radius: 7px;
+    }
+
+    &-name {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: #E8EFFC;
+
+    }
+
+    &-label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.01em;
+      color: rgba(255, 255, 255, 0.48);
+    }
+
+    &-money {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-value {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+
+      background: linear-gradient(90deg, #4E87FA 0%, #47B2FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+}

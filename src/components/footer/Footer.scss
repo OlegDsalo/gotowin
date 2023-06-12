@@ -1,0 +1,60 @@
+.footer {
+  background-color: #0D0D2B;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px 100px;
+  position: relative;
+  z-index: 1;
+
+
+  &-logo{
+   width: 38px;
+    height: 23px;
+  }
+
+  &-header {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+  }
+
+  &-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    gap: 61px;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &-left-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  &-left-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+.logo-name {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  color: #FFFFFF;
+}

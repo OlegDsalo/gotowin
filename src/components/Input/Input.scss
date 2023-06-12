@@ -1,0 +1,19 @@
+.input-container{
+    /*width: 100%;*/
+}
+.input{
+    width: 100%;
+    border: 1px solid rgba(179, 179, 179, 1);
+    padding: 8px 16px;
+    height: 52px;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    outline: none;
+    letter-spacing: 0.01em;
+}
+
+.input::placeholder{
+    color: #A9A9A9;
+}

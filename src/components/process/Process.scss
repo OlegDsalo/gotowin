@@ -1,0 +1,115 @@
+.process {
+  background: #0D0D2B;
+
+  &-header {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &-subheader {
+    margin-top: 18px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #E6E6E6;
+    padding-bottom: 59px;
+  }
+
+  &-cards {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0 auto;
+    width: 937px;
+    height: 286px;
+  }
+
+
+  &-card {
+    width: 294px;
+    height: 276px;
+    background: #3049AD;
+    border-radius: 16px;
+    padding: 22px 18px;
+    z-index: 0;
+
+    position: relative;
+
+    &.first {
+      transform: rotate(-1deg);
+      left: -2px;
+      top: -9px;
+    }
+
+    &.second {
+      transform: rotate(2deg);
+      left: 17.05px;
+      top: 2.85px;
+    }
+
+    &.third {
+      transform: rotate(-3deg);
+      left: 20px;
+      top: 0px;
+    }
+
+    &-arrow {
+      &-left {
+        top: 0;
+        position: absolute;
+        left: 255px;
+        z-index: 1;
+      }
+
+      &-right {
+        position: absolute;
+        bottom: 0;
+        right: 254px;
+        z-index: 1;
+      }
+    }
+
+    &-number {
+      font-family: 'Nanum Pen Script', cursive;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 60px;
+      color: #FFFFFF;
+      margin-bottom: 19px;
+
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 28px;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+
+    }
+
+    &-description {
+      color: #F2F2F2;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+  }
+}
+
+
+.icon-plus{
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+}
