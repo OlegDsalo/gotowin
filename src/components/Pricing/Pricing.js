@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from "../card/Card";
+import Card from "../Card/Card";
 import sparcle from "../../assets/elements/Sparkle.png";
 import bitcoinCoin from "../../assets/coins/Bitcoin.png";
 import bnbCoin from "../../assets/coins/Binance.png";
@@ -9,7 +9,7 @@ import avatar2 from "../../assets/avatar/avatar2.png";
 import avatar3 from "../../assets/avatar/avatar3.png";
 import avatar4 from "../../assets/avatar/avatar4.png";
 import avatar5 from "../../assets/avatar/avatar5.png";
-import './Pricing.scss'
+import styles from './Pricing.module.scss'
 
 export class Avatar {
     constructor(name, value, img) {
@@ -30,36 +30,33 @@ const avatarObj = [
 
 const Pricing = () => {
     return (
-        <div className='pricing'>
-            <div className="winer-list">
-                {avatarObj.map((it,id) =>
-                    <div className="winer-list-item" key={it.name}>
-                        <img className='winer-item-avatar' src={it.img} alt=""/>
-                        <p className="winer-item-name">{it.name}</p>
-                        <div className="winer-item-money">
-                            <div className='winer-item-label'>Value:</div>
-                            <div className='winer-item-value'>{it.value} USDT</div>
+        <div className={styles.pricing}>
+            <div className={styles.winer__list}>
+                {avatarObj.map((it, id) =>
+                    <div className={styles.winer__list__item} key={it.name}>
+                        <img className={styles.winer__item__avatar} src={it.img} alt=""/>
+                        <p className={styles.winer__item__name}>{it.name}</p>
+                        <div className={styles.winer__item__money}>
+                            <div className={styles.winer__item__label}>Value:</div>
+                            <div className={styles.winer__item__value}>{it.value} USDT</div>
                         </div>
                     </div>
                 )}
             </div>
-            <div className='pricing-headline'>
-                <div className="pricing-header">What’s new ?
-                    <img className='pricing-header-icon' src={sparcle} alt='#'></img>
+            <div className={styles.pricing__headline}>
+                <div className={styles.pricing__header}>What’s new ?
+                    <img className={styles.pricing__header__icon} src={sparcle} alt='#'></img>
                 </div>
-                <div className="pricing-subheader">Receive and win cases with unique offers at an affordable price
-                </div>
+                <div className={styles.pricing__subheader}>Receive and win cases with unique offers at an affordable price</div>
             </div>
-            <div className='pricing-bg'>
-                <div className="pricing-cards">
+            <div className={styles.pricing__bg}>
+                <div className={styles.pricing__cards}>
                     <Card label='Limited' title='GOLDCASE' coin='Bitcoin' icon={bitcoinCoin}></Card>
                     <Card label='Premium' title='SILVER CASE' coin='BNB' icon={bnbCoin}></Card>
                     <Card label='Most popular' title='BRONZE CASE' coin='Shiba inu' icon={shibaInuCoin}></Card>
                 </div>
             </div>
-
         </div>
-
     );
 };
 

@@ -1,7 +1,7 @@
 .process {
   background: #0D0D2B;
 
-  &-header {
+  &__header {
     font-weight: 600;
     font-size: 32px;
     line-height: 48px;
@@ -9,7 +9,7 @@
     color: #FFFFFF;
   }
 
-  &-subheader {
+  &__subheader {
     margin-top: 18px;
     font-weight: 400;
     font-size: 24px;
@@ -20,7 +20,7 @@
     padding-bottom: 59px;
   }
 
-  &-cards {
+  &__cards {
     position: relative;
     display: flex;
     justify-content: center;
@@ -31,7 +31,7 @@
   }
 
 
-  &-card {
+  &__card {
     width: 294px;
     height: 276px;
     background: #3049AD;
@@ -59,15 +59,15 @@
       top: 0px;
     }
 
-    &-arrow {
-      &-left {
+    &_arrow {
+      &_left {
         top: 0;
         position: absolute;
         left: 255px;
         z-index: 1;
       }
 
-      &-right {
+      &_right {
         position: absolute;
         bottom: 0;
         right: 254px;
@@ -75,7 +75,7 @@
       }
     }
 
-    &-number {
+    &_number {
       font-family: 'Nanum Pen Script', cursive;
       font-style: normal;
       font-weight: 400;
@@ -86,16 +86,15 @@
 
     }
 
-    &-title {
+    &_title {
       font-weight: 600;
       font-size: 24px;
       line-height: 28px;
       color: #FFFFFF;
       margin-bottom: 16px;
-
     }
 
-    &-description {
+    &_description {
       color: #F2F2F2;
       font-weight: 500;
       font-size: 14px;

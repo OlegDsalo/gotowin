@@ -1,7 +1,7 @@
 .pricing {
   height: 950px;
   background: #0D0D2B;
-  &-headline {
+  &__headline {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -9,13 +9,13 @@
     align-items: center;
   }
 
-  &-header {
+  &__header {
     font-weight: 600;
     font-size: 32px;
     line-height: 48px;
     color: #FFFFFF;
 
-    &-icon {
+    &__icon {
       height: 50px;
       width: 53px;
       position: relative;
@@ -23,7 +23,7 @@
     }
   }
 
-  &-subheader {
+  &__subheader {
     font-weight: 400;
     font-size: 24px;
     line-height: 18px;
@@ -31,7 +31,7 @@
     color: #E6E6E6;
   }
 
-  &-bg {
+  &__bg {
     padding: 40px 60px 0;
     background-image: url("../../assets/pricing-bg.png");
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@
     height: 693px;
   }
 
-  &-cards {
+  &__cards {
     margin: 89px 61px 89px 102px;
     display: flex;
     gap: 34px;
@@ -49,7 +49,7 @@
 }
 
 .winer {
-  &-list {
+  &__list {
     top: -75px;
     position: relative;
     gap: 2px;
@@ -58,7 +58,7 @@
     display: flex;
     flex-direction: row;
 
-    &-item {
+    &__item {
       width: 154px;
       height: 192px;
       background: rgba(255, 255, 255, 0.1);
@@ -67,14 +67,14 @@
     }
   }
 
-  &-item {
-    &-avatar {
+  &__item {
+    &__avatar {
       width: 130px;
       height: 117px;
       border-radius: 7px;
     }
 
-    &-name {
+    &__name {
       font-weight: 500;
       font-size: 14px;
       line-height: 21px;
@@ -82,7 +82,7 @@
 
     }
 
-    &-label {
+    &__label {
       font-weight: 400;
       font-size: 14px;
       line-height: 21px;
@@ -92,13 +92,13 @@
       color: rgba(255, 255, 255, 0.48);
     }
 
-    &-money {
+    &__money {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
     }
 
-    &-value {
+    &__value {
       font-weight: 500;
       font-size: 14px;
       line-height: 21px;

@@ -19,7 +19,7 @@
   background: #FFFFFF;
   border-radius: 38px;
 
-  &-back {
+  &__back {
     width: 60px;
     height: 60px;
     background: #3672E9;
@@ -31,7 +31,7 @@
     justify-content: center;
   }
 
-  &-title {
+  &__title {
     text-align: center;
     color: #0D0D0D;
     font-weight: 600;
@@ -39,7 +39,7 @@
     line-height: 48px;
   }
 
-  &-subtitle {
+  &__subtitle {
     text-align: center;
     color: #999999;
     font-weight: 500;
@@ -51,19 +51,19 @@
 .form {
   padding: 42px 71px 0 71px;
 
-  &-inputs {
+  &__inputs {
     display: flex;
     flex-direction: column;
     gap: 16px;
     margin-bottom: 32px;
   }
 
-  &-actions {
+  &__actions {
     display: flex;
     flex-direction: column;
     gap: 24px;
 
-    &-text {
+    &_text {
       text-align: center;
       letter-spacing: -0.011em;
       font-size: 16px;

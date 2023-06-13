@@ -1,8 +1,8 @@
 import React from 'react';
-import Footer from "../../components/footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import {ReactComponent as ChevronLeft} from "../../assets/icons/chevron-left.svg";
-import Card from "../../components/card/Card";
+import Card from "../../components/Card/Card";
 import bitcoinCoin from "../../assets/coins/Bitcoin.png";
 import bnbCoin from "../../assets/coins/Binance.png";
 import shibaInuCoin from "../../assets/coins/SHIBAINU.png";

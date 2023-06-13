@@ -3,19 +3,23 @@
   display: flex;
   justify-content: space-between;
 
-  &-logo {
+  &__logo {
     width: 275px;
     height: 38px;
     display: flex;
     align-items: center;
 
-    &-img {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &_img {
       width: 59px;
       height: 37px;
     }
   }
 
-  &-name {
+  &__name {
     font-weight: 700;
     font-size: 24px;
     line-height: 27px;
@@ -23,7 +27,7 @@
     color: #FFFFFF;
   }
 
-  &-actions {
+  &__actions {
     display: flex;
     flex-direction: row;
     align-items: center;
