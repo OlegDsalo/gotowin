@@ -1,200 +1,283 @@
 .user-container {
   background-color: #0D0D2B;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 24px;
+}
 
 
-  .title {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 48px;
-    color: #FFFFFF;
-    text-align: center;
-    margin-bottom: 24px;
+.user {
+  padding: 0 150px;
+  position: relative;
+  background-color: #0D0D2B;
+
+  &__bg {
+    background-image: url("../../assets/bgUser.png");
+    height: 505px;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
-
-  .user {
-    padding: 0 150px;
-    position: relative;
-    background-color: #0D0D2B;
-
-
-    &__bg {
-      background-image: url("../../assets/bgUser.png");
-      height: 505px;
-      background-position: center;
-      background-repeat: no-repeat;
-
-    }
-
-    &-border {
-      background-image: url("../../assets/borderUser.png");
-      height: 468px;
-      //background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &-back {
-      top: 105px;
-      left: 250px;
-
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      background: #3672E9;
-      border-radius: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &-avatar {
-      width: 200px;
-      height: 200px;
-    }
-
-    &-text {
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 18px;
-      color: #D1DFFA;
-    }
-
-    &-name {
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 72px;
-      color: #FFFFFF;
-    }
-  }
-
-  .wallet {
-    padding-top: 120px;
-    padding-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-
-    &-card {
-      margin: 0 auto;
-      width: 358px;
-      height: 238px;
-      background: linear-gradient(71.96deg, #005FCF 18.36%, #23B3E0 71.04%);
-      border-radius: 16px;
-    }
-  }
-
-
-  .cases {
-    &-cards {
-      margin-top: 24px;
-      display: flex;
-      gap: 34px;
-      justify-content: center;
-    }
-  }
-
-  .referral {
-    padding-top: 100px;
-    padding-bottom: 116px;
-
-    &-cards {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 27px;
-    }
-
-    &-card {
-      width: 359px;
-      height: 206px;
-      border-radius: 16px;
-
-      &-info {
-        background: linear-gradient(0deg, rgba(54, 113, 233, 0.62), rgba(54, 113, 233, 0.62));
-      }
-
-      &-link {
-        background: linear-gradient(71.96deg, #005FCF 18.36%, #23B3E0 71.04%);
-      }
-    }
-  }
-
-  .purchase {
+  &-border {
+    background-image: url("../../assets/borderUser.png");
+    height: 468px;
+    //background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
 
-    &-subtitle {
+  &-back {
+    top: 105px;
+    left: 250px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #3672E9;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  &-text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 18px;
+    color: #D1DFFA;
+  }
+
+  &-name {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 72px;
+    color: #FFFFFF;
+  }
+}
+
+.wallet {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  &__card {
+    margin: 0 auto;
+    width: 358px;
+    height: 238px;
+    background: linear-gradient(71.96deg, #005FCF 18.36%, #23B3E0 71.04%);
+    border-radius: 16px;
+    padding: 24px 26px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+  }
+
+  &__box {
+    width: 54px;
+    height: 28px;
+    background: #3672E9;
+    border-radius: 10px;
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    font-feature-settings: 'pnum' on, 'lnum' on, 'ss04' on, 'ss03' on, 'liga' off;
+    color: #F6FFFF;
+    margin-bottom: 4px;
+  }
+
+  &__balance {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    letter-spacing: 0.015em;
+    text-transform: capitalize;
+    margin-bottom: 49px;
+  }
+
+  &__action {
+    background: #3672E9;
+    border-radius: 16px;
+    width: 310px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &_text {
+      font-size: 14px;
+      line-height: 21px;
       font-weight: 500;
-      font-size: 24px;
-      line-height: 18px;
-      letter-spacing: -0.02em;
-      text-align: center;
       color: #FFFFFF;
-      padding-bottom: 54px;
+      text-align: center;
     }
 
-    &-calculator {
-      padding: 98px;
-      width: 750px;
-      height: 626px;
-      background: rgba(3, 24, 68, 0.54);
-      backdrop-filter: blur(35px);
-      border-radius: 25px;
+  }
+}
 
-      &-bg {
-        background-image: url('../../assets/elements/EllipsePurchase.png');
-        //background-image: url('../../assets/elements/E.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        //height: ;
+.cases {
+  &-cards {
+    margin-top: 24px;
+    display: flex;
+    gap: 34px;
+    justify-content: center;
+  }
+}
+
+.referral {
+  padding-top: 100px;
+  padding-bottom: 116px;
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+  }
+
+  &__card {
+    width: 359px;
+    height: 206px;
+    border-radius: 16px;
+    padding: 23px 24px;
+
+    &_info {
+      background: linear-gradient(0deg, rgba(54, 113, 233, 0.62), rgba(54, 113, 233, 0.62));
+    }
+
+    &_link {
+      padding: 23px 24px;
+      background: linear-gradient(71.96deg, #005FCF 18.36%, #23B3E0 71.04%);
+
+      &_text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        font-feature-settings: 'pnum' on, 'lnum' on, 'ss04' on, 'ss03' on, 'liga' off;
+        color: #FFFFFF;
+        margin-bottom: 5px;
+      }
+
+      &_title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #FFFFFF;
+      }
+
+      &_button {
+        margin-top: 45px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        padding: 10px 16px;
+        color: #3672E9;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        width: 93px;
+        height: 38px;
       }
     }
+  }
+}
 
-    &-title {
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 28px;
-      color: #FFFFFF;
-      text-align: center;
-    }
+.purchase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    &-button {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 12px 24px;
-      gap: 16px;
-      width: 203px;
-      height: 56px;
-      background: #FFFFFF;
-      border-radius: 32px;
-      margin: 0 auto;
-    }
+  &-subtitle {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 54px;
+  }
 
-    &-line {
-      margin-top: 42px;
-      margin-bottom: 42px;
-      height: 1px;
-      background: rgba(218, 218, 218, 0.12);
-    }
+  &-calculator {
+    padding: 98px;
+    width: 750px;
+    height: 626px;
+    background: rgba(3, 24, 68, 0.54);
+    backdrop-filter: blur(35px);
+    border-radius: 25px;
 
-    &-label {
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 28px;
-      color: #FFFFFF;
-
+    &-bg {
+      background-image: url('../../assets/elements/EllipsePurchase.png');
+      //background-image: url('../../assets/elements/E.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      //height: ;
     }
   }
 
+  &-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  &-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 16px;
+    width: 203px;
+    height: 56px;
+    background: #FFFFFF;
+    border-radius: 32px;
+    margin: 0 auto;
+  }
+
+  &-line {
+    margin-top: 42px;
+    margin-bottom: 42px;
+    height: 1px;
+    background: rgba(218, 218, 218, 0.12);
+  }
+
+  &-label {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+
+  }
 }

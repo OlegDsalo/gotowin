@@ -24,11 +24,15 @@ const User = () => {
             </div>
             <div className='wallet'>
                 <div className='title'>My wallet</div>
-                <div className='wallet-card'>
-                    <div>GOTOWIN</div>
-                    <div>Balance</div>
-                    <div>$00.00</div>
-                    <div>Paste your wallet address</div>
+                <div className='wallet__card'>
+                    <div className="wallet__row">
+                        <div className='wallet__title' >GOTOWIN</div>
+                        <div className='wallet__box'></div>
+                    </div>
+                    <div className='wallet__label'>Balance</div>
+                    <div className='wallet__balance'>$00.00</div>
+                    <div className='wallet__action'>
+                        <div className='wallet__action_text'>Paste your wallet address</div></div>
                 </div>
             </div>
             <div className='cases'>
@@ -41,16 +45,16 @@ const User = () => {
             </div>
             <div className='referral'>
                 <div className="title">Referrals</div>
-                <div className="referral-cards">
-                    <div className="referral-card referral-card-link">
-                        <div className='referral-card-link'>
-                            <div>Refer and Earn</div>
-                            <div>Refer you Friend</div>
-                            <div>And Win</div>
-                            <div className='referral-card-link-button'>
+                <div className="referral__cards">
+                    <div className="referral__card referral__card_link">
+                        {/*<div className='referral__card_link'>*/}
+                            <div className='referral__card_link_text'>Refer and Earn</div>
+                            <div className='referral__card_link_title'>Refer you Friend</div>
+                            <div className='referral__card_link_title'>And Win</div>
+                            <div className='referral__card_link_button'>
                                 Refer Now
                             </div>
-                        </div>
+                        {/*</div>*/}
 
                     </div>
                     <div className="referral-card referral-card-info">
@@ -70,7 +74,6 @@ const User = () => {
                         <div className='purchase-label'>Chose price</div>
                     </div>
                 </div>
-
             </div>
             <Footer/>
         </div>
