@@ -2,12 +2,11 @@ import React from 'react';
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import {ReactComponent as ChevronLeft} from "../../assets/icons/chevron-left.svg";
-import Card from "../../components/Card/Card";
-import bitcoinCoin from "../../assets/coins/Bitcoin.png";
-import bnbCoin from "../../assets/coins/Binance.png";
-import shibaInuCoin from "../../assets/coins/SHIBAINU.png";
-import binanceCoin from "../../assets/coins/BinanceCoin2.png";
 import './User.scss'
+import Referral from "../../components/Referral/Referral";
+import Wallet from "../../components/Wallet/Wallet";
+import Cases from "../../components/Cases/Cases";
+import BlockChain from "../../components/BlockChain/BlockChain";
 
 const User = () => {
     return (
@@ -15,66 +14,19 @@ const User = () => {
             <Header/>
             <div className='user user__bg'>
                 <div className='user-border'>
-                    <div className='user-back'><ChevronLeft/></div>
-                    <img className='user-avatar'
-                         src="https://img.freepik.com/free-icon/user_318-159711.jpg" alt=""/>
-                    <div className='user-name'>ANdt tupan</div>
-                    <div className='user-text'>Lorem</div>
-                </div>
-            </div>
-            <div className='wallet'>
-                <div className='title'>My wallet</div>
-                <div className='wallet__card'>
-                    <div className="wallet__row">
-                        <div className='wallet__title' >GOTOWIN</div>
-                        <div className='wallet__box'></div>
-                    </div>
-                    <div className='wallet__label'>Balance</div>
-                    <div className='wallet__balance'>$00.00</div>
-                    <div className='wallet__action'>
-                        <div className='wallet__action_text'>Paste your wallet address</div></div>
-                </div>
-            </div>
-            <div className='cases'>
-                <div className='title'>My Cases</div>
-                <div className='cases-cards'>
-                    <Card label='Limited' title='GOLDCASE' coin='Bitcoin' icon={bitcoinCoin}></Card>
-                    <Card label='Premium' title='SILVER CASE' coin='BNB' icon={bnbCoin}></Card>
-                    <Card label='Most popular' title='BRONZE CASE' coin='Shiba inu' icon={shibaInuCoin}></Card>
-                </div>
-            </div>
-            <div className='referral'>
-                <div className="title">Referrals</div>
-                <div className="referral__cards">
-                    <div className="referral__card referral__card_link">
-                        {/*<div className='referral__card_link'>*/}
-                            <div className='referral__card_link_text'>Refer and Earn</div>
-                            <div className='referral__card_link_title'>Refer you Friend</div>
-                            <div className='referral__card_link_title'>And Win</div>
-                            <div className='referral__card_link_button'>
-                                Refer Now
-                            </div>
-                        {/*</div>*/}
-
-                    </div>
-                    <div className="referral-card referral-card-info">
-
+                    <div className='user_box'>
+                        <div className='user-back'><ChevronLeft/></div>
+                        <img className='user-avatar'
+                             src="https://img.freepik.com/free-icon/user_318-159711.jpg" alt=""/>
+                        <div className='user-name'>ANdt tupan</div>
+                        <div className='user-text'>Lorem</div>
                     </div>
                 </div>
             </div>
-            <div className="purchase">
-                <div className="title">Buy & Win</div>
-                <div className="purchase-subtitle">Exchange blockchain in a few clicks</div>
-                <div className="purchase-calculator-bg">
-
-                    <div className="purchase-calculator">
-                        <div className="purchase-title">Blockchain</div>
-                        <div className="purchase-button"><img src={binanceCoin} alt=""/>BSC</div>
-                        <hr className='purchase-line'/>
-                        <div className='purchase-label'>Chose price</div>
-                    </div>
-                </div>
-            </div>
+            <Wallet/>
+            <Cases/>
+            <Referral/>
+            <BlockChain/>
             <Footer/>
         </div>
     );

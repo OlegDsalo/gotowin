@@ -1,0 +1,110 @@
+.referral {
+  padding-top: 100px;
+  padding-bottom: 116px;
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+  }
+
+  &__card {
+    width: 359px;
+    height: 206px;
+    border-radius: 16px;
+    padding: 24px 24px;
+    position: relative;
+
+    &_img {
+      position: absolute;
+      right: 0;
+      top: 27px;
+    }
+
+    &_info {
+      background: linear-gradient(0deg, rgba(54, 113, 233, 0.62), rgba(54, 113, 233, 0.62)), url('../../assets/elements/cardBg.png');
+
+      &_column {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      &_title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #FFFFFF;
+        margin-bottom: 36px;
+      }
+
+      &_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-radius: 8px;
+        background: #FFFFFF;
+        width: 165px;
+      }
+
+      &_label {
+        color: #0D0D0D;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+
+      }
+
+      &_value {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #3672E9;
+      }
+    }
+
+    &_link {
+      padding: 24px 24px;
+      background: linear-gradient(71.96deg, #005FCF 18.36%, #23B3E0 71.04%);
+
+      &_text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        font-feature-settings: 'pnum' on, 'lnum' on, 'ss04' on, 'ss03' on, 'liga' off;
+        color: #FFFFFF;
+        margin-bottom: 5px;
+      }
+
+      &_title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #FFFFFF;
+      }
+
+      &_button {
+        margin-top: 45px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        padding: 10px 16px;
+        color: #3672E9;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        width: 93px;
+        height: 38px;
+      }
+    }
+  }
+}
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 24px;
+}
