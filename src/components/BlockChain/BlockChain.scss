@@ -4,6 +4,38 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 250px;
+  position: relative;
+
+  &__coin {
+    position: absolute;
+    //right coins
+    &_stellar {
+      right: 275px;
+      top: 20px
+    }
+    &_bitcoin {
+      right: 5px;
+      top: 200px;
+    }
+    &_binance {
+      right: 135px;
+      top: 630px;
+    }
+
+    //left coins
+    &_cardano {
+      left: 300px;
+      top: -20px;
+    }
+    &_lite {
+      left: 30px;
+      top: 430px;
+    }
+    &_ethereum {
+      left: 0;
+      top: 40px;
+    }
+  }
 
   &-subtitle {
     font-weight: 500;
@@ -25,11 +57,9 @@
 
     &-bg {
       background-image: url('../../assets/elements/EllipsePurchase.png');
-      //background-image: url('../../assets/elements/E.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      //height: ;
     }
   }
 
@@ -75,7 +105,8 @@
     display: flex;
     gap: 24px;
   }
-  &_input{
+
+  &_input {
     flex: 1;
   }
 

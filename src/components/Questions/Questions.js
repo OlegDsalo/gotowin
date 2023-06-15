@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Questions.module.scss'
-import binance from '../../assets/coins/binanceLarge2.png'
+import binance from '../../assets/coins/binanceHome.png'
 import {ReactComponent as PlusIcon} from "../../assets/icons/plus.svg";
 
 const Questions = () => {

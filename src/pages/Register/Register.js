@@ -17,7 +17,6 @@ const Register = () => {
     return (
         <div className={classes.wrapper}>
             <Header/>
-
             <div className={classes.register}>
                 <div className={classes.card}>
                     <div className={classes.card__back}><ChevronLeft/></div>
