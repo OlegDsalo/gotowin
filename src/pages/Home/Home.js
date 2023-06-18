@@ -5,7 +5,7 @@ import Process from "../../components/Process/Process";
 import Contact from "../../components/Contact/Contact";
 import Questions from "../../components/Questions/Questions";
 import Hero from "../../components/Hero/Hero";
-import Header from "../../components/Header/Header";
+import Header from "../../components-ui/Header/Header";
 
 const Home = () => {
     return (

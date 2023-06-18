@@ -6,7 +6,7 @@ const Button = ({
                     children,
                     type = 'primary',
                     size = 'large',
-                    className,
+                    className='',
                     onClick,
                     click = "button",
                 }) => {

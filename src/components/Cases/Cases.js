@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from "../Card/Card";
+import Card from "../../components-ui/Card/Card";
 import bitcoinCoin from "../../assets/coins/Bitcoin.png";
 import bnbCoin from "../../assets/coins/Binance.png";
 import shibaInuCoin from "../../assets/coins/SHIBAINU.png";

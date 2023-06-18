@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from "../Card/Card";
+import Card from "../../components-ui/Card/Card";
 import sparcle from "../../assets/elements/Sparkle.png";
 import bitcoinCoin from "../../assets/coins/Bitcoin.png";
 import bnbCoin from "../../assets/coins/Binance.png";

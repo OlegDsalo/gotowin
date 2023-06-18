@@ -73,3 +73,71 @@
   }
 }
 
+@media only screen and (max-width: 1440px) {
+  .login {
+    padding-top: 35px;
+    padding-bottom: 60px;
+  }
+  .card {
+    border-radius: 25px;
+    &__back {
+      width: 32px;
+      height: 32px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 425px) {
+  .form {
+    padding: 36px 0 0 0;
+  }
+  .login {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+  .card {
+    width: 320px;
+    padding: 24px 26px 48px;
+
+    &__back {
+      width: 32px;
+      height: 32px;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .form {
+    padding: 10px 0 0 0;
+  }
+
+  .login {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .card {
+    width: 300px;
+    padding: 12px 15px 20px;
+
+    &__back {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+}

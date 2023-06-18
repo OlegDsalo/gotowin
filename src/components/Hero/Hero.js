@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from "../Button/Button";
+import Button from "../../components-ui/Button/Button";
 import twitter from "../../assets/icons/bxl-twitter.svg";
 import facebook from "../../assets/icons/bxl-facebook.svg";
 import linkedin from "../../assets/icons/bxl-linkedin.svg";

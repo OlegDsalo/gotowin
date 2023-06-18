@@ -1,10 +1,10 @@
 import React from 'react';
-import Input from "../../components/Input/Input";
-import Button from "../../components/Button/Button";
+import Input from "../../components-ui/Input/Input";
+import Button from "../../components-ui/Button/Button";
 import classes from './Login.module.scss'
 import {ReactComponent as ChevronLeft} from "../../assets/icons/chevron-left.svg";
 import {useForm} from "react-hook-form";
-import Header from "../../components/Header/Header";
+import Header from "../../components-ui/Header/Header";
 
 const Login = () => {
     const {

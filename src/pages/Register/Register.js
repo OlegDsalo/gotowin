@@ -1,9 +1,9 @@
 import React from 'react';
-import Input from "../../components/Input/Input";
-import Button from "../../components/Button/Button";
+import Input from "../../components-ui/Input/Input";
+import Button from "../../components-ui/Button/Button";
 import {ReactComponent as ChevronLeft} from "../../assets/icons/chevron-left.svg";
 import {useForm} from "react-hook-form";
-import Header from "../../components/Header/Header";
+import Header from "../../components-ui/Header/Header";
 import classes from "./register.module.scss";
 
 const Register = () => {
@@ -31,7 +31,7 @@ const Register = () => {
                         </div>
                         <div className={classes.form__actions}>
                             <Button click='submit'>Continue</Button>
-                            <div className={classes.form__actions_text}>Already have an account? <span>Log in</span></div>
+                            <div className={classes.form__actions_text}>Already have an account? <span className={classes.form__actions_link}>Log in</span></div>
                         </div>
                     </form>
                 </div>

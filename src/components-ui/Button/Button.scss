@@ -1,20 +1,18 @@
 .button {
   border-radius: 32px;
   width: 100%;
-
   font-weight: 600;
-
-  //height: 56px;
   border: none;
   color: #FFFFFF;
 
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
+
   //type
   &.primary {
     background: #3672E9;
-    //color: #FFFFFF;
+
     &:hover {
       background: #3672E980;
     }
@@ -24,7 +22,7 @@
   &.outlined {
     background: transparent;
     border: 1px solid #FFFFFF;
-    //color: ;
+
     &:hover {
       color: #A3BEF5;
       border-color: #A3BEF5;
@@ -32,7 +30,7 @@
   }
 
   //size
-  &.xl{
+  &.xl {
     height: 72px;
     font-size: 24px;
     line-height: 24px;
@@ -40,6 +38,7 @@
     width: 212px;
 
   }
+
   &.large {
     font-size: 20px;
     line-height: 24px;
@@ -62,8 +61,13 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+
+@media only screen and (max-width: 425px) {
   .button {
-    background: red;
+    width: 95px;
+    padding: 4px 12px 4px 12px!important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+    height: 25px !important;
   }
 }

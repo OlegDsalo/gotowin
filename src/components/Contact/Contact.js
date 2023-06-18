@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from "../Button/Button";
+import Button from "../../components-ui/Button/Button";
 import classes from './Contact.module.scss'
 import bitcoin from '../../assets/coins/bitcoinHome.png';
 import ethereum from '../../assets/coins/ethereumHome.png'

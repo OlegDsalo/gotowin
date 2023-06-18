@@ -1,7 +1,7 @@
 import React from 'react';
 import binanceCoin from "../../assets/coins/BinanceCoin2.png";
-import Input from "../Input/Input";
-import Button from "../Button/Button";
+import Input from "../../components-ui/Input/Input";
+import Button from "../../components-ui/Button/Button";
 import './BlockChain.scss'
 import binance from '../../assets/coins/binanceUser.png'
 import bitcoin from '../../assets/coins/bitcoinUser.png'
