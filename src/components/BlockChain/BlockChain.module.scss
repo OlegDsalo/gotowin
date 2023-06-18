@@ -5,6 +5,7 @@
   align-items: center;
   margin-bottom: 250px;
   position: relative;
+  margin-inline: 250px;
 
   &__coin {
     position: absolute;
@@ -132,6 +133,12 @@
     margin-bottom: 24px;
 }
 
+@media only screen and (max-width: 1440px) {
+  .purchase{
+    margin-inline: 0;
+  }
+
+}
 @media only screen and (max-width: 1024px) {
   .purchase {
     margin-bottom: 100px;
