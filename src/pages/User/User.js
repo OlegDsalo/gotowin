@@ -13,7 +13,7 @@ const User = () => {
         <div className='user-container'>
             <Header/>
             <div className='user user__bg'>
-                <div className='user-border'>
+                <div className='user__border'>
                     <div className='user_box'>
                         <div className='user-back'><ChevronLeft/></div>
                         <img className='user-avatar'

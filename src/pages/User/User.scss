@@ -32,7 +32,7 @@
     background-repeat: no-repeat;
   }
 
-  &-border {
+  &__border {
     padding: 52px 0 41px;
     background-image: url("../../assets/borderUser.png");
     background-repeat: no-repeat;
@@ -70,5 +70,63 @@
     font-size: 48px;
     line-height: 72px;
     color: #FFFFFF;
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .user {
+
+    &-back {
+      left: 200px;
+    }
+
+    &__border {
+      background-image: none;
+
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .user {
+
+    &-back {
+      width: 38px;
+      height: 38px;
+      left: 150px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .user {
+    padding: 0;
+    &_box{
+      padding-top: 42px;
+    }
+    &__border {
+      padding: 12px  0 15px;
+      background-image: url("../../assets/mobilebgUser.png");
+    }
+    &-back {
+
+      left: 50px;
+    }
+    &-avatar {
+      width: 135px;
+      height: 135px;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &-name {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }

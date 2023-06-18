@@ -1,11 +1,15 @@
 .wallet {
   padding: 80px 150px 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
 
   &__card {
-    margin: 0 auto;
     width: 358px;
     height: 238px;
     background: linear-gradient(71.96deg, #005FCF 18.36%, #23B3E0 71.04%);
@@ -67,6 +71,49 @@
       color: #FFFFFF;
       text-align: center;
     }
+  }
 
+  &__box {
+    background: rgba(54, 114, 233, 0.5);
+    border-radius: 32px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 24px;
+
+  &__icon {
+    position: absolute;
+    right: 100px;
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .wallet {
+    padding-inline: 16px;
+  }
+
+  .title__icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .wallet {
+
+    &__wrapper {
+      flex-direction: column;
+    }
   }
 }
