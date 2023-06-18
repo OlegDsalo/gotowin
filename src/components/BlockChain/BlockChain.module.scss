@@ -5,7 +5,6 @@
   align-items: center;
   margin-bottom: 250px;
   position: relative;
-  overflow: hidden;
 
   &__coin {
     position: absolute;
@@ -42,7 +41,7 @@
     }
   }
 
-  &-subtitle {
+  &__subtitle {
     font-weight: 500;
     font-size: 24px;
     line-height: 18px;
@@ -68,7 +67,7 @@
     }
   }
 
-  &-title {
+  &__title {
     font-weight: 600;
     font-size: 24px;
     line-height: 28px;
@@ -77,7 +76,7 @@
     margin-bottom: 24px;
   }
 
-  &-button {
+  &__button_icon {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -89,16 +88,19 @@
     background: #FFFFFF;
     border-radius: 32px;
     margin: 0 auto;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3672E9;
   }
 
-  &-line {
+  &__line {
     margin-top: 42px;
     margin-bottom: 42px;
     height: 1px;
     background: rgba(218, 218, 218, 0.12);
   }
 
-  &-label {
+  &__label {
     font-weight: 600;
     font-size: 24px;
     line-height: 28px;
@@ -106,19 +108,28 @@
     margin-bottom: 24px;
   }
 
-  &_inputs {
+  &__inputs {
     display: flex;
     gap: 24px;
   }
 
-  &_input {
+  &__input {
     flex: 1;
   }
 
-  &_button {
+  &__button {
     width: 356px;
     margin: auto;
   }
+}
+
+.title{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 24px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -148,30 +159,37 @@
       width: 390px;
     }
 
-    &-title {
+    &__title {
       margin-bottom: 12px;
     }
-    &-subtitle{
+    &__subtitle{
       padding-bottom: 36px;
     }
 
-    &-line {
+    &__line {
       margin-top: 20px;
       margin-bottom: 20px;
     }
 
-    &-label {
+    &__label {
       margin-bottom: 12px;
       font-size: 15px;
       line-height: 22px;
     }
-    &_button{
+    &__button{
       display: flex;
       align-items: center;
       width: 80px;
       justify-content: center;
     }
-    &__coin {
+    &__button_icon {
+      padding: 8px 65px;
+      height: 35px;
+      width: 136px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+      &__coin {
       &_stellar, &_bitcoin,&_binance, &_cardano, &_lite,&_ethereum {
         display: none;
       }
