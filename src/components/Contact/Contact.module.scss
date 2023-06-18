@@ -67,3 +67,45 @@
     width: 455px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    padding-top: 100px;
+
+    &__coin {
+
+      &_etherium {
+        top: 10px;
+      }
+
+      &_bitcoin {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .contact {
+    padding: 100px 16px;
+    &__coin {
+      &_stellar, &_etherium, &_cardano {
+        display: none;
+      }
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 600;
+    }
+
+    &__button {
+      width: 288px;
+    }
+  }
+}

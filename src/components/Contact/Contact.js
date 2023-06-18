@@ -14,7 +14,6 @@ const Contact = () => {
             <img className={`${classes.contact__coin} ${classes.contact__coin_cardano}`} src={cardano} alt="coin"/>
             <img className={`${classes.contact__coin} ${classes.contact__coin_stellar}`} src={stellar} alt="coin"/>
             <div className={classes.contact__content}>
-                <div className={classes.ellipse__bg}></div>
                 <p className={classes.contact__text}>Have a question?</p>
                 <h1 className={classes.contact__title}>Let’s keep in touch</h1>
                 <Button className={classes.contact__button}>Send A Message</Button>

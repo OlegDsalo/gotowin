@@ -4,12 +4,13 @@
   background: #0D0D2B;
   position: relative;
 
-  &__colum{
+  &__colum {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
   }
+
   &__headline {
     font-weight: 600;
     font-size: 32px;
@@ -66,21 +67,63 @@
   }
 
 
-
   &__coin {
     position: absolute;
     bottom: -50px;
     left: 0;
   }
-  &-icon{
+
+  &-icon {
 
   }
 }
 
-.circle-bg{
-  background-image: url("../../assets/elements/oval2.png");
-  position: absolute;
-  right: 0;
-  width: 235px;
-  height: 95px;
+
+
+@media only screen and (max-width: 768px) {
+  .questions {
+    padding-top: 50px;
+    padding-inline: 100px;
+    background: #0D0D2B;
+    &__coin {
+      display: none;
+    }
+    &__headline {
+      &::after {
+
+        top: 30px;
+        width: 235px;
+        height: 95px;
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+        margin-left: -150px;
+      }}
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .questions {
+  padding: 0 20px;
+
+    &__headline {
+      font-size: 24px;
+      line-height: 36px;
+
+      &::after {
+        top: -21px;
+        width: 160px;
+        height: 64px; /* Adjust the height as needed */
+        right: 24px;
+        background-image: url("../../assets/elements/questionsMobile.png");
+      }
+
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+  }
 }

@@ -1,6 +1,7 @@
 .pricing {
-  height: 950px;
+  //height: 950px;
   background: #0D0D2B;
+
   &__headline {
     display: flex;
     flex-direction: column;
@@ -31,16 +32,18 @@
     color: #E6E6E6;
   }
 
+  &__wrapper {
+    padding: 105px 150px 135px;
+  }
+
   &__bg {
-    padding: 40px 60px 0;
     background-image: url("../../assets/pricing-bg.png");
     background-repeat: no-repeat;
     background-position: center;
-    height: 693px;
+    height: 100%;
   }
 
   &__cards {
-    margin: 89px 61px 89px 102px;
     display: flex;
     gap: 34px;
     justify-content: center;
@@ -110,4 +113,40 @@
       text-fill-color: transparent;
     }
   }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .winer {
+    &__list {
+      overflow: auto;
+    }
+  }
+  .pricing {
+
+    &__wrapper {
+      padding: 43px 0 40px;
+    }
+
+    &__cards {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .pricing {
+
+    &__subheader {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    &__header {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
 }

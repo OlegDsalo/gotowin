@@ -1,5 +1,5 @@
 .header {
-  padding: 32px 150px;
+  padding: 24px 150px;
   display: flex;
   justify-content: space-between;
 
@@ -36,4 +36,33 @@
     width: 284px;
     height: 40px;
   }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 24px 35px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+@media only screen and (max-width: 425px) {
+  .header {
+    padding: 32px 16px;
+
+    &__logo {
+      &_img {
+        width: 26px;
+        height: 19px;
+      }
+    }
+
+    &__name {
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 16px;
+    }
+  }
+
 }

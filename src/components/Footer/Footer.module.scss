@@ -29,7 +29,7 @@
   &__left {
     display: flex;
     flex-direction: column;
-    gap: 61px;
+    gap: 55px;
   }
 
   &__right {
@@ -52,7 +52,41 @@
 
 .logo__name {
   font-weight: 700;
-  font-size: 12px;
-  line-height: 12px;
+  font-size: 15px;
+  line-height: 15px;
   color: #FFFFFF;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding: 30px 15px;
+    &__logo {
+      width: 31px;
+      height: 19px;
+    }
+    &__header {
+      font-weight: 500;
+    }
+    &__text {
+      font-size: 10px;
+      line-height: 15px;
+    }
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+    &__right {
+      justify-content: flex-end;
+      gap: 6px;
+    }
+  }
+  .logo__name {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    color: #FFFFFF;
+  }
+
+
 }

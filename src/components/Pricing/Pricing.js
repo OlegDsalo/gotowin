@@ -49,7 +49,7 @@ const Pricing = () => {
                 </div>
                 <div className={styles.pricing__subheader}>Receive and win cases with unique offers at an affordable price</div>
             </div>
-            <div className={styles.pricing__bg}>
+            <div className={`${styles.pricing__bg} ${styles.pricing__wrapper}`}>
                 <div className={styles.pricing__cards}>
                     <Card label='Limited' title='GOLDCASE' coin='Bitcoin' icon={bitcoinCoin}></Card>
                     <Card label='Premium' title='SILVER CASE' coin='BNB' icon={bnbCoin}></Card>
