@@ -6,6 +6,7 @@
   margin-bottom: 250px;
   position: relative;
   overflow: hidden;
+
   &__coin {
     position: absolute;
     //right coins
@@ -13,10 +14,12 @@
       right: 275px;
       top: 20px
     }
+
     &_bitcoin {
       right: 5px;
       top: 200px;
     }
+
     &_binance {
       right: 135px;
       top: 630px;
@@ -27,10 +30,12 @@
       left: 300px;
       top: -20px;
     }
+
     &_lite {
       left: 30px;
       top: 430px;
     }
+
     &_ethereum {
       left: 0;
       top: 40px;
@@ -47,7 +52,7 @@
     padding-bottom: 54px;
   }
 
-  &-calculator {
+  &__calculator {
     padding: 98px;
     width: 750px;
     height: 626px;
@@ -55,7 +60,7 @@
     backdrop-filter: blur(35px);
     border-radius: 25px;
 
-    &-bg {
+    &_bg {
       background-image: url('../../assets/elements/EllipsePurchase.png');
       background-size: cover;
       background-position: center;
@@ -98,7 +103,7 @@
     font-size: 24px;
     line-height: 28px;
     color: #FFFFFF;
-
+    margin-bottom: 24px;
   }
 
   &_inputs {
@@ -113,5 +118,63 @@
   &_button {
     width: 356px;
     margin: auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .purchase {
+    margin-bottom: 100px;
+
+    &__calculator {
+      height: auto;
+      padding: 50px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .purchase {
+    &__calculator {
+      padding: 25px;
+      width: 550px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .purchase {
+    &__calculator {
+      width: 390px;
+    }
+
+    &-title {
+      margin-bottom: 12px;
+    }
+    &-subtitle{
+      padding-bottom: 36px;
+    }
+
+    &-line {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    &-label {
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 22px;
+    }
+    &_button{
+      display: flex;
+      align-items: center;
+      width: 80px;
+      justify-content: center;
+    }
+    &__coin {
+      &_stellar, &_bitcoin,&_binance, &_cardano, &_lite,&_ethereum {
+        display: none;
+      }
+    }
   }
 }
