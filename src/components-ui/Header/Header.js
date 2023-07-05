@@ -7,7 +7,7 @@ import {useNavigate} from "react-router-dom";
 const Header = () => {
     const navigate = useNavigate();
     const navigateToLogin = () => navigate('/login')
-    const navigateToSignIn = () => navigate('/Register')
+    const navigateToSignIn = () => navigate('/register')
     const navigateToHome = () => navigate('/')
     return (
         <header className={classes.header}>

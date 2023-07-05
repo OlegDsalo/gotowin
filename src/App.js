@@ -5,6 +5,9 @@ import Layout from "./components/Layout/Layout";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import User from "./pages/User/User";
+import ConfirmEmail from "./pages/ConfirmEmail/ConfirmEmail";
+import ResetPassword from "./pages/ResetPassword/ResetPassword";
+import ResetPasswordMail from "./pages/ResetPasswordMail/ResetPasswordMail";
 
 function App() {
     const router = createBrowserRouter([
@@ -23,6 +26,14 @@ function App() {
                 {
                     path: 'register',
                     element: <Register/>
+                },
+                {
+                    path: 'reset-mail',
+                    element: <ResetPasswordMail/>
+                },
+                {
+                    path: 'reset/finish/:key',
+                    element: <ResetPassword/>
                 }
             ]
         },
@@ -30,8 +41,11 @@ function App() {
             path:'/user',
             // /path:'/user/:id'
             element:<User/>
+        },
+        {
+            path:'/activate/:key',
+            element:<ConfirmEmail/>
         }
-
     ]);
     return (
         <>
