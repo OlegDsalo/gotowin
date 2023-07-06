@@ -11,6 +11,7 @@ import {useNavigate} from "react-router-dom";
 const Login = () => {
     const navigate = useNavigate();
     const navigateToResetPassword = () => navigate('/reset-mail')
+    const navigateToUser = () => navigate('/user')
 
     const {
         register,
@@ -18,7 +19,14 @@ const Login = () => {
     } = useForm();
     const onSubmit = data => {
         console.log(data);
-        accountServiceInstance.login(data)
+        accountServiceInstance.login(data).then(res => {
+            console.log('token',res.data.idToken)
+            localStorage.setItem('token',res.data.idToken)
+            accountServiceInstance.getUser().then(user => {
+                console.log('user',user)
+                navigateToUser()
+            })
+        })
     }
     return (
         <div className={classes.wrapper}>
@@ -30,13 +38,16 @@ const Login = () => {
                     <p className={classes.card__subtitle}>We are very happy to see you back!</p>
                     <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                         <div className={classes.form__inputs}>
-                            <Input placeholder='Email Address' args={{...register("email",{required:'Email is required'})}}/>
+                            <Input placeholder='Email Address'
+                                   args={{...register("email", {required: 'Email is required'})}}/>
                             <Input placeholder='Password' type='password'
                                    args={{...register("password")}}/>
                         </div>
                         <div className={classes.form__actions}>
                             <Button click='submit'>Login</Button>
-                            <div className={classes.form__actions_text} onClick={navigateToResetPassword}>Forgot your Password?</div>
+                            <div className={classes.form__actions_text} onClick={navigateToResetPassword}>Forgot your
+                                Password?
+                            </div>
                         </div>
                     </form>
                 </div>

@@ -2,20 +2,24 @@ import React, {useEffect} from 'react';
 import accountServiceInstance from "../../service/AccountService";
 import classes from './ConfirmEmail.module.scss'
 import {useNavigate, useParams} from "react-router-dom";
+import axios from "axios";
 
 const ConfirmEmail = () => {
     const navigate = useNavigate();
     let {key} = useParams();
     const navigateToLogin = () => navigate('/login')
+
     useEffect(() => {
-        accountServiceInstance.activate(key)
-        // const timer = setTimeout(() => {
-        //     navigateToLogin()
-        // }, 2000);
-        // return () => {
-            // clearTimeout(timer)
-        // }
-    }, [key])
+        console.log('key', key);
+        if (key) {
+            axios.get(`http://localhost:8080/api/activate?key=${key}`)
+                .then(response => {
+                    console.log('success');
+                    navigateToLogin();
+                })
+                .catch(error => console.log(error));
+        }
+    }, []);
 
     return (
         <div className={classes.wrapper}>

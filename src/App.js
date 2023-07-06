@@ -38,19 +38,17 @@ function App() {
             ]
         },
         {
-            path:'/user',
+            path: '/user',
             // /path:'/user/:id'
-            element:<User/>
+            element: <User/>
         },
         {
-            path:'/activate/:key',
-            element:<ConfirmEmail/>
+            path: '/activate/:key',
+            element: <ConfirmEmail/>
         }
     ]);
     return (
-        <>
-            <RouterProvider router={router}/>
-        </>
+        <RouterProvider router={router}/>
     );
 }
 

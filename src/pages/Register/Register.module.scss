@@ -70,7 +70,8 @@
       line-height: 24px;
       color: #A0A0A0;
     }
-    &_link{
+
+    &_link {
       color: #3672E9;
     }
   }
@@ -80,14 +81,13 @@
 @media only screen and (max-width: 1440px) {
   .register {
     padding-top: 30px;
-    padding-bottom: 45px;
+    padding-bottom: 36px;
   }
   .form {
-    padding: 22px 50px  0;
+    padding: 22px 50px 0;
     border-radius: 25px;
-    &__inputs{
+    &__inputs {
       margin-bottom: 20px;
-
     }
   }
   .card {
@@ -97,21 +97,13 @@
       height: 32px;
       margin-bottom: 0px;
     }
-    &__subtitle {
-      //font-size: 15px;
-      //line-height: 21px;
-    }
-    &__title {
-      //font-size: 24px;
-      //line-height: 36px;
-    }
   }
 }
 
 
 @media only screen and (max-width: 425px) {
   .form {
-    padding: 22px 25px  0;
+    padding: 22px 25px 0;
   }
   .card {
     width: 340px;
@@ -120,13 +112,14 @@
       height: 28px;
     }
   }
-  .actions{
-    &__text{
+  .actions {
+    &__text {
       font-size: 14px;
       line-height: 24px;
     }
   }
 }
+
 @media only screen and (max-width: 320px) {
   .card {
     padding: 15px;
@@ -137,6 +130,6 @@
     }
   }
   .form {
-    padding: 22px 10px  0;
+    padding: 22px 10px 0;
   }
 }

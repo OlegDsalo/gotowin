@@ -69,7 +69,8 @@
       font-size: 16px;
       line-height: 24px;
       color: #A0A0A0;
-      &:hover{
+
+      &:hover {
         cursor: pointer;
         color: #00a5d5;
       }
@@ -81,12 +82,13 @@
   .form {
     padding: 42px 50px 0 50px;
   }
-    .login {
+  .login {
     padding-top: 35px;
     padding-bottom: 60px;
   }
   .card {
     border-radius: 38px;
+
     &__back {
       width: 32px;
       height: 32px;
@@ -95,36 +97,36 @@
   }
 }
 
-
-@media only screen and (max-width: 425px) {
-  .form {
-    padding: 36px 0 0 0;
-  }
-  .login {
-    padding-top: 20px;
-    padding-bottom: 60px;
-  }
-  .card {
-    width: 320px;
-    padding: 24px 26px 48px;
-
-    &__back {
-      width: 32px;
-      height: 32px;
-      margin-bottom: 30px;
-    }
-
-    &__title {
-      font-size: 24px;
-      line-height: 36px;
-    }
-
-    &__subtitle {
-      font-size: 14px;
-      line-height: 21px;
-    }
-  }
-}
+//
+//@media only screen and (max-width: 425px) {
+//  .form {
+//    padding: 36px 0 0 0;
+//  }
+//  .login {
+//    padding-top: 20px;
+//    padding-bottom: 60px;
+//  }
+//  .card {
+//    width: 320px;
+//    padding: 24px 26px 48px;
+//
+//    &__back {
+//      width: 32px;
+//      height: 32px;
+//      margin-bottom: 30px;
+//    }
+//
+//    &__title {
+//      font-size: 24px;
+//      line-height: 36px;
+//    }
+//
+//    &__subtitle {
+//      font-size: 14px;
+//      line-height: 21px;
+//    }
+//  }
+//}
 
 @media only screen and (max-width: 425px) {
   .form {

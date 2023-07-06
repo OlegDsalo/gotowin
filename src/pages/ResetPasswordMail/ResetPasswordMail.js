@@ -5,7 +5,6 @@ import Input from "../../components-ui/Input/Input";
 import Button from "../../components-ui/Button/Button";
 import {useForm} from "react-hook-form";
 import accountServiceInstance from "../../service/AccountService";
-import {ReactComponent as ChevronLeft} from "../../assets/icons/chevron-left.svg";
 import {useNavigate} from "react-router-dom";
 import FormCard from "../../components-ui/FormCard/FormCard";
 
@@ -29,11 +28,10 @@ const ResetPasswordMail = () => {
         <div className={classes.wrapper}>
             <Header/>
             <div className={classes.container}>
-                <FormCard>
-                    {condition ? (<>
-                            <h1 className={classes.card__title}>Reset your password</h1>
-                            <p className={classes.card__subtitle}>Type in your registered email address to reset
-                                password</p>
+                {condition ? (
+                        <FormCard
+                            title='Reset your password sub'
+                            subtitle='Type in your registered email address to reset password'>
                             <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                                 <div className={classes.form__inputs}>
                                     <Input placeholder='Email Address'
@@ -43,18 +41,19 @@ const ResetPasswordMail = () => {
                                     <Button click='submit'>Next</Button>
                                 </div>
                             </form>
-                        </>
-                    ) : (
-                        <div>
-                            <h1 className={classes.card__title}>Recovery Email Sent!</h1>
-                            <p className={classes.card__subtitle}>Please check your email for next steps to reset your
-                                password.</p>
-                            <div className={classes.form__actions}>
-                                <Button onClick={navigateToLogin}>Back to login</Button>
-                            </div>
+                        </FormCard>
+                    ) :
+                    (
+                        <div className={classes.recovery}>
+                            <FormCard
+                                title='Recovery Email Sent!'
+                                subtitle='Please check your email for next steps to reset your password'>
+                                <div className={classes.form__actions}>
+                                    <Button onClick={navigateToLogin}>Back to login</Button>
+                                </div>
+                            </FormCard>
                         </div>
                     )}
-                </FormCard>
             </div>
         </div>
     );

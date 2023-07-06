@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Footer from "../../components-ui/Footer/Footer";
 import Header from "../../components-ui/Header/Header";
 import {ReactComponent as ChevronLeft} from "../../assets/icons/chevron-left.svg";
@@ -7,8 +7,40 @@ import Referral from "../../components/Referral/Referral";
 import Wallet from "../../components/Wallet/Wallet";
 import Cases from "../../components/Cases/Cases";
 import BlockChain from "../../components/BlockChain/BlockChain";
+import axios from "axios";
+import accountServiceInstance from "../../service/AccountService";
+function useAsyncEffect(effect, destroy, inputs) {
+    var hasDestroy = typeof destroy === 'function';
+
+    React.useEffect(function () {
+        var result;
+        var mounted = true;
+        var maybePromise = effect(function () {
+            return mounted;
+        });
+
+        Promise.resolve(maybePromise).then(function (value) {
+            result = value;
+        });
+
+        return function () {
+            mounted = false;
+
+            if (hasDestroy) {
+                destroy(result);
+            }
+        };
+    }, hasDestroy ? inputs : destroy);
+}
 
 const User = () => {
+
+
+    useAsyncEffect(async () => {
+        await accountServiceInstance.getUser();
+    });
+    // useEffect(()=>{
+    // })
     return (
         <div className='user-container'>
             <Header/>
