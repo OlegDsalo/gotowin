@@ -1,60 +1,6 @@
-.wrapper {
-  width: 100%;
-  height: 100%;
-  background: url('../../assets/test-bg.png') center center no-repeat;
-  background-size: cover;
-}
-
-.register {
-  padding-top: 45px;
-  padding-bottom: 48px;
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  width: 554px;
-  height: 100%;
-  padding: 24px 37px 45px;
-  background: #FFFFFF;
-  border-radius: 38px;
-
-  &__back {
-    width: 60px;
-    height: 60px;
-    background: #3672E9;
-    border-radius: 32px;
-    margin-right: auto;
-    margin-bottom: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__title {
-    text-align: center;
-    color: #0D0D0D;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 48px;
-  }
-
-  &__subtitle {
-    text-align: center;
-    color: #999999;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-  }
-}
-
 .form {
-  padding: 42px 71px 0 71px;
-
   &__inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+
     margin-bottom: 32px;
   }
 
@@ -79,57 +25,19 @@
 
 
 @media only screen and (max-width: 1440px) {
-  .register {
-    padding-top: 30px;
-    padding-bottom: 36px;
-  }
   .form {
-    padding: 22px 50px 0;
-    border-radius: 25px;
     &__inputs {
       margin-bottom: 20px;
-    }
-  }
-  .card {
-    padding: 20px;
-    &__back {
-      width: 32px;
-      height: 32px;
-      margin-bottom: 0px;
     }
   }
 }
 
 
 @media only screen and (max-width: 425px) {
-  .form {
-    padding: 22px 25px 0;
-  }
-  .card {
-    width: 340px;
-    &__back {
-      width: 28px;
-      height: 28px;
-    }
-  }
   .actions {
     &__text {
       font-size: 14px;
       line-height: 24px;
     }
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .card {
-    padding: 15px;
-    width: 300px;
-    &__back {
-      width: 24px;
-      height: 24px;
-    }
-  }
-  .form {
-    padding: 22px 10px 0;
   }
 }

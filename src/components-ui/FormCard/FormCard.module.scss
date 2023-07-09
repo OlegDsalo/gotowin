@@ -1,23 +1,11 @@
 .card {
   width: 554px;
-  padding: 24px 36px 24px;
+  padding: 56px 95px;
   flex-direction: column;
   align-items: center;
   border-radius: 38px;
   background: #FFF;
   margin: 0 auto;
-
-  &__back {
-    width: 60px;
-    height: 60px;
-    background: #3672E9;
-    border-radius: 32px;
-    margin-right: auto;
-    margin-bottom: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
   &__title {
     color: #0D0D0D;
@@ -39,10 +27,8 @@
 }
 
 @media only screen and (max-width: 1440px) {
-  .card__back {
-    width: 38px;
-    height: 38px;
-    margin-bottom: 30px;
+  .card {
+    padding: 42px 95px;
   }
 }
 
@@ -50,13 +36,7 @@
 @media only screen and (max-width: 425px) {
   .card {
     width: 300px;
-    padding: 12px 15px 20px;
-
-    &__back {
-      width: 20px;
-      height: 20px;
-      margin-bottom: 10px;
-    }
+    padding: 42px 28px;
 
     &__title {
       font-size: 24px;

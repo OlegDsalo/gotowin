@@ -94,8 +94,14 @@
         font-weight: 600;
         font-size: 12px;
         line-height: 18px;
-        width: 93px;
+        width: 117px;
         height: 38px;
+        display: flex;
+        gap: 8px;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }

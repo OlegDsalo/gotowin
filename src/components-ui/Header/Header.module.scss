@@ -35,7 +35,21 @@
     gap: 12px;
     width: 284px;
     height: 40px;
+
+    &_logined {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+      width: 203px;
+
+      &_icon {
+        min-width: 36px;
+        height: 36px;
+      }
+    }
   }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -62,6 +76,16 @@
       font-weight: 700;
       font-size: 11px;
       line-height: 16px;
+    }
+    &__actions {
+      &_logined {
+        gap: 16px;
+        width: 146px;
+        &_icon {
+          min-width: 24px;
+          height: 24px;
+        }
+      }
     }
   }
 

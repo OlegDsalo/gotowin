@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import binanceCoin from "../../assets/coins/BinanceCoin2.png";
 import Input from "../../components-ui/Input/Input";
 import Button from "../../components-ui/Button/Button";
@@ -11,6 +11,17 @@ import ethereum from '../../assets/coins/ethereumUser.png'
 import cardano from '../../assets/coins/cardanoUser.png'
 
 const BlockChain = () => {
+    const [input, setInput] = useState('');
+    const [resultValue, setResultValue] = useState(0);
+    const multiply = 2.1
+
+    const inputChangeHandler = (e) => {
+        console.log(e.target.value)
+        setInput(e.target.value)
+        console.log('input', input);
+        let result = Number(e.target.value) * multiply
+        setResultValue(result)
+    }
     return (
         <div className={classes.purchase}>
             <img src={binance} alt="" className={`${classes.purchase__coin} ${classes.purchase__coin_binance}`}/>
@@ -28,11 +39,17 @@ const BlockChain = () => {
                     <hr className={classes.purchase__line}/>
                     <div className={classes.purchase__label}>Chose price</div>
                     <div className={classes.purchase__inputs}>
-                        <Input className={classes.purchase__input}/>
-                        <Input className={classes.purchase__input}/>
+                        <Input type='number' color='transparent' className={classes.purchase__input} value={input}
+                               onChange={inputChangeHandler}/>
+                        <div className={classes.purchase__input_result}>
+                            {resultValue} GOW
+                        </div>
                     </div>
-                    <hr className={classes.purchase__line}/>
-                    <Button className={classes.purchase__button}>Buy</Button>
+                    <hr className={classes.purchase__line} style={{marginTop: 26}}/>
+                    <div className={classes.purchase__button}>
+                        <Button>Buy</Button>
+                    </div>
+                    {/*<Button className={classes.purchase__button}>Buy</Button>*/}
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@ import Contact from "../../components/Contact/Contact";
 import Questions from "../../components/Questions/Questions";
 import Hero from "../../components/Hero/Hero";
 import Header from "../../components-ui/Header/Header";
+import Footer from "../../components-ui/Footer/Footer";
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <Process/>
             <Contact/>
             <Questions/>
+            <Footer/>
         </div>
     );
 };

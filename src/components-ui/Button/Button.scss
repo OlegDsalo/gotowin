@@ -29,6 +29,14 @@
     }
   }
 
+  &.secondary {
+    background: #0A255C;
+
+    &:hover {
+      background: #477EEB;
+    }
+  }
+
   //size
   &.xl {
     height: 72px;
@@ -76,13 +84,15 @@
       line-height: 18px;
       height: 25px;
     }
+
     &.large {
       font-size: 16px;
       line-height: 24px;
       padding: 10px 12px;
-      height:44px;
+      height: 44px;
     }
-    &.xl{
+
+    &.xl {
       font-size: 16px;
       line-height: 24px;
       padding: 8px 30px;

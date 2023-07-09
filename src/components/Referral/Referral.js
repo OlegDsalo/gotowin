@@ -2,8 +2,14 @@ import React from 'react';
 import cardEthereum from "../../assets/coins/cardCoinEthereum.png";
 import cardBitcoin from "../../assets/coins/cardCoinBitcoin.png";
 import classes from './Referral.module.scss'
+import clipboardCopy from "../../utils/clipboard";
+import {ReactComponent as Copy} from "../../assets/icons/copy.svg";
 
-const Referral = () => {
+
+const Referral = ({referralEarnedBalance = 0, invited = 0, refCode = ''}) => {
+    const copyRefCode = () => {
+        clipboardCopy(refCode)
+    }
     return (
         <div className={classes.referral}>
             <div className={classes.title}>Referrals</div>
@@ -12,8 +18,8 @@ const Referral = () => {
                     <div className={classes.referral__card_link_text}>Refer and Earn</div>
                     <div className={classes.referral__card_link_title}>Refer you Friend</div>
                     <div className={classes.referral__card_link_title}>And Win</div>
-                    <div className={classes.referral__card_link_button}>
-                        Refer Now
+                    <div className={classes.referral__card_link_button} onClick={copyRefCode}>
+                        Refer Now<Copy/>
                     </div>
                     <img className={classes.referral__card_img} src={cardEthereum} alt=""/>
                 </div>
@@ -22,14 +28,13 @@ const Referral = () => {
                     <div className={classes.referral__card_info_column}>
                         <div className={classes.referral__card_info_box}>
                             <div className={classes.referral__card_info_label}>Invited:</div>
-                            <div className={classes.referral__card_info_value}>23</div>
+                            <div className={classes.referral__card_info_value}>{invited}</div>
                         </div>
                         <div className={classes.referral__card_info_box}>
                             <div className={classes.referral__card_info_label}>Earned:</div>
-                            <div className={classes.referral__card_info_value}>USD 389</div>
+                            <div className={classes.referral__card_info_value}>{referralEarnedBalance}</div>
                         </div>
                     </div>
-
                     <img className={classes.referral__card_img} src={cardBitcoin} alt=""/>
                 </div>
             </div>

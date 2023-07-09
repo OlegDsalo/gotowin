@@ -1,19 +1,18 @@
 import './App.scss';
 import Home from "./pages/Home/Home";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Layout from "./components/Layout/Layout";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import User from "./pages/User/User";
 import ConfirmEmail from "./pages/ConfirmEmail/ConfirmEmail";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
-import ResetPasswordMail from "./pages/ResetPasswordMail/ResetPasswordMail";
+import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 
 function App() {
     const router = createBrowserRouter([
         {
             path: "/",
-            element: <Layout/>,
+            // element: <Layout/>,
             children: [
                 {
                     index: true,
@@ -29,7 +28,7 @@ function App() {
                 },
                 {
                     path: 'reset-mail',
-                    element: <ResetPasswordMail/>
+                    element: <ForgotPassword/>
                 },
                 {
                     path: 'reset/finish/:key',
