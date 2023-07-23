@@ -1,5 +1,4 @@
 .pricing {
-  //height: 950px;
   background: #0D0D2B;
 
   &__headline {
@@ -57,7 +56,6 @@
     position: relative;
     gap: 2px;
     margin: 0 19px;
-    //margin-top: 100px;
     display: flex;
     flex-direction: row;
 
@@ -82,7 +80,7 @@
       font-size: 14px;
       line-height: 21px;
       color: #E8EFFC;
-
+      text-wrap: nowrap;
     }
 
     &__label {

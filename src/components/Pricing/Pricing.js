@@ -9,6 +9,10 @@ import avatar2 from "../../assets/avatar/avatar2.png";
 import avatar3 from "../../assets/avatar/avatar3.png";
 import avatar4 from "../../assets/avatar/avatar4.png";
 import avatar5 from "../../assets/avatar/avatar5.png";
+import avatar6 from "../../assets/avatar/avatar6.png";
+import avatar7 from "../../assets/avatar/avatar7.png";
+import avatar8 from "../../assets/avatar/avatar8.png";
+import avatar9 from "../../assets/avatar/avatar9.png";
 import styles from './Pricing.module.scss'
 
 export class Avatar {
@@ -25,6 +29,10 @@ const avatarObj = [
     new Avatar('The Plague NFT', '3,000', avatar3),
     new Avatar('Thelight3', '2700', avatar4),
     new Avatar('sadads', '3,000', avatar5),
+    new Avatar('ONI Force', '3,000', avatar6),
+    new Avatar('Otherdeed for Otherside', '3,000', avatar7),
+    new Avatar('Cool Cats NFT', '3,000', avatar8),
+    new Avatar('Ghost6', '3,000', avatar9),
 
 ]
 

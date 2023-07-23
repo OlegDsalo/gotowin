@@ -57,9 +57,17 @@
   color: #FFFFFF;
 }
 
+@media only screen and (max-width: 1440px) {
+  .footer {
+    padding: 24px 100px;
+    &__left {
+      gap: 30px;
+    }
+  }
+}
 @media only screen and (max-width: 768px) {
   .footer {
-    padding: 30px 15px;
+    padding: 24px 15px;
     &__logo {
       width: 31px;
       height: 19px;
@@ -74,7 +82,7 @@
     &__left {
       display: flex;
       flex-direction: column;
-      gap: 36px;
+
     }
     &__right {
       justify-content: flex-end;
@@ -87,6 +95,4 @@
     line-height: 15px;
     color: #FFFFFF;
   }
-
-
 }

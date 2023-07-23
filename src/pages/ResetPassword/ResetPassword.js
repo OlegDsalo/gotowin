@@ -21,7 +21,9 @@ const ResetPassword = () => {
     } = useForm();
     const onSubmit = data => {
         let obj = {...data, key}
-        accountServiceInstance.resetPassword(obj)
+        accountServiceInstance.resetPassword(obj).then(
+            navigate('/login')
+        )
     }
     return (
         <div className='form_bg'>

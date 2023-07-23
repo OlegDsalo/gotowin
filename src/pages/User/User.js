@@ -51,7 +51,7 @@ const User = () => {
                         </div>
                     </div>
                 </div>
-                <Wallet/>
+                <Wallet walletBalance={user.walletBalance} walletAddress={user.walletAddress}/>
                 <Cases/>
                 <Referral referralEarnedBalance={user.referralEarnedBalance} refCode={user.referralCode}
                           invited={user.invited}/>

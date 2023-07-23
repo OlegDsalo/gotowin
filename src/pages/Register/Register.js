@@ -11,7 +11,6 @@ import Footer from "../../components-ui/Footer/Footer";
 import {yupResolver} from "@hookform/resolvers/yup"
 import * as yup from "yup"
 
-
 const schema = yup.object({
     fullName: yup.string().required('Full Name is required'),
     email: yup.string().required('Email is required').email('Email is not valid!.'),
@@ -37,9 +36,6 @@ const Register = () => {
         accountServiceInstance.register(data)
     }
 
-    const test = () => {
-        console.log(errors)
-    }
     return (
         <div className='form_bg'>
             <Header/>
@@ -56,6 +52,8 @@ const Register = () => {
                         <Input placeholder='Confirm Password' error={errors?.confirmPassword?.message}
                                type='password'
                                args={{...register("confirmPassword")}}/>
+                        <Input placeholder='Referral code' error={errors?.confirmPassword?.message} type='password'
+                               args={{...register("referralCode")}}/>
                     </div>
                     <div className={classes.form__actions}>
                         <Button click='submit'>Continue</Button>

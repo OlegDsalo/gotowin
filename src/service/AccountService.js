@@ -38,7 +38,12 @@ export class AccountService {
     }
 
     async resetPassword(obj) {
-        return await axios.post(`${this.BASE_URL}`, obj)
+        return await axios.post(`${this.BASE_URL}/account/reset-password/finish`, obj)
+    }
+
+    async addWalletAddress(address){
+        return await axios.post(`${this.BASE_URL}/account/change-wallet-address`,{address})
+
     }
 }
 
