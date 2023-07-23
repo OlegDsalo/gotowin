@@ -59,6 +59,7 @@
     display: flex;
     flex-direction: row;
 
+    overflow-x: scroll;
     &__item {
       width: 154px;
       height: 192px;
@@ -147,4 +148,22 @@
     }
   }
 
+}
+
+#auto-scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes scrollItems {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-animation {
+  animation: scrollItems 15s linear infinite;
 }

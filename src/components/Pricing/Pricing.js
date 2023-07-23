@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import Card from "../../components-ui/Card/Card";
 import sparcle from "../../assets/elements/Sparkle.png";
 import bitcoinCoin from "../../assets/coins/Bitcoin.png";
@@ -37,9 +37,41 @@ const avatarObj = [
 ]
 
 const Pricing = () => {
+    const autoScrollContainerRef = useRef(null);
+
+
+    useEffect(() => {
+        if (window.innerWidth <= 1440) {
+            const scrollSpeed = 1; // Adjust the scroll speed as needed
+            let interval;
+
+            const flavoursContainer = autoScrollContainerRef.current;
+            const flavoursScrollWidth = flavoursContainer.scrollWidth;
+
+            console.log(flavoursContainer.clientWidth)
+
+            const scrollStep = () => {
+
+                if (flavoursContainer.scrollLeft + flavoursContainer.clientWidth === flavoursScrollWidth) {
+                    // When scrolling reaches the end, reset to 0
+                    flavoursContainer.scrollTo(0, 0);
+                } else {
+                    // Scroll horizontally by scrollSpeed pixels
+                    flavoursContainer.scrollTo(flavoursContainer.scrollLeft + scrollSpeed, 0);
+                }
+            };
+
+            interval = setInterval(scrollStep, 15);
+
+            // Clear the interval when the component unmounts
+            return () => {
+                clearInterval(interval);
+            };
+        }
+    }, []);
     return (
         <div className={styles.pricing}>
-            <div className={styles.winer__list}>
+            <div className={styles.winer__list} ref={autoScrollContainerRef}>
                 {avatarObj.map((it, id) =>
                     <div className={styles.winer__list__item} key={it.name}>
                         <img className={styles.winer__item__avatar} src={it.img} alt=""/>
@@ -55,7 +87,9 @@ const Pricing = () => {
                 <div className={styles.pricing__header}>What’s new ?
                     <img className={styles.pricing__header__icon} src={sparcle} alt='#'></img>
                 </div>
-                <div className={styles.pricing__subheader}>Receive and win cases with unique offers at an affordable price</div>
+                <div className={styles.pricing__subheader}>Receive and win cases with unique offers at an affordable
+                    price
+                </div>
             </div>
             <div className={`${styles.pricing__bg} ${styles.pricing__wrapper}`}>
                 <div className={styles.pricing__cards}>

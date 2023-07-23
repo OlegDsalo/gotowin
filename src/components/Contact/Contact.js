@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from "../../components-ui/Button/Button";
 import classes from './Contact.module.scss'
 import bitcoin from '../../assets/coins/bitcoinHome.png';
 import ethereum from '../../assets/coins/ethereumHome.png'
@@ -16,7 +15,7 @@ const Contact = () => {
             <div className={classes.contact__content}>
                 <p className={classes.contact__text}>Have a question?</p>
                 <h1 className={classes.contact__title}>Let’s keep in touch</h1>
-                <Button className={classes.contact__button}>Send A Message</Button>
+                <a className={classes.contact__button} href='mailto:vatix40933@semonir.com'>Send A Message</a>
             </div>
         </div>
     );
