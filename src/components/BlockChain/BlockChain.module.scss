@@ -155,12 +155,46 @@
   .purchase {
     margin-inline: 0;
   }
+}
 
+@media only screen and (max-width: 1400px) {
+  .purchase {
+    &__coin {
+      &_binance {
+        width: 250px;
+        height: 250px;
+      }
+
+      &_lite {
+        height: 250px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1024px) {
   .purchase {
     margin-bottom: 100px;
+
+    &__coin {
+      width: 250px;
+      height: 250px;
+
+      &_binance {
+        height: 120px;
+      }
+
+      &_stellar {
+        top: 62px;
+      }
+
+      &_cardano {
+        left: 500px;
+        top: 48px;
+      }
+
+
+    }
 
     &__calculator {
       height: auto;
