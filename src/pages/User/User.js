@@ -14,10 +14,8 @@ const User = () => {
     const [user, setUser] = useState(null)
 
     const fetchUser = async () => {
-        await accountServiceInstance.getUser()
-            .then(r => {
-                setUser(r.data);
-            })
+      const response =  await accountServiceInstance.getUser()
+        setUser(response.data);
     }
 
     useAsyncEffect(async () => {
