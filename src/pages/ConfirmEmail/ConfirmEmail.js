@@ -9,11 +9,9 @@ const ConfirmEmail = () => {
     const navigateToLogin = () => navigate('/login')
 
     useEffect(() => {
-        console.log('key', key);
         if (key) {
             accountServiceInstance.activate(key)
                 .then(response => {
-                    console.log('success');
                     navigateToLogin()
                 })
                 .catch(error => console.log(error))
@@ -22,8 +20,15 @@ const ConfirmEmail = () => {
 
     return (
         <div className='form_bg'>
-            <div className={classes.title}>
-                Confirm email
+            <div className={classes.wrapper}>
+                <div className={classes.wrapper_text}>
+                   <div className={classes.title}>
+                       Confirmation of email
+                   </div>
+                    <div className={classes.title}>
+                        ... Wait
+                    </div>
+                </div>
             </div>
         </div>
     );

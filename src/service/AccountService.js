@@ -11,13 +11,15 @@ export class AccountService {
     }
 
     async login(user) {
-        return await axios.post(`${this.BASE_URL}/authenticate`, user).catch((e) => {
+        let response = await axios.post(`${this.BASE_URL}/authenticate`, user).catch((e) => {
             console.log(e)
         })
+        return response.data.idToken
     }
 
     async getUser() {
-        return $api.get(`/account`,).catch(e => console.log(e));
+        let response = await $api.get(`/account`);
+        return response.data
     }
 
     async activate(key) {

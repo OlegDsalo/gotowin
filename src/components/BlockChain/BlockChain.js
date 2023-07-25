@@ -13,7 +13,7 @@ import cardano from '../../assets/coins/cardanoUser.png'
 const BlockChain = () => {
     const [input, setInput] = useState('');
     const [resultValue, setResultValue] = useState(0);
-    const multiply = 2.1
+    const multiply = 1000
 
     const inputChangeHandler = (e) => {
         console.log(e.target.value)

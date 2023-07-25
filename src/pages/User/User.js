@@ -9,16 +9,23 @@ import Cases from "../../components/Cases/Cases";
 import BlockChain from "../../components/BlockChain/BlockChain";
 import accountServiceInstance from "../../service/AccountService";
 import useAsyncEffect from "../../utils/AsyncEffect";
+import {useNavigate} from "react-router-dom";
 
 const User = () => {
     const [user, setUser] = useState(null)
 
+    const navigate = useNavigate();
+    const navigateToLogin = () => navigate('/login')
+
     const fetchUser = async () => {
-      const response =  await accountServiceInstance.getUser()
-        setUser(response.data);
+        const response = await accountServiceInstance.getUser()
+        setUser(response);
     }
 
     useAsyncEffect(async () => {
+        if (localStorage.getItem('token') === null) {
+            navigateToLogin()
+        }
         await fetchUser()
     }, []);
 

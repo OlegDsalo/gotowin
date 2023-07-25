@@ -1,6 +1,6 @@
 import './App.scss';
 import Home from "./pages/Home/Home";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import User from "./pages/User/User";
@@ -37,9 +37,11 @@ function App() {
             ]
         },
         {
-            path: '/user',
-            // /path:'/user/:id'
-            element: <User/>
+
+            path: '/profile',
+            element: <ProtectedRoute>
+                <User/>
+            </ProtectedRoute>
         },
         {
             path: '/activate/:key',
@@ -52,3 +54,12 @@ function App() {
 }
 
 export default App;
+
+
+const ProtectedRoute = ({children}) => {
+    if (!localStorage.getItem('token')) {
+        return <Navigate to="/login" replace/>;
+    }
+
+    return children;
+};

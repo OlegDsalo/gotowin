@@ -39,12 +39,12 @@ const Questions = () => {
             <div className={classes.questions__text}>Here are some tips to help you get the most</div>
             <div className={classes.questions__list}>
                 {questions.map((question, index) =>
-                    <>
-                        <div key={index} className={classes.questions__item} onClick={() => handleQuestionClick(index)}
+                    <div key={'b'+index} >
+                        <div  className={classes.questions__item} onClick={() => handleQuestionClick(index)}
                         >{question.question}<PlusIcon className='questions-icon'/>
                         </div>
-                        {activeIndex === index && <div className={classes.answer}>{question.answer}</div>}
-                    </>
+                        {activeIndex === index && <div  className={classes.answer}>{question.answer}</div>}
+                    </div>
                 )
                 }
             </div>

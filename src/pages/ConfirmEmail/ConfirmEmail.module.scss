@@ -1,7 +1,25 @@
-.title{
-  padding: 40px;
-  border-radius: 20px;
-  background: white;
+.title {
   font-size: 20px;
   line-height: 30px;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 100vh;
+
+  &_text {
+    padding: 40px;
+    border-radius: 20px;
+    background: white;
+    text-align: center;
+
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+  }
+
 }

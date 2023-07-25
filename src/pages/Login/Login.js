@@ -12,7 +12,7 @@ import Footer from "../../components-ui/Footer/Footer";
 const Login = () => {
     const navigate = useNavigate();
     const navigateToResetPassword = () => navigate('/reset-mail')
-    const navigateToUser = () => navigate('/user')
+    const navigateToUser = () => navigate('/profile')
 
     const {
         register,
@@ -22,8 +22,8 @@ const Login = () => {
     const onSubmit = data => {
         console.log(data);
         accountServiceInstance.login(data).then(res => {
-            console.log('token', res.data.idToken)
-            localStorage.setItem('token', res.data.idToken)
+            // console.log('token', res.data.idToken)
+            localStorage.setItem('token', res)
             accountServiceInstance.getUser().then(user => {
                 console.log('user', user)
                 navigateToUser()
