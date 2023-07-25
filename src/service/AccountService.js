@@ -16,16 +16,8 @@ export class AccountService {
         })
     }
 
-
-    async getUser(token) {
-
-        let config = {
-            headers: {
-                "Authorization": `Bearer ${localStorage.getItem('token')}`,
-            }
-        }
-        return axios.get(`${this.BASE_URL}/account`,config).catch(e => console.log(e));
-
+    async getUser() {
+        return $api.get(`/account`,).catch(e => console.log(e));
     }
 
     async activate(key) {
@@ -41,9 +33,8 @@ export class AccountService {
         return await axios.post(`${this.BASE_URL}/account/reset-password/finish`, obj)
     }
 
-    async addWalletAddress(address){
-        return await axios.post(`${this.BASE_URL}/account/change-wallet-address`,{address})
-
+    async addWalletAddress(user) {
+        return await $api.post(`/account/change-wallet-address`, user)
     }
 }
 
@@ -54,7 +45,7 @@ export default accountServiceInstance;
 
 const $api = axios.create({
     withCredentials: true,
-    baseURL: 'http://localhost:8080/api'
+    baseURL: '/api'
 });
 
 $api.interceptors.request.use((config) => {

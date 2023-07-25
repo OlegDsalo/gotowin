@@ -58,8 +58,10 @@
     margin: 0 19px;
     display: flex;
     flex-direction: row;
+    overflow-x: auto;
+    justify-content: center;
 
-    overflow-x: scroll;
+
     &__item {
       width: 154px;
       height: 192px;
@@ -114,11 +116,21 @@
   }
 }
 
+@media only screen and (max-width: 1440px) {
+  .winer {
+    &__list {
+      overflow: auto;
+      justify-content: normal;
+
+    }
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   .winer {
     &__list {
-      overflow: auto;
+
+
     }
   }
   .pricing {

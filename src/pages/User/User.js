@@ -13,27 +13,15 @@ import useAsyncEffect from "../../utils/AsyncEffect";
 const User = () => {
     const [user, setUser] = useState(null)
 
-    // useEffect(() => {
-    //         async function fetchUser() {
-    //             await accountServiceInstance.getUser()
-    //                 .then(r => {
-    //                     setUser(r.data);
-    //                 })
-    //         }
-    //
-    //         fetchUser()
-    //         console.log(user)
-    //     }, []
-    // )
+    const fetchUser = async () => {
+        await accountServiceInstance.getUser()
+            .then(r => {
+                setUser(r.data);
+            })
+    }
+
     useAsyncEffect(async () => {
-        async function fetchUser() {
-            await accountServiceInstance.getUser()
-                .then(r => {
-                    setUser(r.data);
-                })
-        }
-        fetchUser()
-        console.log(user)
+        await fetchUser()
     }, []);
 
 
@@ -51,7 +39,7 @@ const User = () => {
                         </div>
                     </div>
                 </div>
-                <Wallet walletBalance={user.walletBalance} walletAddress={user.walletAddress}/>
+                <Wallet user={user} fetchUser={fetchUser}/>
                 <Cases/>
                 <Referral referralEarnedBalance={user.referralEarnedBalance} refCode={user.referralCode}
                           invited={user.invited}/>
