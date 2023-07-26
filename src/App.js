@@ -8,6 +8,7 @@ import ConfirmEmail from "./pages/ConfirmEmail/ConfirmEmail";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 
+
 function App() {
     const router = createBrowserRouter([
         {
@@ -37,7 +38,6 @@ function App() {
             ]
         },
         {
-
             path: '/profile',
             element: <ProtectedRoute>
                 <User/>

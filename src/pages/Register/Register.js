@@ -33,7 +33,15 @@ const Register = () => {
 
     const onSubmit = data => {
         console.log(data);
-        accountServiceInstance.register(data)
+        if (data.referralCode){
+            accountServiceInstance.register(data)
+        }else{
+            delete data.referralCode
+            console.log(data)
+            // let obj =
+            accountServiceInstance.register(data)
+        }
+        // accountServiceInstance.register(data)
     }
 
     return (
@@ -56,7 +64,7 @@ const Register = () => {
                                args={{...register("referralCode")}}/>
                     </div>
                     <div className={classes.form__actions}>
-                        <Button click='submit'>Continue</Button>
+                        <Button click='submit'>Create account</Button>
                         <div className={classes.form__actions_text} onClick={navigateToLogin}>
                             Already have an account?
                             <span className={classes.form__actions_link}>Log in</span>

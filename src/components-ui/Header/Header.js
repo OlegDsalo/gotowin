@@ -21,9 +21,8 @@ const Header = ({user = null}) => {
                 <p className={classes.header__name}>GO TO WIN</p>
             </div>
             {user ? <div className={classes.header__actions_logined}>
-                    <Button onClick={signOutHandler} size='small' type='secondary'>Sign
-                        Out</Button>
-                    <UserIcon className={classes.header__actions_logined_icon}/>
+                    <Button onClick={signOutHandler} size='small' type='secondary'>Sign Out</Button>
+                    <UserIcon onClick={navigateToHome} className={classes.header__actions_logined_icon}/>
                 </div>
                 :
                 <div className={classes.header__actions}>

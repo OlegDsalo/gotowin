@@ -46,10 +46,10 @@ const Wallet = ({user, fetchUser}) => {
     }
     const WalletAddress = () => {
         return (
-            user.walletAddress ?
+            user.walletAddress &&
                 <div className={classes.wallet__address}>
                     {transformString(user.walletAddress)}
-                </div> : null
+                </div>
         )
     }
     const EditWalletAddress = () => {
@@ -78,7 +78,7 @@ const Wallet = ({user, fetchUser}) => {
     }
     const AddAddressButton = () => {
         return (
-            !edit && !user.walletAddress &&
+            edit && !user.walletAddress &&
             <form onSubmit={handleSubmit(onSubmit)}>
                 <button className={classes.wallet__confirm} type='submit'>Add address</button>
             </form>
