@@ -9,13 +9,12 @@ import Cases from "../../components/Cases/Cases";
 import BlockChain from "../../components/BlockChain/BlockChain";
 import accountServiceInstance from "../../service/AccountService";
 import useAsyncEffect from "../../utils/AsyncEffect";
-import {useNavigate} from "react-router-dom";
+import {useAppNavigation} from "../../hook/useAppNavigation";
 
 const User = () => {
     const [user, setUser] = useState(null)
 
-    const navigate = useNavigate();
-    const navigateToLogin = () => navigate('/login')
+    const {navigateToLogin, navigateToHome} = useAppNavigation();
 
     const fetchUser = async () => {
         const response = await accountServiceInstance.getUser()
@@ -36,7 +35,7 @@ const User = () => {
                 <div className='user user__bg'>
                     <div className='user__border'>
                         <div className='user_box'>
-                            <div className='user-back'><ChevronLeft/></div>
+                            <div className='user-back'><ChevronLeft onClick={navigateToHome}/></div>
                             <img className='user-avatar'
                                  src="https://img.freepik.com/free-icon/user_318-159711.jpg" alt=""/>
                             <div className='user-name'>{user.fullName}</div>

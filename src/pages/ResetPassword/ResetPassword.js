@@ -5,15 +5,14 @@ import Button from "../../components-ui/Button/Button";
 import {useForm} from "react-hook-form";
 import accountServiceInstance from "../../service/AccountService";
 import classes from './ResetPassword.module.scss'
-import {useNavigate, useParams} from "react-router-dom";
+import { useParams} from "react-router-dom";
 import FormCard from "../../components-ui/FormCard/FormCard";
 import Footer from "../../components-ui/Footer/Footer";
+import {useAppNavigation} from "../../hook/useAppNavigation";
 
 const ResetPassword = () => {
-
-    const navigate = useNavigate();
+const {navigateToLogin} = useAppNavigation();
     let {key} = useParams();
-    // const navigateToLogin = () => navigate('/login')
 
     const {
         register,
@@ -22,7 +21,7 @@ const ResetPassword = () => {
     const onSubmit = data => {
         let obj = {...data, key}
         accountServiceInstance.resetPassword(obj).then(
-            navigate('/login')
+            navigateToLogin()
         )
     }
     return (

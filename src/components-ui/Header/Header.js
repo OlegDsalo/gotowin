@@ -2,14 +2,12 @@ import React from 'react';
 import loginBg from "../../assets/test-logo.png";
 import Button from "../Button/Button";
 import classes from './Header.module.scss'
-import {useNavigate} from "react-router-dom";
 import {ReactComponent as UserIcon} from "../../assets/icons/user.svg";
+import {useAppNavigation} from "../../hook/useAppNavigation";
 
 const Header = ({user = null}) => {
-    const navigate = useNavigate();
-    const navigateToLogin = () => navigate('/login')
-    const navigateToSignIn = () => navigate('/register')
-    const navigateToHome = () => navigate('/')
+    const {navigateToLogin, navigateToSignIn, navigateToProfile, navigateToHome} = useAppNavigation()
+
     const signOutHandler = () => {
         localStorage.removeItem('token')
         navigateToLogin()
@@ -22,7 +20,7 @@ const Header = ({user = null}) => {
             </div>
             {user ? <div className={classes.header__actions_logined}>
                     <Button onClick={signOutHandler} size='small' type='secondary'>Sign Out</Button>
-                    <UserIcon onClick={navigateToHome} className={classes.header__actions_logined_icon}/>
+                    <UserIcon onClick={navigateToProfile} className={classes.header__actions_logined_icon}/>
                 </div>
                 :
                 <div className={classes.header__actions}>

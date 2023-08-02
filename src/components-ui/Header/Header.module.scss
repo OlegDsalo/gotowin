@@ -46,6 +46,10 @@
       &_icon {
         min-width: 36px;
         height: 36px;
+        &:hover{
+          cursor: pointer;
+          opacity: 0.4;
+        }
       }
     }
   }

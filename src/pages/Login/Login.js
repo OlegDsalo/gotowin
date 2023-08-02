@@ -5,14 +5,12 @@ import classes from './Login.module.scss'
 import {useForm} from "react-hook-form";
 import Header from "../../components-ui/Header/Header";
 import accountServiceInstance from "../../service/AccountService";
-import {useNavigate} from "react-router-dom";
 import FormCard from "../../components-ui/FormCard/FormCard";
 import Footer from "../../components-ui/Footer/Footer";
+import {useAppNavigation} from "../../hook/useAppNavigation";
 
 const Login = () => {
-    const navigate = useNavigate();
-    const navigateToResetPassword = () => navigate('/reset-mail')
-    const navigateToUser = () => navigate('/profile')
+    const {navigateToResetPassword, navigateToUser} = useAppNavigation()
 
     const {
         register,

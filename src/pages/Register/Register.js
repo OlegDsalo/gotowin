@@ -5,11 +5,12 @@ import {useForm} from "react-hook-form";
 import Header from "../../components-ui/Header/Header";
 import classes from "./Register.module.scss";
 import accountServiceInstance from "../../service/AccountService";
-import {useNavigate} from "react-router-dom";
 import FormCard from "../../components-ui/FormCard/FormCard";
 import Footer from "../../components-ui/Footer/Footer";
 import {yupResolver} from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import {useAppNavigation} from "../../hook/useAppNavigation";
+import {useParams} from "react-router-dom";
 
 const schema = yup.object({
     fullName: yup.string().required('Full Name is required'),
@@ -19,9 +20,7 @@ const schema = yup.object({
 })
 
 const Register = () => {
-    const navigate = useNavigate();
-    const navigateToLogin = () => navigate('/login')
-
+    const {navigateToLogin} = useAppNavigation()
     const {
         register,
         handleSubmit,
@@ -31,17 +30,20 @@ const Register = () => {
         resolver: yupResolver(schema),
     });
 
+    let {key} = useParams();
+
     const onSubmit = data => {
-        console.log(data);
-        if (data.referralCode){
-            accountServiceInstance.register(data)
+        // console.log(data);
+        if (key){
+            // let obj={...data,referralCode:key}
+            // console.log(obj)
+
+            accountServiceInstance.registerReferral(data,key)
         }else{
-            delete data.referralCode
-            console.log(data)
+            // console.log(data)
             // let obj =
             accountServiceInstance.register(data)
         }
-        // accountServiceInstance.register(data)
     }
 
     return (
@@ -60,8 +62,6 @@ const Register = () => {
                         <Input placeholder='Confirm Password' error={errors?.confirmPassword?.message}
                                type='password'
                                args={{...register("confirmPassword")}}/>
-                        <Input placeholder='Referral code' error={errors?.confirmPassword?.message} type='password'
-                               args={{...register("referralCode")}}/>
                     </div>
                     <div className={classes.form__actions}>
                         <Button click='submit'>Create account</Button>

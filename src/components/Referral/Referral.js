@@ -7,8 +7,9 @@ import {ReactComponent as Copy} from "../../assets/icons/copy.svg";
 
 
 const Referral = ({referralEarnedBalance = 0, invited = 0, refCode = ''}) => {
+    const basesUrl = 'http://localhost:3000/register/'
     const copyRefCode = () => {
-        clipboardCopy(refCode)
+        clipboardCopy(basesUrl + refCode)
     }
     return (
         <div className={classes.referral}>

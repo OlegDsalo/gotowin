@@ -50,6 +50,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.4;
+    }
   }
 
   &-avatar {
@@ -76,14 +81,11 @@
 
 @media only screen and (max-width: 1024px) {
   .user {
-
     &-back {
       left: 200px;
     }
-
     &__border {
       background-image: none;
-
     }
   }
 }
@@ -91,7 +93,6 @@
 
 @media only screen and (max-width: 768px) {
   .user {
-
     &-back {
       width: 38px;
       height: 38px;
@@ -103,17 +104,20 @@
 @media only screen and (max-width: 425px) {
   .user {
     padding: 0;
-    &_box{
+
+    &_box {
       padding-top: 42px;
     }
+
     &__border {
-      padding: 12px  0 15px;
+      padding: 12px 0 15px;
       background-image: url("../../assets/mobilebgUser.png");
     }
-    &-back {
 
+    &-back {
       left: 50px;
     }
+
     &-avatar {
       width: 135px;
       height: 135px;

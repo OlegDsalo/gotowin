@@ -5,13 +5,13 @@ import Input from "../../components-ui/Input/Input";
 import Button from "../../components-ui/Button/Button";
 import {useForm} from "react-hook-form";
 import accountServiceInstance from "../../service/AccountService";
-import {useNavigate} from "react-router-dom";
 import FormCard from "../../components-ui/FormCard/FormCard";
 import Footer from "../../components-ui/Footer/Footer";
+import {useAppNavigation} from "../../hook/useAppNavigation";
 
 const ForgotPassword = () => {
-    const navigate = useNavigate();
-    const navigateToLogin = () => navigate('/login')
+    const {navigateToLogin} = useAppNavigation()
+
     const [condition, setCondition] = useState(true)
     const {
         register,

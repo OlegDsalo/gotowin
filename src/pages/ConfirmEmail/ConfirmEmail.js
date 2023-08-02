@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 import accountServiceInstance from "../../service/AccountService";
 import classes from './ConfirmEmail.module.scss'
-import {useNavigate, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
+import {useAppNavigation} from "../../hook/useAppNavigation";
 
 const ConfirmEmail = () => {
-    const navigate = useNavigate();
+    const {navigateToLogin} = useAppNavigation()
     let {key} = useParams();
-    const navigateToLogin = () => navigate('/login')
 
     useEffect(() => {
         if (key) {

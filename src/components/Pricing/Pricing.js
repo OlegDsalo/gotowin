@@ -39,7 +39,6 @@ const avatarObj = [
 const Pricing = () => {
     const autoScrollContainerRef = useRef(null);
 
-
     useEffect(() => {
         if (window.innerWidth <= 1440) {
             const scrollSpeed = 1; // Adjust the scroll speed as needed
@@ -47,9 +46,6 @@ const Pricing = () => {
 
             const flavoursContainer = autoScrollContainerRef.current;
             const flavoursScrollWidth = flavoursContainer.scrollWidth;
-
-            console.log(flavoursContainer.clientWidth)
-
             const scrollStep = () => {
 
                 if (flavoursContainer.scrollLeft + flavoursContainer.clientWidth === flavoursScrollWidth) {
