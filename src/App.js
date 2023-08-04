@@ -7,6 +7,8 @@ import User from "./pages/User/User";
 import ConfirmEmail from "./pages/ConfirmEmail/ConfirmEmail";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import UserAgreement from "./pages/UserAgreement/UserAgreement";
 
 
 const ProtectedRoute = ({children}) => {
@@ -18,18 +20,6 @@ const ProtectedRoute = ({children}) => {
 };
 
 
-// export const routes = {
-//     home:'/',
-//     login:'/login',
-//     register:'/register',
-//     profile: '/profile',
-//     resetMail:'/reset-mail',
-//     forgotPassword: '/reset/finish/:key',
-//     confirmMail: '/activate/:key',
-//     navigateTo:(route)=>{
-//         navigate(route)
-//     }
-// }
 export const routes = {
     home: '/',
     login: '/login',
@@ -39,6 +29,8 @@ export const routes = {
     resetMail: '/reset-mail',
     forgotPassword: '/reset/finish/:key',
     confirmMail: '/activate/:key',
+    privacyPolicy: '/privacy-policy',
+    userAgreement: '/user-agreement',
 }
 
 const router = createBrowserRouter([
@@ -76,50 +68,18 @@ const router = createBrowserRouter([
     {
         path: routes.confirmMail,
         element: <ConfirmEmail/>
+    },
+    {
+        path: routes.privacyPolicy,
+        element: <PrivacyPolicy/>
+    },
+    {
+        path: routes.userAgreement,
+        element: <UserAgreement/>
     }
 ]);
 
 function App() {
-
-
-    // const router = createBrowserRouter([
-    //     {
-    //         path: "/",
-    //         // element: <Layout/>,
-    //         children: [
-    //             {
-    //                 index: true,
-    //                 element: <Home/>
-    //             },
-    //             {
-    //                 path: 'login',
-    //                 element: <Login/>
-    //             },
-    //             {
-    //                 path: 'register',
-    //                 element: <Register/>
-    //             },
-    //             {
-    //                 path: 'reset-mail',
-    //                 element: <ForgotPassword/>
-    //             },
-    //             {
-    //                 path: 'reset/finish/:key',
-    //                 element: <ResetPassword/>
-    //             }
-    //         ]
-    //     },
-    //     {
-    //         path: '/profile',
-    //         element: <ProtectedRoute>
-    //             <User/>
-    //         </ProtectedRoute>
-    //     },
-    //     {
-    //         path: '/activate/:key',
-    //         element: <ConfirmEmail/>
-    //     }
-    // ]);
     return (
         <RouterProvider router={router}/>
     );

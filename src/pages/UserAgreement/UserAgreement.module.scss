@@ -1,0 +1,35 @@
+.wrapper {
+  background: #0D0D2B;
+}
+
+.content {
+  padding: 0 150px;
+  color: #E6E6E6;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 125% */
+  letter-spacing: -0.48px;
+}
+
+.title {
+  margin-top: 88px;
+  margin-bottom: 56px;
+  font-size: 48px;
+  font-weight: 600;
+  color: #FFF;
+  font-feature-settings: 'clig' off, 'liga' off;
+  line-height: 72px;
+}
+
+.content_wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.letter-list {
+   list-style-type: lower-alpha;
+}
