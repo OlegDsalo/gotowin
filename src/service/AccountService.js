@@ -19,7 +19,7 @@ export class AccountService {
 
     async login(user) {
         let response = await axios.post(`${this.BASE_URL}/authenticate`, user).catch((e) => {
-            console.log(e)
+                return e; // Throw the error to be caught in the caller function
         })
         return response.data.idToken
     }

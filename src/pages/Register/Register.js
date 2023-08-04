@@ -34,10 +34,12 @@ const Register = () => {
 
     const onSubmit = data => {
         // console.log(data);
+        console.log('key',key)
         let refferalCode = key ? key: "";
         let user={...data,referralCode:refferalCode}
         console.log(user)
-        accountServiceInstance.register(user)
+        accountServiceInstance.register(user).then(navigateToLogin())
+
 
     }
 
