@@ -1,14 +1,20 @@
 import {useNavigate} from "react-router-dom";
+import {routes} from "../App";
 
 export const useAppNavigation = () => {
     const navigate = useNavigate();
 
-    const navigateToLogin = () => navigate('/login');
-    const navigateToSignIn = () => navigate('/register');
-    const navigateToProfile = () => navigate('/profile');
-    const navigateToHome = () => navigate('/');
-    const navigateToResetPassword = () => navigate('/reset-mail')
-    const navigateToUser = () => navigate('/profile')
+    const navigateToLogin = () => navigate(routes.login);
+    const navigateToSignIn = () => navigate(routes.register);
+    const navigateToProfile = () => navigate(routes.profile);
+    const navigateToHome = () => navigate(routes.home);
+    const navigateToResetPassword = () => navigate(routes.resetMail)
+
+
+    const navigateToPrivacyPolicy = () => navigate(routes.privacyPolicy)
+    const navigateToUserAgreement = () => navigate(routes.userAgreement)
+    const navigateToPrivacyPolicyUA = () => navigate(routes.privacyPolicyUA)
+
 
     return {
         navigateToLogin,
@@ -16,6 +22,8 @@ export const useAppNavigation = () => {
         navigateToProfile,
         navigateToHome,
         navigateToResetPassword,
-        navigateToUser
+        navigateToPrivacyPolicy,
+        navigateToUserAgreement,
+        navigateToPrivacyPolicyUA,
     };
 };

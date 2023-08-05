@@ -9,6 +9,7 @@ import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import UserAgreement from "./pages/UserAgreement/UserAgreement";
+import PrivacyPolicyUA from "./pages/PrivacyPolicy/PrivacyPolicyUA/PrivacyPolicyUA";
 
 
 const ProtectedRoute = ({children}) => {
@@ -30,6 +31,7 @@ export const routes = {
     forgotPassword: '/reset/finish/:key',
     confirmMail: '/activate/:key',
     privacyPolicy: '/privacy-policy',
+    privacyPolicyUA: '/privacy-policy/ua',
     userAgreement: '/user-agreement',
 }
 
@@ -72,6 +74,10 @@ const router = createBrowserRouter([
     {
         path: routes.privacyPolicy,
         element: <PrivacyPolicy/>
+    },
+    {
+        path: routes.privacyPolicyUA,
+        element: <PrivacyPolicyUA/>
     },
     {
         path: routes.userAgreement,

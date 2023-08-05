@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Footer from "../../components-ui/Footer/Footer";
 import Header from "../../components-ui/Header/Header";
 import classes from "./UserAgreement.module.scss"
 
 const UserAgreement = () => {
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, []);
     return (
         <div className={classes.wrapper}>
             <Header/>
@@ -925,95 +928,142 @@ const UserAgreement = () => {
                             </ul>
                         </li>
 
-                        {/*todo*/}
-                        <div>
-                            9. Client's risks
-
-                            9.1. The Client is fully aware of the following:
-                            a. The Company and the Seller are not responsible for the Client's lost funds
-                            b. The Company and the Seller are not responsible for the purchased crypto assets
-                            c. conducting Trading operations with financial instruments is accompanied by significant
-                            risks. Before
-                            using the Company's services, a Client should analyze his/her financial capabilities;
-                            d. Trading operations carried out through the Trading Platform are not transactions
-                            concluded on an official
-                            exchange. They are over-the-counter and therefore carry a higher risk for the Client than
-                            official exchange
-                            transactions;
-                            e. any information and/or recommendations they receive on the Website from the Company's
-                            representatives or
-                            partners are not a direct offer to make a Trade or financial transaction;
-                            f. may suffer financial losses as a result of failures and/or interruptions in the operation
-                            of computer
-                            hardware, software, unstable Internet connection, power outages or other technical factors;
-                            g. in market conditions that differ from normal, the time of processing of his/her Trading
-                            Orders may be
-                            increased, as a result of which the Client may incur losses. In addition, sharp fluctuations
-                            in the Quotes
-                            may result in the Client's losses when a Trade is concluded at the Quotation Price that
-                            differs from the
-                            Quotation Price displayed on the Trading Platform.
-
-                            9.2. In some countries, use of the Company's services may be restricted or prohibited by
-                            law. The Client
-                            assumes all risks associated with analysis of the legislation of their country, or their
-                            country of
-                            residence, for such restrictions or prohibitions, as well as responsibility for using the
-                            services of the
-                            Company in countries where they are restricted or prohibited.
-
-                            9.3. The Client acknowledges that the Company does not guarantee receipt by the Client of
-                            profit in any
-                            amount or the absence of losses in the course of the Client using the services.
-                        </div>
-
-
                         <li>
+                            Client's risks
+                            <div style={{marginLeft: "-35px" ,marginTop:'20px'}}>
+                                10.1 The Client is fully aware of the following:
+                            </div>
+                            <ul className={classes.letter_list}>
+                                <li className={classes.letter_item}>
+                                    The Company and the Seller are not responsible for the Client's lost funds
+
+                                </li>
+                                <li className={classes.letter_item}>
+                                    The Company and the Seller are not responsible for the purchased crypto assets
+
+                                </li>
+                                <li className={classes.letter_item}>
+                                    conducting Trading operations with financial instruments is accompanied by
+                                    significant
+                                    risks. Before using the Company's services, a Client should analyze his/her
+                                    financial capabilities;
+
+                                </li>
+                                <li className={classes.letter_item}>
+                                    Trading operations carried out through the Trading Platform are not transactions
+                                    concluded on an official exchange. They are over-the-counter and therefore carry
+                                    a higher risk for the
+                                    Client than official exchange transactions;
+                                </li>
+                                <li className={classes.letter_item}>
+                                    any information and/or recommendations they receive on the Website from the
+                                    Company's representatives or
+                                    partners are not a direct offer to make a Trade or financial transaction;
+                                </li>
+                                <li className={classes.letter_item}>
+                                    may suffer financial losses as a result of failures and/or interruptions in the
+                                    operation of computer
+                                    hardware, software, unstable Internet connection, power outages or other
+                                    technical factors;
+                                </li>
+
+                                <li className={classes.letter_item}>in market conditions that differ from normal,
+                                    the time of processing of his/her
+                                    Trading Orders may be increased, as a result of which the Client may incur
+                                    losses. In addition, sharp fluctuations in the Quotes
+                                    may result in the Client's losses when a Trade is concluded at the Quotation
+                                    Price that differs from the
+                                    Quotation Price displayed on the Trading Platform.
+                                </li>
+                            </ul>
+
+                            <div style={{marginLeft: "-30px",marginTop:'20px'}}>
+                                10.2. In some countries, use of the Company's services may be restricted or
+                                prohibited by law. The Client
+                                assumes all risks associated with analysis of the legislation of their country, or their
+                                country of
+                                residence, for such restrictions or prohibitions, as well as responsibility for
+                                using the services of the Company in countries where they are restricted or prohibited.
+                            </div>
+                            <div style={{marginLeft: "-30px",marginTop:'20px'}}>
+                                10.3. The Client acknowledges that the Company does not guarantee receipt by the
+                                Client of profit in any amount or the absence of losses in the course of the Client
+                                using the services.
+                            </div>
+                        </li>
+
+
+                        <li style={{marginTop:'20px'}}>
                             Orders and Transactions
                             <ul className={classes.letter_list}>
-                                <li className={classes.letter_item}>The Platform allows the User to create (initiate)
-                                    the Orders to buy or to sell Digital assets. By creating (initiating) the Order the
-                                    User makes an offer to all other Users to conclude a Transaction on the terms and
-                                    conditions specified in the relevant Order. GOTOWIN unilaterally sets the interface
-                                    for creating (initiating) the Orders, determines possible types of the Orders and
+                                <li className={classes.letter_item}>The Platform allows the User to create
+                                    (initiate)
+                                    the Orders to buy or to sell Digital assets. By creating (initiating) the Order
+                                    the
+                                    User makes an offer to all other Users to conclude a Transaction on the terms
+                                    and
+                                    conditions specified in the relevant Order. GOTOWIN unilaterally sets the
+                                    interface
+                                    for creating (initiating) the Orders, determines possible types of the Orders
+                                    and
                                     which parameters of the Order shall be determined by the User, who initiates it.
                                 </li>
-                                <li className={classes.letter_item}>The User agrees that the Order may be executed both
+                                <li className={classes.letter_item}>The User agrees that the Order may be executed
+                                    both
                                     in full and by parts.
                                 </li>
-                                <li className={classes.letter_item}>To create (initiate) the Order the User shall have
-                                    enough Funds on the Account to meet (to execute) his/her obligations corresponding
+                                <li className={classes.letter_item}>To create (initiate) the Order the User shall
+                                    have
+                                    enough Funds on the Account to meet (to execute) his/her obligations
+                                    corresponding
                                     with the Order (as well as other active Orders opened by the User).
                                 </li>
-                                <li className={classes.letter_item}>The User recognizes that the Order should only be
+                                <li className={classes.letter_item}>The User recognizes that the Order should only
+                                    be
                                     submitted after careful consideration and the User understands and accepts the
                                     consequences of its execution. The User agrees that as soon as the Order is
-                                    executed, such Transaction is irreversible and may not be cancelled. Transactions
-                                    will be executed instantly upon the matching of the seller's and the buyer's Orders
+                                    executed, such Transaction is irreversible and may not be cancelled.
+                                    Transactions
+                                    will be executed instantly upon the matching of the seller's and the buyer's
+                                    Orders
                                     without prior notice to the seller and the buyer and will be considered to have
                                     taken place at the execution date and time.
                                 </li>
-                                <li className={classes.letter_item}>The User acknowledges and agrees that in case the
-                                    destination address is not specified and/or is incorrectly indicated and/or if the
-                                    reference number (for example, memo) is incorrectly specified; and/or if the Deposit
-                                    is made from the network (Token standard) which is not supported by GOTOWIN; and/or
-                                    if the Withdrawal is made to the network (Token standard) which is not supported by
-                                    the recipient; and/or if the network (Token standard) wrongly selected by the User;
-                                    and/or if the wallet addresses specified with the incorrect memo (Destination tag);
-                                    and/or if the other details of User’s Transactions specified incorrectly, the User
-                                    may lose the Funds or it may cause delay of the Order execution. In such cases, the
+                                <li className={classes.letter_item}>The User acknowledges and agrees that in case
+                                    the
+                                    destination address is not specified and/or is incorrectly indicated and/or if
+                                    the
+                                    reference number (for example, memo) is incorrectly specified; and/or if the
+                                    Deposit
+                                    is made from the network (Token standard) which is not supported by GOTOWIN;
+                                    and/or
+                                    if the Withdrawal is made to the network (Token standard) which is not supported
+                                    by
+                                    the recipient; and/or if the network (Token standard) wrongly selected by the
+                                    User;
+                                    and/or if the wallet addresses specified with the incorrect memo (Destination
+                                    tag);
+                                    and/or if the other details of User’s Transactions specified incorrectly, the
+                                    User
+                                    may lose the Funds or it may cause delay of the Order execution. In such cases,
+                                    the
                                     User himself/herself bears responsibility for his/her inaccurate and incorrect
                                     actions and also carries the risk of losing Funds. GOTOWIN in any case will not
                                     compensate for such losses.
                                 </li>
-                                <li className={classes.letter_item}>GOTOWIN may set a minimal and maximal Order amount
-                                    and/or other restrictions (limits) for the trade Orders (operations). Restrictions
+                                <li className={classes.letter_item}>GOTOWIN may set a minimal and maximal Order
+                                    amount
+                                    and/or other restrictions (limits) for the trade Orders (operations).
+                                    Restrictions
                                     (limits) may vary for each trading pair (and/or depending on other details).
                                 </li>
                                 <li className={classes.letter_item}>The User can use Voucher (if applicable on the
-                                    Platform) to transfer Digital assets to/from the Account. The Voucher should be used
-                                    before its expiration date set by GOTOWIN. GOTOWIN shall not be liable and shall not
-                                    accept any liability, obligation or responsibility whatsoever for any loss or damage
+                                    Platform) to transfer Digital assets to/from the Account. The Voucher should be
+                                    used
+                                    before its expiration date set by GOTOWIN. GOTOWIN shall not be liable and shall
+                                    not
+                                    accept any liability, obligation or responsibility whatsoever for any loss or
+                                    damage
                                     arising from the User's use of the Voucher purchased from any third parties or
                                     acquired in any other way. To avoid doubts, the User is solely responsible for
                                     ensuring that the Voucher they acquired is genuine, valid and redeemable.
@@ -1022,8 +1072,10 @@ const UserAgreement = () => {
                                     those related to making Deposits, Withdrawals, creating/executing the Orders are
                                     displayed in the User’s Account.
                                 </li>
-                                <li className={classes.letter_item}>The pending Order not canceled by the User, who has
-                                    made it, is valid until executed. Nevertheless, GOTOWIN reserves the right to set
+                                <li className={classes.letter_item}>The pending Order not canceled by the User, who
+                                    has
+                                    made it, is valid until executed. Nevertheless, GOTOWIN reserves the right to
+                                    set
                                     time limits for the pending Orders.
                                 </li>
                             </ul>
@@ -1045,9 +1097,11 @@ const UserAgreement = () => {
                             Prevention of the illegal use of the Website and Platform
                             <ul className={classes.letter_list}>
                                 <li className={classes.letter_item}>
-                                    By accessing or using the Platform and/or the Services, the User agrees to comply
+                                    By accessing or using the Platform and/or the Services, the User agrees to
+                                    comply
                                     with the requirements of
-                                    all Laws, regulations, intellectual property rights or other rights of third parties
+                                    all Laws, regulations, intellectual property rights or other rights of third
+                                    parties
                                     and not to commit
                                     offenses and to be responsible for his/her behavior when using our Platform and
                                     Services. Without limiting
@@ -1056,8 +1110,10 @@ const UserAgreement = () => {
                                         <li className={classes.filled_item}>provide (submit) false, inaccurate or
                                             misleading information (documents);
                                         </li>
-                                        <li className={classes.filled_item}>use the Services (the Platform) for fraud
-                                            and/or for any other illegal operations, including using credit and debit
+                                        <li className={classes.filled_item}>use the Services (the Platform) for
+                                            fraud
+                                            and/or for any other illegal operations, including using credit and
+                                            debit
                                             cards obtained illegally;
                                         </li>
                                         <li className={classes.filled_item}>use the Services (the Platform) to pay,
@@ -1065,39 +1121,50 @@ const UserAgreement = () => {
                                             laundering, terrorist activity or other illegal actions (activities);
                                         </li>
                                         <li className={classes.filled_item}>use the Services (the Platform) for
-                                            financing operations or activities, for which administrative, criminal or
+                                            financing operations or activities, for which administrative, criminal
+                                            or
                                             civil liability is provided for in accordance with the applicable Laws;
                                         </li>
                                         <li className={classes.filled_item}>use the Services (the Platform) in a way
-                                            that may disrupt, adversely affect or prevent other Users from the full use
+                                            that may disrupt, adversely affect or prevent other Users from the full
+                                            use
                                             of the Services (the Platform) or somehow damage, disable, overload or
                                             disrupt the functioning of the Services (the Platform);
                                         </li>
-                                        <li className={classes.filled_item}>use any robots, crawlers, scrapers or other
-                                            automated tools or interfaces that were not provided by GOTOWIN to access
+                                        <li className={classes.filled_item}>use any robots, crawlers, scrapers or
+                                            other
+                                            automated tools or interfaces that were not provided by GOTOWIN to
+                                            access
                                             the Services or to extract data;
                                         </li>
                                         <li className={classes.filled_item}>use or try to use the Account of another
                                             User;
                                         </li>
-                                        <li className={classes.filled_item}>use the Services (the Platform) bypassing
-                                            the procedure stipulated by this User Agreement or bypassing/exceeding the
+                                        <li className={classes.filled_item}>use the Services (the Platform)
+                                            bypassing
+                                            the procedure stipulated by this User Agreement or bypassing/exceeding
+                                            the
                                             User’s level of access to the Platform; try to access any area of the
                                             Services, the Website or the Platform, to which the User does not have
                                             access rights;
                                         </li>
-                                        <li className={classes.filled_item}>change the software used by the Website or
+                                        <li className={classes.filled_item}>change the software used by the Website
+                                            or
                                             the Platform in any way, take any actions aimed at changing the
                                             functionality and operability of the Website, the Platform disabling or
                                             interfering with the operation of the Website;
                                         </li>
-                                        <li className={classes.filled_item}>insult in words or perform any other actions
+                                        <li className={classes.filled_item}>insult in words or perform any other
+                                            actions
                                             violating rights and freedoms of other Users and/or third parties;
                                         </li>
                                         <li className={classes.filled_item}>copy and/or disseminate any objects or
-                                            intellectual property published on the Website or used by the Platform; copy
-                                            or otherwise use parts of the program (code) of the Website, the Platform,
-                                            as well as design of the Website; use Personal data of third parties without
+                                            intellectual property published on the Website or used by the Platform;
+                                            copy
+                                            or otherwise use parts of the program (code) of the Website, the
+                                            Platform,
+                                            as well as design of the Website; use Personal data of third parties
+                                            without
                                             their permission;
                                         </li>
                                         <li className={classes.filled_item}>develop any third-party applications
@@ -1106,13 +1173,15 @@ const UserAgreement = () => {
                                     </ul>
                                 </li>
                                 <li className={classes.letter_item}>
-                                    In case of detection of the suspicious Transactions from the Users, access to the
+                                    In case of detection of the suspicious Transactions from the Users, access to
+                                    the
                                     Account may be limited
                                     (suspended) for verification for a term up to 30 Business days.
                                 </li>
 
                                 <li className={classes.letter_item}>
-                                    The User agrees that in case of a breach of this User Agreement, GOTOWIN is entitled
+                                    The User agrees that in case of a breach of this User Agreement, GOTOWIN is
+                                    entitled
                                     to suspend or terminate
                                     the User’s Account.
                                 </li>
@@ -1124,26 +1193,38 @@ const UserAgreement = () => {
                             <ul className={classes.letter_list}>
                                 <li className={classes.letter_item}>
                                     Trading with, Transactions, holding of Digital assets are related to significant
-                                    risks. Prices may fluctuate on a daily basis. Such price fluctuations can increase
+                                    risks. Prices may fluctuate on a daily basis. Such price fluctuations can
+                                    increase
                                     or decrease the value of the User’s assets at any time. Any currency, whether
-                                    virtual or not, can undergo significant fluctuations in value, as well as completely
-                                    depreciate. There is an inherent risk of losses as a result of purchase, sale, or
+                                    virtual or not, can undergo significant fluctuations in value, as well as
+                                    completely
+                                    depreciate. There is an inherent risk of losses as a result of purchase, sale,
+                                    or
                                     any trading in the market.
                                 </li>
                                 <li className={classes.letter_item}>
-                                    Trading with Digital assets is also related to special risks that are not usually
-                                    peculiar to Fiat money and/or goods and/or commodity (not virtual/digital) assets.
-                                    Unlike most Fiat money guaranteed by governments, Digital assets are unique types of
-                                    assets supported by technology and trust. There is no central bank that could issue
-                                    more currency or take measures to protect the value of Digital assets in a crisis.
+                                    Trading with Digital assets is also related to special risks that are not
+                                    usually
+                                    peculiar to Fiat money and/or goods and/or commodity (not virtual/digital)
+                                    assets.
+                                    Unlike most Fiat money guaranteed by governments, Digital assets are unique
+                                    types of
+                                    assets supported by technology and trust. There is no central bank that could
+                                    issue
+                                    more currency or take measures to protect the value of Digital assets in a
+                                    crisis.
                                 </li>
                                 <li className={classes.letter_item}>
-                                    Trading with Digital assets is often subject to irrational (or rational) “bubbles”
-                                    or loss of confidence, which can lead to a drop in demand relative to supply. For
-                                    example, confidence in Digital assets may fall due to unexpected changes imposed by
+                                    Trading with Digital assets is often subject to irrational (or rational)
+                                    “bubbles”
+                                    or loss of confidence, which can lead to a drop in demand relative to supply.
+                                    For
+                                    example, confidence in Digital assets may fall due to unexpected changes imposed
+                                    by
                                     software developers or other persons, government measures, creation of superior
                                     competing alternative Digital assets, as well as deflationary or inflationary
-                                    spirals. Confidence can also be reduced due to technical problems: if the anonymity
+                                    spirals. Confidence can also be reduced due to technical problems: if the
+                                    anonymity
                                     of the system is compromised, if assets are lost or stolen, or if hackers or
                                     governments can prevent any Transactions.
                                 </li>
@@ -1152,18 +1233,23 @@ const UserAgreement = () => {
                                     Agreement.
                                 </li>
                                 <li className={classes.letter_item}>
-                                    The User understands that all operations with Digital assets are irreversible and
-                                    that the Funds received as a result of the Transaction can be returned only under a
+                                    The User understands that all operations with Digital assets are irreversible
+                                    and
+                                    that the Funds received as a result of the Transaction can be returned only
+                                    under a
                                     separate additional agreement/deal with the appropriate Person. The User cannot
-                                    cancel, recall or change any Order with completed or executed status. The User bears
+                                    cancel, recall or change any Order with completed or executed status. The User
+                                    bears
                                     responsibility for the accurateness and correctness of the Transaction details
-                                    (network/network standard/wallet address/memo or destination tag) and carries the
+                                    (network/network standard/wallet address/memo or destination tag) and carries
+                                    the
                                     risk of losing funds, no losses will be compensated by GOTOWIN in such cases.
                                 </li>
                                 <li className={classes.letter_item}>
                                     The User warrants that he/she is aware of the basic principles of dealing with
                                     Digital assets, as well as of characteristics of Digital assets affecting their
-                                    value and he/she is also aware of the relevant risks, in particular, volatility and
+                                    value and he/she is also aware of the relevant risks, in particular, volatility
+                                    and
                                     fluctuations in their value. The User must understand that there is a high
                                     probability not to receive a fair and accurate price for the Digital assets when
                                     trading.
@@ -1175,12 +1261,16 @@ const UserAgreement = () => {
                                 </li>
                                 <li className={classes.letter_item}>
                                     The User declares to be aware of and understand and agree that GOTOWIN can’t
-                                    directly or indirectly be liable for, and/or have any obligations with respect to or
-                                    in any other way guarantee the performance or payment of any Transaction concluded
+                                    directly or indirectly be liable for, and/or have any obligations with respect
+                                    to or
+                                    in any other way guarantee the performance or payment of any Transaction
+                                    concluded
                                     by the User on the Platform and using blockchain and/or third parties’
-                                    services/technology (in part of functionality, proper performance, reliability, etc.
+                                    services/technology (in part of functionality, proper performance, reliability,
+                                    etc.
                                     of such blockchain/technology), and neither GOTOWIN nor Third-party provider is
-                                    liable to the User or any other Person for such Transactions performed through the
+                                    liable to the User or any other Person for such Transactions performed through
+                                    the
                                     Platform.
                                 </li>
                                 <li className={classes.letter_item}>
@@ -1194,8 +1284,10 @@ const UserAgreement = () => {
                             Intellectual property and limited use
                             <ul className={classes.letter_list}>
                                 <li className={classes.letter_item}>
-                                    GOTOWIN is the sole owner (except to the extent owned by third-party licensors) of
-                                    all rights, titles and interests in and to the Platform, the Website, the Data, and
+                                    GOTOWIN is the sole owner (except to the extent owned by third-party licensors)
+                                    of
+                                    all rights, titles and interests in and to the Platform, the Website, the Data,
+                                    and
                                     each component thereof, trademarks, all custom modifications, work products,
                                     deliverables, or other materials created by or on behalf of GOTOWIN, and all
                                     intellectual property rights with respect thereto, and all rights not explicitly
@@ -1203,9 +1295,12 @@ const UserAgreement = () => {
                                 </li>
                                 <li className={classes.letter_item}>
                                     The User shall not obtain any rights in or to the intellectual property rights,
-                                    except for those limited rights licensed to him/her by GOTOWIN. The User shall take
-                                    all steps necessary to maintain the confidentiality of all documents and material
-                                    provided by GOTOWIN or any of its Third-party providers with respect to the Platform
+                                    except for those limited rights licensed to him/her by GOTOWIN. The User shall
+                                    take
+                                    all steps necessary to maintain the confidentiality of all documents and
+                                    material
+                                    provided by GOTOWIN or any of its Third-party providers with respect to the
+                                    Platform
                                     and each component thereof.
                                 </li>
                                 <li className={classes.letter_item}>
@@ -1215,8 +1310,10 @@ const UserAgreement = () => {
                                             alter, maintain, enhance or otherwise modify the Platform;
                                         </li>
                                         <li className={classes.filled_item}>
-                                            disassemble, decompile, reverse-engineer, copy, bug fix, correct, update,
-                                            transfer, broadcast or create derivative based on the Platform nor otherwise
+                                            disassemble, decompile, reverse-engineer, copy, bug fix, correct,
+                                            update,
+                                            transfer, broadcast or create derivative based on the Platform nor
+                                            otherwise
                                             take express action to develop the equivalent of the Platform (similar
                                             Platform).
                                         </li>
@@ -1224,14 +1321,17 @@ const UserAgreement = () => {
                                     <li className={classes.letter_item}>
                                         Subject to the User’s compliance with the terms and conditions of this User
                                         Agreement, AML/CFT Policy and procedures, Privacy policy, Fees the User is
-                                        granted a limited, revocable, non-exclusive, non-transferable license to access
+                                        granted a limited, revocable, non-exclusive, non-transferable license to
+                                        access
                                         and use the Platform, the Website (the term may be set/limited/altered by
                                         GOTOWIN) for purposes set out in, and in a manner consistent with, this User
                                         Agreement, AML/CFT Policy and procedures, Privacy Policy.
                                     </li>
                                     <li className={classes.letter_item}>
-                                        The User acknowledges and agrees that GOTOWIN shall use information regarding
-                                        the User’s Personal data (information) in accordance with its Privacy policy, as
+                                        The User acknowledges and agrees that GOTOWIN shall use information
+                                        regarding
+                                        the User’s Personal data (information) in accordance with its Privacy
+                                        policy, as
                                         such policy may be amended from time to time by GOTOWIN.
                                     </li>
                                 </li>
@@ -1244,72 +1344,98 @@ const UserAgreement = () => {
                                 <li className={classes.letter_item}>
                                     The User acknowledges and agrees that GOTOWIN shall have sole discretion and
                                     absolute control over, and the right to modify at any time, the Website and the
-                                    Platform, as well as the exclusive right to make any changes to their functionality,
+                                    Platform, as well as the exclusive right to make any changes to their
+                                    functionality,
                                     configuration, appearance, and content.
                                 </li>
                                 <li className={classes.letter_item}>
                                     We do not guarantee that the Website, the Services, and/or the Platform will be
-                                    available all the time for use without the absence of any delays, failures, errors,
+                                    available all the time for use without the absence of any delays, failures,
+                                    errors,
                                     or loss of transmitted information. We do not guarantee that the Services (the
                                     Platform) will be available via the mobile application.
                                 </li>
                                 <li className={classes.letter_item}>
-                                    We will make reasonable efforts to ensure that the Users can access the Website, the
-                                    Services, and/or the Platform in accordance with this User Agreement. However, we
-                                    may suspend the use of the Website and/or the Platform for maintenance and will use
+                                    We will make reasonable efforts to ensure that the Users can access the Website,
+                                    the
+                                    Services, and/or the Platform in accordance with this User Agreement. However,
+                                    we
+                                    may suspend the use of the Website and/or the Platform for maintenance and will
+                                    use
                                     reasonable efforts to notify the Users. The User acknowledges that this (prior
-                                    noticing) may not be possible in an emergency, and the User assumes risks associated
+                                    noticing) may not be possible in an emergency, and the User assumes risks
+                                    associated
                                     with the fact that he/she cannot always use the Website and/or the Platform or
                                     perform urgent Transactions using his/her Account.
                                 </li>
                                 <li className={classes.letter_item}>
                                     Any use of the Internet may be subject to a virus attack and/or a communication
-                                    failure. GOTOWIN accepts no responsibility for any damage or interruption caused by
-                                    computer viruses, spyware, Trojan horses, worms, or other malware that can affect
-                                    the User’s system, computer, or other equipment, or any phishing, spoofing, or other
-                                    virus attacks. GOTOWIN recommends that the User always uses reliable and affordable
-                                    software to scan and prevent viruses. The User should also be careful when viewing
-                                    text messages and e-mails that allegedly come from GOTOWIN, as SMS and e-mails are
+                                    failure. GOTOWIN accepts no responsibility for any damage or interruption caused
+                                    by
+                                    computer viruses, spyware, Trojan horses, worms, or other malware that can
+                                    affect
+                                    the User’s system, computer, or other equipment, or any phishing, spoofing, or
+                                    other
+                                    virus attacks. GOTOWIN recommends that the User always uses reliable and
+                                    affordable
+                                    software to scan and prevent viruses. The User should also be careful when
+                                    viewing
+                                    text messages and e-mails that allegedly come from GOTOWIN, as SMS and e-mails
+                                    are
                                     also vulnerable to phishing and spoofing, as well as some viruses.
-                                    It is advisable that the User enters his/her Account only through the Website (to
+                                    It is advisable that the User enters his/her Account only through the Website
+                                    (to
                                     avoid fraud/phishing websites the User must carefully check the address of the
-                                    Platform each time he/she uses the Services, the Platform) and avoid messages from
+                                    Platform each time he/she uses the Services, the Platform) and avoid messages
+                                    from
                                     unverified senders offering him/her entry options.
                                 </li>
 
                                 <li className={classes.letter_item}>
-                                    Despite the fact that we intend to provide accurate and timely information on the
-                                    Website, the Website (including, without limitation, content thereof) may not always
+                                    Despite the fact that we intend to provide accurate and timely information on
+                                    the
+                                    Website, the Website (including, without limitation, content thereof) may not
+                                    always
                                     be completely accurate, complete or current and may also contain technical
                                     inaccuracies or typos.
                                 </li>
                                 <li className={classes.letter_item}>
                                     In an effort to continue to provide the User with the most complete and accurate
                                     information possible, information may, within limits permitted by the applicable
-                                    Laws, be amended or updated without a prior notice, including, without limitation,
-                                    in relation to our policies, products, and the Services. Accordingly, the User must
-                                    verify all information before relying on it (the User must get acknowledged with the
-                                    up-to-date version of User Agreement before each using the Services/the Platform)
-                                    and all decisions based on the information posted on the Website are the User’s sole
+                                    Laws, be amended or updated without a prior notice, including, without
+                                    limitation,
+                                    in relation to our policies, products, and the Services. Accordingly, the User
+                                    must
+                                    verify all information before relying on it (the User must get acknowledged with
+                                    the
+                                    up-to-date version of User Agreement before each using the Services/the
+                                    Platform)
+                                    and all decisions based on the information posted on the Website are the User’s
+                                    sole
                                     responsibility (we are not responsible for them).
                                 </li>
                                 <li className={classes.letter_item}>
-                                    If the User uploads any content to the Website, including, without limitation, any
-                                    text, picture or other material, the User represents and warrants that such content
+                                    If the User uploads any content to the Website, including, without limitation,
+                                    any
+                                    text, picture or other material, the User represents and warrants that such
+                                    content
                                     will not consist of: false, misleading or illegally obtained information;
-                                    copyrighted material the User is not entitled to publicly post; obscene, abusive,
+                                    copyrighted material the User is not entitled to publicly post; obscene,
+                                    abusive,
                                     illegal content or any other content that can damage or jeopardize GOTOWIN’s
                                     reputation; or anything prohibited by any applicable Law.
                                 </li>
                                 <li className={classes.letter_item}>
                                     Without exempting the User from the above liability, GOTOWIN may, at its sole
-                                    discretion, delete any content violating the above requirements, in addition to any
+                                    discretion, delete any content violating the above requirements, in addition to
+                                    any
                                     further actions GOTOWIN may deem necessary GOTOWIN is not obligated to check any
                                     such content and assumes no responsibility in this regard.
                                 </li>
                                 <li className={classes.letter_item}>
                                     The User acknowledges and agrees to the fact that GOTOWIN cannot and does not
-                                    confirm or guarantee the authenticity, identity or reliability of any content and
+                                    confirm or guarantee the authenticity, identity or reliability of any content
+                                    and
                                     information posted by or attributed to any User of the Website; thus, the User
                                     relies on any content of the other Users solely at his/her discretion and risk.
                                 </li>
@@ -1319,29 +1445,37 @@ const UserAgreement = () => {
                             Restriction, suspension or termination
                             <ul className={classes.letter_list}>
                                 <li className={classes.letter_item}>
-                                    The User can terminate this User Agreement with GOTOWIN and close his/her Account at
+                                    The User can terminate this User Agreement with GOTOWIN and close his/her
+                                    Account at
                                     any time after having settled all incomplete Transactions (the User participates
-                                    in), having paid applicable Fees and executed all other obligations, which either
+                                    in), having paid applicable Fees and executed all other obligations, which
+                                    either
                                     directly or indirectly arose from his/her use of the Services (the Platform).
                                 </li>
                                 <li className={classes.letter_item}>
-                                    Notwithstanding any other provision of this User Agreement, the User confirms that
+                                    Notwithstanding any other provision of this User Agreement, the User confirms
+                                    that
                                     GOTOWIN is entitled to restrict the User’s access, set limits on the User and/or
                                     temporarily suspend the Account and/or the User’s access to the Website, the
-                                    Platform, the Services (including the ability to place the Orders and perform the
-                                    Transactions), in whole or in part, or to refuse to enter into, to participate in
+                                    Platform, the Services (including the ability to place the Orders and perform
+                                    the
+                                    Transactions), in whole or in part, or to refuse to enter into, to participate
+                                    in
                                     any or all Transactions, to block the Funds on the Account if in GOTOWIN's sole
                                     discretion any of the following circumstances occur or GOTOWIN considers such
                                     circumstance to be likely to occur or if any of the following circumstances is
                                     possible in the opinion of GOTOWIN:
                                     <ul className={classes.filled_list}>
                                         <li className={classes.filled_item}>
-                                            complete or partial failure of the Website and/or the Platform, including
+                                            complete or partial failure of the Website and/or the Platform,
+                                            including
                                             failure of any of the technologies constituting the Website and/or the
                                             Platform or any communication channels within the Website and/or the
-                                            Platform or between the Website and/or the Platform and any other Person or
+                                            Platform or between the Website and/or the Platform and any other Person
+                                            or
                                             counterparty or any other circumstance when GOTOWIN considers, at its
-                                            discretion, that GOTOWIN is not able to provide access to the Website and/or
+                                            discretion, that GOTOWIN is not able to provide access to the Website
+                                            and/or
                                             to the Platform;
                                         </li>
                                         <li className={classes.filled_item}>
@@ -1357,14 +1491,17 @@ const UserAgreement = () => {
                                             restriction of any Digital asset);
                                         </li>
                                         <li className={classes.filled_item}>
-                                            detection of unusual and/or suspicious activity on the Account; detection of
+                                            detection of unusual and/or suspicious activity on the Account;
+                                            detection of
                                             unauthorized access to the Account;
                                         </li>
                                         <li className={classes.filled_item}>
                                             in connection with the procedural actions of Governmental authorities in
-                                            relation to a specific Account and/or the User, criminal investigation, or
+                                            relation to a specific Account and/or the User, criminal investigation,
+                                            or
                                             any legal process; by a court decision or decision of a Governmental
-                                            authority; if the User’s Account and activities related to it have become
+                                            authority; if the User’s Account and activities related to it have
+                                            become
                                             the subject of judicial and administrative proceedings;
                                         </li>
                                         <li className={classes.filled_item}>
@@ -1376,55 +1513,70 @@ const UserAgreement = () => {
                                     </ul>
                                 </li>
                                 <li className={classes.letter_item}>
-                                    Any action taken by GOTOWIN in accordance with this section will continue for a term
-                                    determined at the discretion of GOTOWIN. The User agrees that any evasion of or any
-                                    attempt to evade access restrictions, limits, or temporary suspension in accordance
-                                    with this section of this User Agreement constitutes a material breach of this User
-                                    Agreement; and taking any action in accordance with this section is a right and not
+                                    Any action taken by GOTOWIN in accordance with this section will continue for a
+                                    term
+                                    determined at the discretion of GOTOWIN. The User agrees that any evasion of or
+                                    any
+                                    attempt to evade access restrictions, limits, or temporary suspension in
+                                    accordance
+                                    with this section of this User Agreement constitutes a material breach of this
+                                    User
+                                    Agreement; and taking any action in accordance with this section is a right and
+                                    not
                                     an obligation of GOTOWIN.
                                 </li>
                                 <li className={classes.letter_item}>
                                     In addition, the User acknowledges and agrees that in case of any of the
-                                    circumstances listed in this section, GOTOWIN may cancel the Transaction the User
+                                    circumstances listed in this section, GOTOWIN may cancel the Transaction the
+                                    User
                                     has previously initiated or performed using the Platform.
                                 </li>
                                 <li className={classes.letter_item}>
-                                    The User agrees that GOTOWIN is entitled to immediately suspend the Account, block
-                                    any Funds on the Account, to suspend the access to the Services (to the Platform)
+                                    The User agrees that GOTOWIN is entitled to immediately suspend the Account,
+                                    block
+                                    any Funds on the Account, to suspend the access to the Services (to the
+                                    Platform)
                                     and/or terminate the Account, in the following cases:
                                     <ul className={classes.filled_list}>
                                         <li className={classes.filled_item}>
-                                            GOTOWIN has detected on the Account activity related to money laundering,
+                                            GOTOWIN has detected on the Account activity related to money
+                                            laundering,
                                             financing of terrorism; breaking by the User the applicable Anti-Money
                                             Laundering, Countering Financing of Terrorism Laws and regulations;
                                         </li>
                                         <li className={classes.filled_item}>
-                                            the User’s Account and activities related to it have become the subject of
+                                            the User’s Account and activities related to it have become the subject
+                                            of
                                             criminal investigation;
                                         </li>
                                         <li className={classes.filled_item}>
                                             using the Account by UN, EU, or USA sanctioned person;
                                         </li>
                                         <li className={classes.filled_item}>
-                                            when there is an actual breach by the User of this User Agreement, Privacy
+                                            when there is an actual breach by the User of this User Agreement,
+                                            Privacy
                                             Policy, or any applicable Laws and regulations;
                                         </li>
                                         <li className={classes.filled_item}>
-                                            GOTOWIN is required to do so by a court order or an order of an authorized
+                                            GOTOWIN is required to do so by a court order or an order of an
+                                            authorized
                                             Governmental authority.
                                         </li>
                                     </ul>
                                 </li>
                                 <li className={classes.letter_item}>
-                                    In case of termination of this User Agreement due to fraudulent activity, breaking
+                                    In case of termination of this User Agreement due to fraudulent activity,
+                                    breaking
                                     Anti-Money Laundering,
                                     Countering Financing of Terrorism Laws and regulations, a material breach by the
                                     User of this User Agreement
-                                    (including, but not limited to using the Services by Sanctioned Person) or within
+                                    (including, but not limited to using the Services by Sanctioned Person) or
+                                    within
                                     the investigation of
                                     fraudulent Transactions and combating money laundering, GOTOWIN is entitled to
                                     cancel the data of the User’s
-                                    Account and/or to impose (and to charge) a fine in the amount of the entire balance
+                                    Account and/or to impose (and to charge) a fine in the amount of the entire
+                                    balance
                                     of Funds on the User’s
                                     Account.
                                 </li>
@@ -1434,34 +1586,46 @@ const UserAgreement = () => {
                             Representations and warranties
                             <ul className={classes.letter_list}>
                                 <li className={classes.letter_item}>
-                                    On the execution date of this User Agreement and on the date of each using of the
+                                    On the execution date of this User Agreement and on the date of each using of
+                                    the
                                     Services/the Website
                                     (Depositing/Withdrawing any Funds, placing each Order, making/initiating each
                                     Transaction), the User
-                                    represents and warrants to GOTOWIN and agree in favor of GOTOWIN, its affiliates and
+                                    represents and warrants to GOTOWIN and agree in favor of GOTOWIN, its affiliates
+                                    and
                                     their Representatives
                                     that:
                                     <ul className={classes.filled_list}>
                                         <li className={classes.filled_item}>
-                                            The User has reviewed all the documents (including those published on the
+                                            The User has reviewed all the documents (including those published on
+                                            the
                                             Website) provided to the User in connection with the Services and the
                                             Platform, and the User understands and agrees that using the Services
-                                            provided by GOTOWIN will be governed by these documents as amended from time
-                                            to time. The User must not apply for registration on the Platform in order
+                                            provided by GOTOWIN will be governed by these documents as amended from
+                                            time
+                                            to time. The User must not apply for registration on the Platform in
+                                            order
                                             to create the Account or deposit the Funds or place the Order,
-                                            perform/initiate Transaction, use other Services available via the Website
-                                            if the User is not aware of how the Services or the Platform operates or of
-                                            risks related to the Services or of the nature of the risks associated with
+                                            perform/initiate Transaction, use other Services available via the
+                                            Website
+                                            if the User is not aware of how the Services or the Platform operates or
+                                            of
+                                            risks related to the Services or of the nature of the risks associated
+                                            with
                                             it.
                                         </li>
                                         <li className={classes.filled_item}>
                                             The execution of this User Agreement and performance of all obligations
                                             contemplated under this User Agreement have been duly authorized by all
-                                            necessary action by the User; and each Person executing this User Agreement
-                                            (or authorized to accept its terms electronically or otherwise) and entering
+                                            necessary action by the User; and each Person executing this User
+                                            Agreement
+                                            (or authorized to accept its terms electronically or otherwise) and
+                                            entering
                                             into each Transaction (or using other Services) hereunder on the User’s
-                                            behalf has been duly authorized to do so. All information provided by the
-                                            User to GOTOWIN, including, but not limited to, the information provided by
+                                            behalf has been duly authorized to do so. All information provided by
+                                            the
+                                            User to GOTOWIN, including, but not limited to, the information provided
+                                            by
                                             the User in his/her Account, is reliable, accurate, and not misleading.
                                         </li>
                                     </ul>
@@ -1470,34 +1634,45 @@ const UserAgreement = () => {
                                     The User shall guarantee that:
                                     <ul className={classes.filled_list}>
                                         <li className={classes.filled_item}>
-                                            The User is able to make or take delivery of the full amount of the Funds
-                                            required to be delivered as a result of each Transaction the User entered
+                                            The User is able to make or take delivery of the full amount of the
+                                            Funds
+                                            required to be delivered as a result of each Transaction the User
+                                            entered
                                             in;
                                         </li>
                                         <li className={classes.filled_item}>
                                             Execution by the User of this User Agreement and entering into each
-                                            Transaction (and/or using other Services), as well as the User’s performance
+                                            Transaction (and/or using other Services), as well as the User’s
+                                            performance
                                             of his/her obligations under this User Agreement and his/her use of the
                                             Services (the Platform) will not violate any applicable Law;
                                         </li>
                                         <li className={classes.filled_item}>
-                                            The User has received and will comply with the terms and conditions of all
-                                            licenses, consents, registrations, permits, authorizations, exceptions, and
-                                            memberships necessary to use the Services and the Platform under this User
-                                            Agreement, including Depositing/Withdrawing the Funds, entering/executing
+                                            The User has received and will comply with the terms and conditions of
+                                            all
+                                            licenses, consents, registrations, permits, authorizations, exceptions,
+                                            and
+                                            memberships necessary to use the Services and the Platform under this
+                                            User
+                                            Agreement, including Depositing/Withdrawing the Funds,
+                                            entering/executing
                                             Transactions on the Platform;
                                         </li>
                                         <li className={classes.filled_item}>
-                                            The User has sufficient expertise, experience, and knowledge necessary to
-                                            make informed decisions regarding using the Services/the Platform, and the
+                                            The User has sufficient expertise, experience, and knowledge necessary
+                                            to
+                                            make informed decisions regarding using the Services/the Platform, and
+                                            the
                                             User will not rely on any message or statement (written or oral) of User
                                             represents and warrants to GOTOWIN an as investment advice or
-                                            recommendations to enter into any Transaction; the User will be prudent and
+                                            recommendations to enter into any Transaction; the User will be prudent
+                                            and
                                             careful in determining whether to enter into Transaction or otherwise
                                             perform activities on the Platform (use the Services);
                                         </li>
                                         <li className={classes.filled_item}>
-                                            Person accessing the Platform acts as a principal, and not on behalf of any
+                                            Person accessing the Platform acts as a principal, and not on behalf of
+                                            any
                                             third party unless this Person is a Representative of the User.
                                         </li>
                                     </ul>
@@ -1514,32 +1689,45 @@ const UserAgreement = () => {
                             <ul className={classes.letter_list}>
                                 <li className={classes.letter_item}>
                                     To the maximal extent permitted under the applicable Law, the Services, the
-                                    Platform, the Website, the mobile application, materials, and any product or other
+                                    Platform, the Website, the mobile application, materials, and any product or
+                                    other
                                     item provided by or on behalf of User represents and warrants to GOTOWIN an are
-                                    provided on an “as is” and “as available” basis and User represents and warrants to
-                                    GOTOWIN an expressly disclaims, and the User waives, any and all other warranties of
+                                    provided on an “as is” and “as available” basis and User represents and warrants
+                                    to
+                                    GOTOWIN an expressly disclaims, and the User waives, any and all other
+                                    warranties of
                                     any kind, whether expressed or implied, including, without limitation, implied
-                                    warranties of functionality, fitness for a particular purpose or non-infringement or
-                                    warranties arising from the course of performance, course of dealing or use of the
+                                    warranties of functionality, fitness for a particular purpose or
+                                    non-infringement or
+                                    warranties arising from the course of performance, course of dealing or use of
+                                    the
                                     Services, the Platform, the Website, the mobile application.
                                 </li>
                                 <li className={classes.letter_item}>
-                                    Without limiting the foregoing, User represents and warrants to GOTOWIN an does not
+                                    Without limiting the foregoing, User represents and warrants to GOTOWIN an does
+                                    not
                                     represent or warrant that the Services, the Platform, the Website, the mobile
-                                    application, or materials are accurate, complete, reliable, up-to-date, error-free,
+                                    application, or materials are accurate, complete, reliable, up-to-date,
+                                    error-free,
                                     or free of viruses or other harmful components.
                                 </li>
                                 <li className={classes.letter_item}>
-                                    User represents and warrants to GOTOWIN an does not guarantee that any Order will be
-                                    executed, accepted, recorded or remain open. Except for the express statements set
-                                    forth in this User Agreement, the User hereby acknowledges and agrees that he/she
-                                    has not relied upon any other statement or understanding, whether written or oral,
-                                    with respect to his/her use and access of the Services, the Platform, the Website,
+                                    User represents and warrants to GOTOWIN an does not guarantee that any Order
+                                    will be
+                                    executed, accepted, recorded or remain open. Except for the express statements
+                                    set
+                                    forth in this User Agreement, the User hereby acknowledges and agrees that
+                                    he/she
+                                    has not relied upon any other statement or understanding, whether written or
+                                    oral,
+                                    with respect to his/her use and access of the Services, the Platform, the
+                                    Website,
                                     the mobile application.
                                 </li>
                                 <li className={classes.letter_item}>
                                     Without limiting the foregoing, the User hereby understands and agrees that User
-                                    represents and warrants to GOTOWIN an will not be liable for any losses or damages
+                                    represents and warrants to GOTOWIN an will not be liable for any losses or
+                                    damages
                                     arising out of or relating to:
                                     <ul className={classes.filled_list}>
                                         <li className={classes.filled_item}>
@@ -1550,71 +1738,100 @@ const UserAgreement = () => {
                                             transmitting/obtaining any such Data;
                                         </li>
                                         <li className={classes.filled_item}>
-                                            any damages incurred by another User’s actions, omissions or violation of
+                                            any damages incurred by another User’s actions, omissions or violation
+                                            of
                                             this User Agreement.
                                         </li>
                                     </ul>
                                 </li>
 
                                 <li className={classes.letter_item}>
-                                    The disclaimer of implied warranties contained herein may not apply if and to the
+                                    The disclaimer of implied warranties contained herein may not apply if and to
+                                    the
                                     extent it is prohibited by the applicable Law.
                                 </li>
                                 <li className={classes.letter_item}>
                                     To the maximum extent permitted by the applicable Law, in no event will User
-                                    represents and warrants to GOTOWIN an’s affiliates, User represents and warrants to
-                                    GOTOWIN an’s and its affiliates’ shareholders, owners, members, directors, officers,
-                                    employees, attorneys, agents, representatives, suppliers, or contractors be liable
+                                    represents and warrants to GOTOWIN an’s affiliates, User represents and warrants
+                                    to
+                                    GOTOWIN an’s and its affiliates’ shareholders, owners, members, directors,
+                                    officers,
+                                    employees, attorneys, agents, representatives, suppliers, or contractors be
+                                    liable
                                     for any incidental, indirect, consequential or similar damages or liabilities
-                                    whatsoever (including, without limitation, damages for loss of data, information,
+                                    whatsoever (including, without limitation, damages for loss of data,
+                                    information,
                                     revenue, profits or other benefits) arising out of or in connection with the
                                     Services, the Platform, the Website, the mobile application, any performance or
-                                    non-performance of the Services, the Platform, the Website, the mobile application,
-                                    or any other product or other item provided by or on behalf of User represents and
+                                    non-performance of the Services, the Platform, the Website, the mobile
+                                    application,
+                                    or any other product or other item provided by or on behalf of User represents
+                                    and
                                     warrants to GOTOWIN an.
                                 </li>
                                 <li className={classes.letter_item}>
-                                    Notwithstanding the foregoing, in no event will the liability of User represents and
+                                    Notwithstanding the foregoing, in no event will the liability of User represents
+                                    and
                                     warrants to GOTOWIN an, its affiliates and their shareholders, owners, members,
-                                    directors, officers, employees, attorneys, agents, representatives, suppliers, or
-                                    contractors arising out of or in connection with using the Services, the Platform,
+                                    directors, officers, employees, attorneys, agents, representatives, suppliers,
+                                    or
+                                    contractors arising out of or in connection with using the Services, the
+                                    Platform,
                                     the Website, the mobile application, any performance or non-performance of the
-                                    Services, the Platform, the Website, the mobile application, or any other product or
-                                    other item provided by or on behalf of User represents and warrants to GOTOWIN an or
-                                    its affiliates exceed the amount of Fees paid by you to User represents and warrants
+                                    Services, the Platform, the Website, the mobile application, or any other
+                                    product or
+                                    other item provided by or on behalf of User represents and warrants to GOTOWIN
+                                    an or
+                                    its affiliates exceed the amount of Fees paid by you to User represents and
+                                    warrants
                                     to GOTOWIN an under this User Agreement in the six-month period immediately
                                     preceding the event giving rise to the claim for liability.
                                 </li>
                                 <li className={classes.letter_item}>
-                                    Without prejudice to the foregoing, User represents and warrants to GOTOWIN an makes
-                                    no representations or warranties regarding the timeliness, accuracy or completeness
-                                    of any Data or other information on the Platform or results the User receives when
-                                    accessing or using the Platform. User represents and warrants to GOTOWIN an does not
-                                    bear any responsibility for claims related to any software, technology or equipment,
-                                    the Platform, existing technology, Data or any other information, materials, Digital
-                                    assets or the fact that the Platform meets the User’s requirements or that access to
+                                    Without prejudice to the foregoing, User represents and warrants to GOTOWIN an
+                                    makes
+                                    no representations or warranties regarding the timeliness, accuracy or
+                                    completeness
+                                    of any Data or other information on the Platform or results the User receives
+                                    when
+                                    accessing or using the Platform. User represents and warrants to GOTOWIN an does
+                                    not
+                                    bear any responsibility for claims related to any software, technology or
+                                    equipment,
+                                    the Platform, existing technology, Data or any other information, materials,
+                                    Digital
+                                    assets or the fact that the Platform meets the User’s requirements or that
+                                    access to
                                     it must be continuous, timely, safe, complete, accurate, free from errors and
                                     defects.
                                 </li>
                                 <li className={classes.letter_item}>
-                                    The User acknowledges that the software and equipment he/she uses may not support
+                                    The User acknowledges that the software and equipment he/she uses may not
+                                    support
                                     certain functions of the Platform.
                                 </li>
                                 <li className={classes.letter_item}>
                                     Neither User represents and warrants to GOTOWIN an nor any third party providing
-                                    information on the Website, the Platform recommends, endorses, protects or acts as a
+                                    information on the Website, the Platform recommends, endorses, protects or acts
+                                    as a
                                     guarantor of any Digital asset, trading pair or Transaction that is present or
-                                    performed on the Platform. The User acknowledges significant risks associated with
-                                    the Digital assets markets and trading Transactions. User represents and warrants to
+                                    performed on the Platform. The User acknowledges significant risks associated
+                                    with
+                                    the Digital assets markets and trading Transactions. User represents and
+                                    warrants to
                                     GOTOWIN an does not provide financial, tax, legal, investment or other
                                     recommendations. Any information on prices, quotes, forecasts, profitability
-                                    estimates or historical indicators is intended for informational purposes only and
+                                    estimates or historical indicators is intended for informational purposes only
+                                    and
                                     does not guarantee future results and is not an offer to buy or sell, or a
-                                    recommendation to buy or sell any Digital asset or to perform any Transaction. The
-                                    User agrees that the Platform is not and cannot be considered the main reason for
+                                    recommendation to buy or sell any Digital asset or to perform any Transaction.
+                                    The
+                                    User agrees that the Platform is not and cannot be considered the main reason
+                                    for
                                     his/her decision to perform any Transaction, and User represents and warrants to
                                     GOTOWIN an is not and cannot be considered the User’s financial consultant or
-                                    fiduciary trustee. By entering into this User Agreement, the User acknowledges that
+                                    fiduciary trustee. By entering into this User Agreement, the User acknowledges
+                                    that
                                     any use of the Data or other content of the Platform is solely at the User’s
                                     responsibility.
                                 </li>
@@ -1625,247 +1842,603 @@ const UserAgreement = () => {
                                     exempted from the liability for any direct or indirect losses, any lost profit,
                                     data, ability to use the Platform, operational downtime, loss of business
                                     reputation, costs on the replacement of the Services or downtime incurred to the
-                                    User, the User’s affiliates and any other Person as a result of execution of or in
-                                    connection with this User Agreement, even if the User, the User’s affiliate or any
+                                    User, the User’s affiliates and any other Person as a result of execution of or
+                                    in
+                                    connection with this User Agreement, even if the User, the User’s affiliate or
+                                    any
                                     other Person had not previously been notified of the possibility of such losses,
                                     etc.
                                 </li>
                                 <li className={classes.letter_item}>
-                                    Nothing in this User Agreement shall and can be construed as excluding or limiting the liability of any of
+                                    Nothing in this User Agreement shall and can be construed as excluding or
+                                    limiting
+                                    the liability of any of
                                     the parties for:
                                     <ul className={classes.filled_list}>
                                         <li className={classes.filled_item}>
                                             Fraud or intentional misrepresentation;
                                         </li>
                                         <li className={classes.filled_item}>
-                                            Other actions, the liability for which cannot be excluded or limited by virtue of the Law.
+                                            Other actions, the liability for which cannot be excluded or limited by
+                                            virtue of the Law.
                                         </li>
                                     </ul>
                                 </li>
 
-                                
 
+                                <li className={classes.letter_item}>
+                                    The Platform may contain links to third-party websites and direct the Users to
+                                    other
+                                    websites. Such websites are not under the control of the User. GOTOWIN does not
+                                    represent or warrant the approval of these websites. User represents and
+                                    warrants to
+                                    GOTOWIN that they do not provide any warranties or representations and are not
+                                    responsible for the accuracy, content, terms of use, privacy policy, legality,
+                                    reliability, perception, relevance, compliance with moral standards, and other
+                                    aspects related to such websites.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    External websites have separate and independent terms and conditions of use and
+                                    related policies. We advise Users to familiarize themselves with the rules,
+                                    policies, terms, and conditions of each website they visit. The User is
+                                    responsible
+                                    for taking precautions to ensure that everything they choose to use is free from
+                                    viruses, worms, Trojan horses, and other malware.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    By performing an operation, the User agrees to and independently bears all risks
+                                    of
+                                    Transactions. No claims regarding the cancellation of operations can be filed
+                                    against User represents and warrants to GOTOWIN. Unless otherwise prescribed by
+                                    this
+                                    User Agreement for special cases, User represents and warrants to GOTOWIN does
+                                    not
+                                    accept or process applications for the return and/or cancellation of operations
+                                    from
+                                    anyone.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Indemnification
+
+                            <ul className={classes.letter_list}>
+                                <li className={classes.letter_item}>
+                                    The User agrees to defend, indemnify and hold harmless User represents and
+                                    warrants
+                                    to GOTOWIN an, its
+                                    affiliates and relevant employees, officers, directors and shareholders against
+                                    all
+                                    and any losses from
+                                    property damage as a result of personal injury, death or other injuries
+                                    resulting
+                                    from negligence or
+                                    misbehavior of the User or any Person, for whom the User is legally liable.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    The User agrees to defend, indemnify and hold harmless User represents and
+                                    warrants
+                                    to GOTOWIN an against
+                                    any losses, damage, expenses, claims, litigation, fine, including court expenses
+                                    incurred by User represents
+                                    and warrants to GOTOWIN an, which are a direct or indirect consequence of:
+                                    <ul className={classes.filled_list}>
+                                        <li className={classes.filled_item}>
+
+                                            the User’s misuse of the Website/the Services/the Platform or the User’s
+                                            use
+                                            of the Website/the Services/the
+                                            Platform;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            the User’s inability to fully and timely perform any of his/her
+                                            obligations
+                                            under this User Agreement,
+                                            including the User’s failure to perform obligations related to any
+                                            Transaction or Order;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            any of the User’s representations or warranties provided in accordance
+                                            with
+                                            this User Agreement is or has
+                                            become false or incorrect;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            any violation by the User of any Law, rule, regulation or third party
+                                            rights;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            using the Platform, the User’s Account by any other Person (except the
+                                            authorized Representative of a legal
+                                            entity), using the User’s password or any other User’s Account data
+                                            (credentials) regardless of whether it
+                                            was done with or without the User’s knowledge.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Applicable Law and dispute resolution
+                            <ul className={classes.letter_list}>
+                                <li className={classes.letter_item}>
+                                    This User Agreement is governed by and construed in accordance with the laws of
+                                    England and Wales.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    In case of disputes on the issues specified in this User Agreement, the Parties
+                                    shall take all possible measures to resolve them through negotiations.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    If the Parties fail to reach an agreement through negotiation, any dispute
+                                    arising
+                                    out of or in connection with this User Agreement shall be considered and finally
+                                    resolved in accordance with the Rules of the London Court of International
+                                    Arbitration (LCIA). The place of arbitration shall be London, United Kingdom.
+                                    The
+                                    language of the arbitration shall be English. Such a decision shall be final and
+                                    binding on both parties and may be used or prepared for enforcement in any court
+                                    having jurisdiction; if necessary, an application may be submitted to the
+                                    appropriate competent court.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    The Parties agree that information on the arbitration, including, but not
+                                    limited
+                                    to, information on the content of any arbitral award, is confidential and shall
+                                    not
+                                    be disclosed to third parties without the written consent of the Parties unless
+                                    otherwise stipulated by the Law.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Confidentiality and disclosure of information
+                            <ul className={classes.letter_list}>
+                                <li className={classes.letter_item}>
+                                    The User agrees not to disclose any Confidential information relating to User
+                                    represents and warrants to GOTOWIN an or its affiliates received in connection
+                                    with
+                                    the conclusion of this User Agreement or any investigation conducted in
+                                    connection
+                                    with this User Agreement and, if applicable, the User will also ensure the
+                                    performance of this obligation by his/her officials, employees, and consultants,
+                                    to
+                                    whom such information has been disclosed. Obligations stipulated by this section
+                                    do
+                                    not apply to Confidential information which:
+                                    <ul className={classes.filled_list}>
+                                        <li className={classes.filled_item}>
+                                            was lawfully in the User’s possession prior to entering this User
+                                            Agreement;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            voluntarily disclosed to the User by third parties if such Persons do
+                                            not
+                                            breach any obligations not to disclose such information;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            voluntarily released by User represents and warrants to GOTOWIN an;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            is already known to the public.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li className={classes.letter_item}>
+                                    User represents and warrants to GOTOWIN an will not share or otherwise transmit
+                                    information about the Users and/or potential users of the Website and/or the
+                                    Platform, with the exception of its Representatives, the appropriate employees
+                                    (in
+                                    accordance to the applicable personal data protection Laws and regulations) in
+                                    the
+                                    ordinary course of User represents and warrants to GOTOWIN an’s activities, as
+                                    well
+                                    as for the purposes of implementation of User represents and warrants to GOTOWIN
+                                    an’s banking or credit relations.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    User represents and warrants to GOTOWIN an may also transfer the User’s Personal
+                                    data to the law enforcement agencies, data protection authorities, government
+                                    officials, Governmental authorities if:
+                                    <ul className={classes.filled_list}>
+                                        <li className={classes.filled_item}>
+                                            this is required by Governmental authorities on the basis of a subpoena,
+                                            court order, or decision, or other legal procedure;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            User represents and warrants to GOTOWIN an believes that such disclosure
+                                            is
+                                            required to prevent losses or financial loss;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            disclosure is necessary to report alleged illegal activity;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            disclosure is necessary to investigate breaches of this User Agreement
+                                            or
+                                            any applicable Law.
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            this is required by Law;
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li className={classes.letter_item}>
+                                    Privacy Policy has the priority other than this section of the User Agreement.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Notices
+                            <ul className={classes.letter_list}>
+                                <li className={classes.letter_item}>
+                                    Except as expressly stipulated by this User Agreement and the applicable Law,
+                                    all
+                                    notifications, messages, and documents related to fulfillment by the Parties of
+                                    the
+                                    obligations arising out of this User Agreement shall be sent and considered
+                                    received
+                                    by the Parties if they are e-mailed from the authorized address of one of the
+                                    Parties to the authorized address of the other Party. Authorized addresses are:
+                                </li>
+                                <li className={classes.letter_item}>
+                                    for the User: e-mail address or postal address, specified in the User’s Account
+                                    (personal cabinet);
+                                </li>
+                                <li className={classes.letter_item}>
+                                    for User represents and warrants to GOTOWIN an: the appropriate e-mail address,
+                                    specified on the Website or postal address of the company, managing the Website,
+                                    specified on the Website.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    If, in accordance with the above provision, any notification, request or other
+                                    messages to User represents and warrants to GOTOWIN an was delivered or made
+                                    after 5
+                                    p.m. (UTC) and/or not on Business day such notification, request or other
+                                    messages
+                                    shall be deemed delivered or received at 9 a.m. (UTC) on the next Business day.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    User represents and warrants to GOTOWIN an may provide the User through the
+                                    Platform
+                                    with information, notifications, and confirmations regarding the Orders, the
+                                    Transactions, the Services, the Platform, and the use thereof. Such information,
+                                    notifications, and confirmations shall be deemed received by the User as soon as
+                                    they become available to the User through the Platform.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    User represents and warrants to GOTOWIN an social media (Facebook, Telegram,
+                                    Twitter, Medium, etc.), links to which are indicated on the Website home page
+                                    and in
+                                    the footer, are GOTOWIN official sources of communication.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Entire agreement, amendments and severability
+                            <ul className={classes.letter_list}>
+                                <li className={classes.letter_item}>
+                                    This User Agreement and any other documents referred to in it constitute an
+                                    entire
+                                    agreement between the Parties and supersede any previous agreements, stipulated
+                                    terms and conditions, or agreements between them relating to the subject matter
+                                    of
+                                    this User Agreement. Each of the Parties acknowledges that when concluding this
+                                    User
+                                    Agreement, it does not rely on any statements, representations, or warranties
+                                    (“representations”) of any Person (regardless of whether it is a Party of this
+                                    User
+                                    Agreement), except as expressly specified in this User Agreement or other
+                                    documents
+                                    specified in this User Agreement.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    GOTOWIN is entitled to unilaterally amend the terms and conditions of this User
+                                    Agreement, Privacy Policy, AML/CFT Policy and procedures, as well as Fees and
+                                    limits. Such amendments take effect upon the expiry of three (3) days from the
+                                    date
+                                    of posting a new version of the relevant documents on the Website.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    With each subsequent visit to the Website before using the User’s Account, the
+                                    User
+                                    shall familiarize himself/herself with a new version of the above documents.
+                                    Continued use of the Website and/or the Platform, through the User’s Account,
+                                    will
+                                    mean the User’s acceptance of the terms and conditions of a new version of the
+                                    mentioned above documents.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    If the User does not agree to the terms and conditions of new versions of the
+                                    above-mentioned documents, the User must stop using the Website and the
+                                    Platform,
+                                    including by closing all incomplete Transactions with GOTOWIN.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    If any provision of this User Agreement is or becomes (whether or not it is such
+                                    on
+                                    the basis of any decision or otherwise) invalid, illegal, or unenforceable in
+                                    any
+                                    way in accordance with the applicable Law, the validity, legality, and
+                                    enforceability of the remaining provisions contained herein shall not in any way
+                                    be
+                                    affected or impaired.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    If any court or Governmental authority finds that any provision of this User
+                                    Agreement (or part of any provision) is invalid, illegal, or unenforceable, that
+                                    provision or part thereof shall be considered deleted to the necessary extent,
+                                    and
+                                    this shall not affect the validity, legality, and enforceability of the
+                                    remaining
+                                    provisions of this User Agreement.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Change of control and assignment
+                            <ul className={classes.letter_list}>
+                                <li className={classes.letter_item}>
+                                    If GOTOWIN is acquired by or merged with a third party or GOTOWIN’s assets
+                                    and/or
+                                    business (in whole or in part) are acquired by a third party (in any of these
+                                    circumstances), GOTOWIN reserves the right to transfer or to assign the
+                                    information,
+                                    which GOTOWIN has received from the User, including the User’s Personal data and
+                                    other information as part of such acquisition, merger, sale, transfer or other
+                                    change of control.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    The User must not assign the rights and obligations under this User Agreement in
+                                    any
+                                    way without the prior written consent of GOTOWIN, and any alleged assignment in
+                                    violation of this clause is invalid. GOTOWIN may assign rights and obligations
+                                    under
+                                    this User Agreement (in whole or in part) to other entity(ies) in connection
+                                    with
+                                    the transfer of all or part of GOTOWIN’s assets or business to GOTOWIN’s
+                                    affiliate
+                                    or any third party with prior notice at least five Business days before. By
+                                    accepting this User Agreement, the User gives the irrevocable consent to the
+                                    aforementioned assignment and/or transfer, including transfer of the User’s
+                                    Personal
+                                    data and other information, related to the User, as well as transfer of any
+                                    Funds on
+                                    the User Account by GOTOWIN as part of such assignment.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    Data recording
+                                </li>
+                                <li className={classes.letter_item}>
+                                    The User acknowledges and agrees that any telephone conversations and other
+                                    communications between the User and GOTOWIN, including GOTOWIN technical support
+                                    service, may, at the discretion of GOTOWIN, be recorded with or without using an
+                                    automatic sound notification device. In addition, the User unconditionally
+                                    agrees
+                                    and authorizes GOTOWIN to use such records and any transcripts thereof as
+                                    evidence
+                                    in connection with any dispute or lawsuit that may arise or any issue arising
+                                    out of
+                                    or in connection with this User Agreement, the Services, any Order or
+                                    Transaction.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Data recording
+                            <ul className={classes.letter_list}>
+                                <li className={classes.letter_item}>
+                                    The User acknowledges and agrees that any telephone conversations and other
+                                    communications between the User
+                                    and GOTOWIN, including GOTOWIN technical support service, may, at the discretion
+                                    of
+                                    GOTOWIN, be recorded
+                                    with or without using an automatic sound notification device. In addition, the
+                                    User
+                                    unconditionally agrees
+                                    and authorizes GOTOWIN to use such records and any transcripts thereof as
+                                    evidence
+                                    in connection with any
+                                    dispute or lawsuit that may arise or any issue arising out of or in connection
+                                    with
+                                    this User Agreement, the
+                                    Services, any Order or Transaction.
+                                </li>
                             </ul>
 
-
+                        </li>
+                        <li>
+                            Delisting Policy
+                            <ul className={classes.letter_list}>
+                                <li className={classes.letter_item}>
+                                    GOTOWIN is entitled to delist any coin/token from the Platform for any reason
+                                    specified in the coin/token
+                                    listing agreement. Having made such a decision, GOTOWIN shall send a delisting
+                                    notification to the
+                                    coin/token issuer (or to the team/legal entity managing the appropriate project,
+                                    or
+                                    to the appropriate
+                                    project owner(s), or to the Person who was the initiator of listing) forteen
+                                    (14)
+                                    calendar days prior to the
+                                    start of the Delisting procedure.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    V makes the decision to delist coin/token following the next
+                                    criteria/circumstances:
+                                    <ul className={classes.filled_list}>
+                                        <li className={classes.filled_item}>
+                                            the coin/token is no longer supported by the team, issuer, community,
+                                            etc.;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            blockchain or related technology becomes compromised or defective or has
+                                            serious technical or security problems/issues (including if it became
+                                            known
+                                            from public sources);
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            due to the implementation of new regulatory standards and other
+                                            compliance
+                                            issues;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            the coin/token faces significant legal issues related to compliance with
+                                            applicable Laws and regulations;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            violation of the GOTOWIN User Agreement or the appropriate listing
+                                            agreement;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            in cases prescribed by the appropriate listing agreement;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            multiple complaints (or suspicious activity reports) related to the
+                                            coin/token from the Users;
+                                        </li>
+                                        <li className={classes.filled_item}>
+                                            if it is necessary to prevent and/or stop fraud, manipulation, security
+                                            breaches or other unlawful actions, hacking attacks.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li className={classes.letter_item}>
+                                    The start of the Delisting procedure is marked by disabling Deposits and trading
+                                    of
+                                    the coin/token, specifying a time period for Withdrawal of the coins/tokens, and
+                                    sending the Delisting notice to Users that possess such coins/tokens on their
+                                    Accounts.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    GOTOWIN will send the Delisting notices to Users that have such coins/tokens on
+                                    their Accounts about the coin/token Delisting by means of e-mail notification
+                                    and/or
+                                    by social media post(s). Users bear the sole responsibility for regularly
+                                    checking
+                                    updates on the coin/token Delisting.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    GOTOWIN shall give to the Users a certain time period, which will be specified
+                                    in
+                                    the Delisting notice to Users, to withdraw coins/tokens from their GOTOWIN
+                                    Accounts
+                                    to external wallets. The time period, stated in the Delisting notice to Users,
+                                    shall
+                                    be 30 calendar days from the date of issuing. After the end of such period Users
+                                    won’t be able to see the balance of coin/token which is undergoing the Delisting
+                                    procedure in the GOTOWIN User’s Accounts.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    If the User does not withdraw the specified coins/tokens within the time period
+                                    indicated in the Delisting notice, GOTOWIN shall give him/her an additional 120
+                                    calendar days term (hereinafter - the “Penalty period”) to withdraw coins/tokens
+                                    from his/her GOTOWIN Account with an appropriate penalty that will be
+                                    automatically
+                                    charged by GOTOWIN.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    On the last day of the time period indicated in the Delisting notice, GOTOWIN
+                                    shall
+                                    send the Final delisting notice to the Users that still possess the coin/token
+                                    which
+                                    is undergoing the Delisting procedure by e-mail notification. Final delisting
+                                    notice
+                                    shall contain information on the amount of such coin/token on GOTOWIN User’s
+                                    Account
+                                    and the information about the penalty that will be automatically applied in case
+                                    the
+                                    User didn't withdraw such coins/tokens from their GOTOWIN Accounts before the
+                                    start
+                                    of the Penalty period.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    GOTOWIN has the right and is freely entitled to remove the coin/token from the
+                                    Platform after the expiration of the Withdrawal period specified in the
+                                    Delisting
+                                    notice to Users. In that case, the technical support of coin/token (as well as
+                                    the
+                                    technical possibility to keep coins/tokens on the wallet of the platform) is
+                                    terminated, and all balances of Users in delisted coin/token will be annulled
+                                    without compensation.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    To withdraw the coin/token which is undergoing the Delisting procedure during
+                                    the
+                                    Penalty period, User shall contact GOTOWIN Support Team at support@whitebit.com,
+                                    via
+                                    online chat, or by creating a ticket on GOTOWIN User’s Account and follow its
+                                    instructions.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    During the Penalty period, GOTOWIN applies an appropriate penalty which is 25%
+                                    of
+                                    the amount of coin/token which is undergoing the Delisting procedure and which
+                                    User
+                                    possesses on the first day of the Penalty period. GOTOWIN charges such a penalty
+                                    once every 30 calendar days from the start of such Penalty period.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    During the Penalty period, once for 30 calendar days, GOTOWIN shall send a
+                                    notice
+                                    about a penalty that will be automatically charged. GOTOWIN shall send such
+                                    notices
+                                    till the end of the Penalty period or till the time the User’s balance in the
+                                    coin/token which is undergoing the Delisting procedure is less than the minimum
+                                    limits for Withdrawing or equal to zero.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    GOTOWIN has the right and is freely entitled to remove the coin/token from the
+                                    Platform after the expiration of the Withdrawal period specified in the
+                                    Delisting
+                                    notice to Users and the end of the Penalty period (if it was given to User). In
+                                    that
+                                    case, the technical support of coin/token (as well as the technical possibility
+                                    to
+                                    keep coins/tokens on the wallet of the platform) is terminated, and all balances
+                                    of
+                                    Users in coin/token which is undergoing the Delisting procedure will be annulled
+                                    without compensation.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    In cases if GOTOWIN, due to the technical or other changes or arisen technical
+                                    issues in appropriate blockchains (major technical issues or updates), can't
+                                    guarantee the Withdrawal of the appropriate Digital assets (related to such
+                                    blockchain) within 30 calendar days, GOTOWIN reserves the right to shorten this
+                                    period. In this case, GOTOWIN shall issue no less than 3 (three) warnings to the
+                                    Users per e-mail and/or per the official social media channels.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Final provisions
+                            <ul className={classes.letter_list}>
+                                <li className={classes.letter_item}>
+                                    This User Agreement is valid until one of the Parties terminates it. The User
+                                    may
+                                    terminate this User Agreement at any time (after fulfilling the appropriate
+                                    demands
+                                    stipulated by this User Agreement) by ceasing the use of the Services (the
+                                    Platform)
+                                    and removing all copies of any components of the software from all of his/her
+                                    devices and equipment.
+                                </li>
+                                <li className={classes.letter_item}>
+                                    In addition to cases specially stipulated by this User Agreement, GOTOWIN may
+                                    unilaterally terminate this User Agreement at its discretion, with prior, at
+                                    least
+                                    10 days before, notice to the User.
+                                </li>
+                            </ul>
                         </li>
                     </ol>
-
-
+                    Contact us: UAB Clear White Technologies, address: 26, J. Basanavičiaus Street, Vilnius, LT-03224
+                    Republic
+                    of Lithuania
                 </div>
             </div>
 
 
-
-            The Platform may contain links to third-party(ies) websites and direct the Users to other websites. Such
-            websites are not under control of User represents and warrants to GOTOWIN an; furthermore, publication of
-            links does not mean that User represents and warrants to GOTOWIN an approves such websites. User represents
-            and warrants to GOTOWIN an does not provide any warranties or representations and does not bear any
-            responsibility with regard to the accuracy, content, terms of use, privacy policy, legality, reliability,
-            perception, relevance, compliance with moral standards and other aspects related to such websites.
-            External websites have separate and independent terms and conditions of use and related policies. We ask the
-            Users to familiarize themselves with the rules, policies, terms and conditions of each website they visit.
-            The User must take precautions to make sure that everything he/she chooses to use is free from viruses,
-            worms, Trojan horses and other malware.
-            Performing an operation, the User agrees to and independently bears all risks of Transactions. No claims
-            regarding cancellation of operations can be filed against User represents and warrants to GOTOWIN an. Unless
-            otherwise prescribed by this User Agreement for special cases, User represents and warrants to GOTOWIN an
-            does not accept or process applications for the return and/or cancellation of operations from anyone.
-
-            Indemnification
-
-            The User agrees to defend, indemnify and hold harmless User represents and warrants to GOTOWIN an, its
-            affiliates and relevant employees, officers, directors and shareholders against all and any losses from
-            property damage as a result of personal injury, death or other injuries resulting from negligence or
-            misbehavior of the User or any Person, for whom the User is legally liable.
-            The User agrees to defend, indemnify and hold harmless User represents and warrants to GOTOWIN an against
-            any losses, damage, expenses, claims, litigation, fine, including court expenses incurred by User represents
-            and warrants to GOTOWIN an, which are a direct or indirect consequence of:
-            the User’s misuse of the Website/the Services/the Platform or the User’s use of the Website/the Services/the
-            Platform;
-            the User’s inability to fully and timely perform any of his/her obligations under this User Agreement,
-            including the User’s failure to perform obligations related to any Transaction or Order;
-            any of the User’s representations or warranties provided in accordance with this User Agreement is or has
-            become false or incorrect;
-            any violation by the User of any Law, rule, regulation or third party rights;
-            using the Platform, the User’s Account by any other Person (except the authorized Representative of a legal
-            entity), using the User’s password or any other User’s Account data (credentials) regardless of whether it
-            was done with or without the User’s knowledge.
-
-            Applicable Law and dispute resolution
-
-            This User Agreement is governed by and construed in accordance with the laws of England and Wales.
-            In case of disputes on the issues specified in this User Agreement, the Parties shall take all possible
-            measures to resolve them through negotiations.
-            If the Parties fail to reach an agreement through negotiation, any dispute arising out of or in connection
-            with this User Agreement shall be considered and finally resolved in accordance with the Rules of the London
-            Court of International Arbitration (LCIA). The place of arbitration shall be London, United Kingdom. The
-            language of the arbitration shall be English. Such a decision shall be final and binding on both parties and
-            may be used or prepared for enforcement in any court having jurisdiction; if necessary, an application may
-            be submitted to the appropriate competent court.
-            The Parties agree that information on the arbitration, including, but not limited to, information on the
-            content of any arbitral award, is confidential and shall not be disclosed to third parties without the
-            written consent of the Parties unless otherwise stipulated by the Law.
-            Confidentiality and disclosure of information
-            The User agrees not to disclose any Confidential information relating to User represents and warrants to
-            GOTOWIN an or its affiliates received in connection with the conclusion of this User Agreement or any
-            investigation conducted in connection with this User Agreement and, if applicable, the User will also ensure
-            the performance of this obligation by his/her officials, employees and consultants, to whom such information
-            has been disclosed. Obligations stipulated by this section do not apply to Confidential information which:
-            was lawfully in the User’s possession prior to the entering this User Agreement;
-            voluntarily disclosed to the User by third parties if such Persons do not breach any obligations not to
-            disclose such information;
-            voluntarily released by User represents and warrants to GOTOWIN an;
-            is already known to the public.
-            User represents and warrants to GOTOWIN an will not share or otherwise transmit information about the Users
-            and/or potential users of the Website and/or the Platform, with the exception of its Representatives, the
-            appropriate employees (in accordance to the applicable personal data protection Laws and regulations) in the
-            ordinary course of User represents and warrants to GOTOWIN an’s activities, as well as for the purposes of
-            implementation of User represents and warrants to GOTOWIN an’s banking or credit relations.
-            User represents and warrants to GOTOWIN an may also transfer the User’s Personal data to the law enforcement
-            agencies, data protection authorities, government officials, Governmental authorities if:
-            this is required by Law;
-            this is required by Governmental authorities on the basis of a subpoena, court order or decision or other
-            legal procedure;
-            User represents and warrants to GOTOWIN an believes that such disclosure is required to prevent losses or
-            financial loss;
-            disclosure is necessary to report alleged illegal activity;
-            disclosure is necessary to investigate breaches of this User Agreement or any applicable Law.
-            Privacy Policy has the priority other than this section of the User Agreement.
-            Notices
-            Except as expressly stipulated by this User Agreement and the applicable Law, all notifications, messages
-            and documents related to fulfillment by the Parties of the obligations arising out of this User Agreement
-            shall be sent and considered received by the Parties if they are e-mailed from the authorized address of one
-            of the Parties to the authorized address of the other Party. Authorized addresses are:
-            for the User: e-mail address or postal address, specified in the User’s Account (personal cabinet);
-            for User represents and warrants to GOTOWIN an: the appropriate e-mail address, specified on the Website or
-            postal address of the company, managing the Website, specified on the Website.
-            If, in accordance with the above provision, any notification, request or other messages to User represents
-            and warrants to GOTOWIN an was delivered or made after 5 p.m. (UTC) and/or not on Business day such
-            notification, request or other messages shall be deemed delivered or received at 9 a.m. (UTC) on the next
-            Business day.
-            User represents and warrants to GOTOWIN an may provide the User through the Platform with information,
-            notifications and confirmations regarding the Orders, the Transactions, the Services, the Platform, and the
-            use thereof. Such information, notifications and confirmations shall be deemed received by the User as soon
-            as they become available to the User through the Platform.
-            User represents and warrants to GOTOWIN an social media (Facebook, Telegram, Twitter, Medium, etc.), links
-            to which are indicated on the Website home page and in the footer, are GOTOWIN official sources of
-            communication.
-            Entire agreement, amendments and severability
-            This User Agreement and any other documents referred to in it constitute an entire agreement between the
-            Parties and supersede any previous agreements, stipulated terms and conditions or agreements between them
-            relating to the subject matter of this User Agreement. Each of the Parties acknowledges that when concluding
-            this User Agreement, it does not rely on any statements, representations or warranties (“representations”)
-            of any Person (regardless of whether it is a Party of this User Agreement), except as expressly specified in
-            this User Agreement or other documents specified in this User Agreement.
-            GOTOWIN is entitled to unilaterally amend the terms and conditions of this User Agreement, Privacy Policy,
-            AML/CFT Policy and procedures, as well as Fees and limits. Such amendments take effect upon the expiry of
-            three (3) days from the date of posting a new version of the relevant documents on the Website.
-            With each subsequent visit to the Website before using the User’s Account, the User shall familiarize
-            himself/herself with a new version of the above documents. Continued use of the Website and/or the Platform,
-            through the User’s Account, will mean the User’s acceptance of the terms and conditions of a new version of
-            the mentioned above documents.
-            If the User does not agree to the terms and conditions of new versions of the above mentioned documents, the
-            User must stop using the Website and the Platform, including by closing all incomplete Transactions with
-            GOTOWIN.
-            If any provision of this User Agreement is or becomes (whether or not it is such on the basis of any
-            decision or otherwise) invalid, illegal or unenforceable in any way in accordance with the applicable Law
-            the validity, legality, and enforceability of the remaining provisions contained herein shall not in any way
-            be affected or impaired.
-            If any court or Governmental authority finds that any provision of this User Agreement (or part of any
-            provision) is invalid, illegal or unenforceable, that provision or part thereof shall be considered deleted
-            to the necessary extent, and this shall not affect the validity, legality, and enforceability of the
-            remaining provisions of this User Agreement.
-            Change of control and assignment
-            If GOTOWIN is acquired by or merged with a third party or GOTOWIN’s assets and/or business (in whole or in
-            part) are acquired by a third party (in any of these circumstances), GOTOWIN reserves the right to transfer
-            or to assign the information, which GOTOWIN has received from the User, including the User’s Personal data
-            and other information as part of such acquisition, merger, sale, transfer or other change of control.
-            The User must not assign the rights and obligations under this User Agreement in any way without the prior
-            written consent of GOTOWIN, and any alleged assignment in violation of this clause is invalid. GOTOWIN may
-            assign rights and obligations under this User Agreement (in whole or in part) to other entity(ies) in
-            connection with the transfer of all or part of GOTOWIN’s assets or business to GOTOWIN’s affiliate or any
-            third party with prior notice at least five Business days before. By accepting this User Agreement, the User
-            gives the irrevocable consent to the aforementioned assignment and/or transfer, including transfer of the
-            User’s Personal data and other information, related to the User, as well as transfer of any Funds on the
-            User Account by GOTOWIN as part of such assignment.
-            Data recording
-            The User acknowledges and agrees that any telephone conversations and other communications between the User
-            and GOTOWIN, including GOTOWIN technical support service, may, at the discretion of GOTOWIN, be recorded
-            with or without using an automatic sound notification device. In addition, the User unconditionally agrees
-            and authorizes GOTOWIN to use such records and any transcripts thereof as evidence in connection with any
-            dispute or lawsuit that may arise or any issue arising out of or in connection with this User Agreement, the
-            Services, any Order or Transaction.
-            Delisting Policy
-            GOTOWIN is entitled to delist any coin/token from the Platform for any reason specified in the coin/token
-            listing agreement. Having made such a decision, GOTOWIN shall send a delisting notification to the
-            coin/token issuer (or to the team/legal entity managing the appropriate project, or to the appropriate
-            project owner(s), or to the Person who was the initiator of listing) forteen (14) calendar days prior to the
-            start of the Delisting procedure.
-            V makes the decision to delist coin/token following the next criteria/circumstances:
-            the coin/token is no longer supported by the team, issuer, community, etc.;
-            blockchain or related technology becomes compromised or defective or has serious technical or security
-            problems/issues (including if it became known from public sources);
-            due to the implementation of new regulatory standards and other compliance issues;
-            the coin/token faces significant legal issues related to compliance with applicable Laws and regulations;
-            violation of the GOTOWIN User Agreement or the appropriate listing agreement;
-            in cases prescribed by the appropriate listing agreement;
-            multiple complaints (or suspicious activity reports) related to the coin/token from the Users;
-            if it is necessary to prevent and/or stop fraud, manipulation, security breaches or other unlawful actions,
-            hacking attacks.
-            The start of the Delisting procedure is marked by disabling Deposits and trading of the coin/token,
-            specifying a time period for Withdrawal of the coins/tokens, and sending the Delisting notice to Users that
-            possess such coins/tokens on their Accounts.
-            GOTOWIN will send the Delisting notices to Users that have such coins/tokens on their Accounts about the
-            coin/token Delisting by means of e-mail notification and/or by social media post(s). Users bear the sole
-            responsibility for regularly checking updates on the coin/token Delisting.
-            GOTOWIN shall give to the Users a certain time period, which will be specified in the Delisting notice to
-            Users, to withdraw coins/tokens from their GOTOWIN Accounts to external wallets. The time period, stated in
-            the Delisting notice to Users, shall be 30 calendar days from the date of issuing. After the end of such
-            period Users won’t be able to see the balance of coin/token which is undergoing the Delisting procedure in
-            the GOTOWIN User’s Accounts.
-            If the User does not withdraw the specified coins/tokens within the time period indicated in the Delisting
-            notice, GOTOWIN shall give him/her an additional 120 calendar days term (hereinafter - the “Penalty period”)
-            to withdraw coins/tokens from his/her GOTOWIN Account with an appropriate penalty that will be automatically
-            charged by GOTOWIN.
-            On the last day of the time period indicated in the Delisting notice GOTOWIN shall send the Final delisting
-            notice to the Users that still possess the coin/token which is undergoing the Delisting procedure by e-mail
-            notification. Final delisting notice shall contain information on the amount of such coin/token on GOTOWIN
-            User’s Account and the information about the penalty that will be automatically applied in case the User
-            didn't withdraw such coins/tokens from their GOTOWIN Accounts before the start of Penalty period.
-            GOTOWIN has the right and is freely entitled to remove the coin/token from the Platform after the expiration
-            of the Withdrawal period specified in the Delisting notice to Users. In that case, the technical support of
-            coin/token (as well as the technical possibility to keep coins/tokens on the wallet of the platform) is
-            terminated, and all balances of Users in delisted coin/token will be annulled without compensation.
-            To withdraw the coin/token which is undergoing the Delisting procedure during the Penalty period, User shall
-            contact GOTOWIN Support Team at support@whitebit.com, via online chat or by creating a ticket on GOTOWIN
-            User’s Account and follow its instructions.
-            During the Penalty period GOTOWIN applies an appropriate penalty which is 25% of the amount of coin/token
-            which is undergoing the Delisting procedure and which User possesses on the first day of the Penalty period.
-            GOTOWIN charges such a penalty once every 30 calendar days from the start of such Penalty period.
-            During the Penalty period once for 30 calendar days GOTOWIN shall send notice about a penalty that will be
-            automatically charged. GOTOWIN shall send such notices till the end of the Penalty period or till the time
-            the User’s balance in the coin/token which is undergoing the Delisting procedure is less than the minimum
-            limits for Withdrawing or equal to zero.
-            GOTOWIN has the right and is freely entitled to remove the coin/token from the Platform after the expiration
-            of the Withdrawal period specified in the Delisting notice to Users and the end of the Penalty period (if it
-            was given to User). In that case the technical support of coin/token (as well as the technical possibility
-            to keep coins/tokens on the wallet of the platform) is terminated and all balances of Users in coin/token
-            which is undergoing the Delisting procedure will be annulled without compensation.
-            In cases if GOTOWIN, due to the technical or other changes or arisen technical issues in appropriate
-            blockchains (major technical issues or updates), can't guarantee the Withdrawal of the appropriate Digital
-            assets (related to such blockchain) within 30 calendar days, GOTOWIN reserves the right to shorten this
-            period. In this case, GOTOWIN shall issue no less than 3 (three) warnings to the Users per e-mail and/or per
-            the official social media channels.
-            Final provisions
-            This User Agreement is valid until one of the Parties terminates it. The User may terminate this User
-            Agreement at any time (after fulfilling the appropriate demands stipulated by this User Agreement) by
-            ceasing the use of the Services (the Platform) and removing all copies of any components of the software
-            from all of his/her devices and equipment.
-            In addition to cases specially stipulated by this User Agreement, GOTOWIN may unilaterally terminate this
-            User Agreement at its discretion, with prior, at least 10 days before, notice to the User.
-            Contact us: UAB Clear White Technologies, address: 26, J. Basanavičiaus Street, Vilnius, LT-03224 Republic
-            of Lithuania
             <Footer/>
         </div>
     );
