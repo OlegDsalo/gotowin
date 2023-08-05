@@ -30,7 +30,7 @@ const {navigateToLogin} = useAppNavigation();
             <FormCard title='Reset your password' subtitle='Type in your new password'>
                 <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                     <div className={classes.form__inputs}>
-                        <Input placeholder='New password *'
+                        <Input placeholder='New password *' type='password'
                                args={{...register("newPassword", {required: 'Email is required'})}}/>
                         <Input placeholder='Retry new password *' type='password'
                                args={{...register("newPasswordConfirm")}}/>
