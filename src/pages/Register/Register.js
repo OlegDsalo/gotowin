@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Input from "../../components-ui/Input/Input";
 import Button from "../../components-ui/Button/Button";
 import {useForm} from "react-hook-form";
@@ -30,15 +30,22 @@ const Register = () => {
         resolver: yupResolver(schema),
     });
 
+    const [error, setError] = useState(null);
+
     let {key} = useParams();
 
-    const onSubmit = data => {
-        // console.log(data);
-        console.log('key',key)
-        let refferalCode = key ? key: "";
-        let user={...data,referralCode:refferalCode}
-        console.log(user)
-        accountServiceInstance.register(user).then(navigateToLogin())
+    const onSubmit = async (data) => {
+        console.log('key', key)
+        try {
+            let refferalCode = key ? key : "";
+            let user = {...data, referralCode: refferalCode};
+            console.log(user)
+            await accountServiceInstance.register(user);
+            navigateToLogin()
+        } catch (error) {
+            console.log(error)
+            setError(error)
+        }
 
 
     }
@@ -46,6 +53,7 @@ const Register = () => {
     return (
         <div className='form_bg'>
             <Header/>
+            {error&& JSON.stringify(error,2,null)}
             <FormCard title='Create Account' subtitle='Lorem ipsum dolor sit amet, con'>
                 <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                     <div className={classes.form__inputs}>

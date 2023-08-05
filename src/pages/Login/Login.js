@@ -30,10 +30,11 @@ const Login = () => {
 
             navigateToUser();
         } catch (error) {
+            console.log('test', error)
             // console.error('Error:', error?.response?.data || error.message);
             setError(error)
         }
-        console.log('dog',error)
+        console.log('dog', error)
         // accountServiceInstance.login(data).then(res => {
         //     console.log('token', res.data.idToken)
         // localStorage.setItem('token', res)
@@ -46,9 +47,7 @@ const Login = () => {
     return (
         <div className='form_bg'>
             <Header/>
-            {error && <div>
-                {error?.message}
-            </div>}
+            {error&& JSON.stringify(error,2,null)}
             <FormCard title='Hey, Welcome Back!' subtitle='We are very happy to see you back!'>
                 <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                     <div className={classes.form__inputs}>

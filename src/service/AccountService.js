@@ -5,9 +5,7 @@ export class AccountService {
 
     async register(user) {
         console.log(user);
-        return await axios.post(`${this.BASE_URL}/register`, user).catch((e) => {
-            console.log(e)
-        })
+        return await axios.post(`${this.BASE_URL}/register`, user)
     }
 
     // async registerReferral(user,referralCode) {
@@ -18,9 +16,7 @@ export class AccountService {
     // }
 
     async login(user) {
-        let response = await axios.post(`${this.BASE_URL}/authenticate`, user).catch((e) => {
-                return e; // Throw the error to be caught in the caller function
-        })
+        let response = await axios.post(`${this.BASE_URL}/authenticate`, user)
         return response.data.idToken
     }
 

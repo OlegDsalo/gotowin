@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Header from "../../components-ui/Header/Header";
 import Input from "../../components-ui/Input/Input";
 import Button from "../../components-ui/Button/Button";
