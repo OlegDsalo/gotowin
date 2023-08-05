@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import classes from "../PrivacPolicy.module.scss";
 import Header from "../../../components-ui/Header/Header";
 import Footer from "../../../components-ui/Footer/Footer";
 
 const PrivacyPolicyUA = () => {
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, []);
     return (
         <div className={classes.wrapper}>
             <Header/>

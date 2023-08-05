@@ -8,26 +8,34 @@ import accountServiceInstance from "../../service/AccountService";
 import FormCard from "../../components-ui/FormCard/FormCard";
 import Footer from "../../components-ui/Footer/Footer";
 import {useAppNavigation} from "../../hook/useAppNavigation";
+import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
 
 const ForgotPassword = () => {
     const {navigateToLogin} = useAppNavigation()
-
+    const [error, setError] = useState(null);
     const [condition, setCondition] = useState(true)
+
     const {
         register,
         handleSubmit
     } = useForm();
-    const onSubmit = data => {
+    const onSubmit = async (data) => {
         console.log(data);
-        accountServiceInstance.resetPasswordMessage(data).then((r) =>
-            console.log('condidion', condition)
-        )
-        setCondition(false);
-        console.log(123)
+        try {
+            await accountServiceInstance.resetPasswordMessage(data)
+            setCondition(false);
+        } catch (e) {
+            setError(e)
+        }
+    }
+    const clearError = () => {
+        setError(null)
     }
     return (
         <div className='form_bg'>
             <Header/>
+            {error && <ErrorModal error={error} clearError={clearError}/>}
+
             {condition ? (
                     <FormCard
                         title='Recovery Email Sent!'

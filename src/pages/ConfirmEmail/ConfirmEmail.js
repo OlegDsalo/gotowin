@@ -1,30 +1,40 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import accountServiceInstance from "../../service/AccountService";
 import classes from './ConfirmEmail.module.scss'
 import {useParams} from "react-router-dom";
 import {useAppNavigation} from "../../hook/useAppNavigation";
+import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
+import useAsyncEffect from "../../utils/AsyncEffect";
 
 const ConfirmEmail = () => {
     const {navigateToLogin} = useAppNavigation()
     let {key} = useParams();
 
-    useEffect(() => {
+    const [error, setError] = useState(null);
+    const clearError = () => {
+        setError(null)
+        navigateToLogin()
+    }
+    useAsyncEffect(async() => {
         if (key) {
-            accountServiceInstance.activate(key)
-                .then(response => {
-                    navigateToLogin()
-                })
-                .catch(error => console.log(error))
+            try{
+                await  accountServiceInstance.activate(key)
+                navigateToLogin()
+
+            } catch(error){
+               setError(error)
+            }
         }
     }, []);
 
     return (
         <div className='form_bg'>
+            {error && <ErrorModal error={error} clearError={clearError}/>}
             <div className={classes.wrapper}>
                 <div className={classes.wrapper_text}>
-                   <div className={classes.title}>
-                       Confirmation of email
-                   </div>
+                    <div className={classes.title}>
+                        Confirmation of email
+                    </div>
                     <div className={classes.title}>
                         ... Wait
                     </div>

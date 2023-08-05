@@ -63,10 +63,10 @@
 .block_icons{
   display: flex;
   gap: 20px;
-  width: 91%;
-  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
-  top:-30px;
+  left: 50%;
   &:hover{
     cursor: pointer;
   }

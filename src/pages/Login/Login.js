@@ -8,11 +8,13 @@ import accountServiceInstance from "../../service/AccountService";
 import FormCard from "../../components-ui/FormCard/FormCard";
 import Footer from "../../components-ui/Footer/Footer";
 import {useAppNavigation} from "../../hook/useAppNavigation";
+import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
 
 const Login = () => {
     const {navigateToResetPassword, navigateToProfile} = useAppNavigation()
-
     const [error, setError] = useState(null);
+
+
     const {
         register,
         handleSubmit
@@ -34,20 +36,14 @@ const Login = () => {
             // console.error('Error:', error?.response?.data || error.message);
             setError(error)
         }
-        // console.log('dog', error)
-        // accountServiceInstance.login(data).then(res => {
-        //     console.log('token', res.data.idToken)
-        // localStorage.setItem('token', res)
-        // accountServiceInstance.getUser().then(user => {
-        //     console.log('user', user)
-        //     navigateToUser()
-        // }).catch(e => console.log(e.response.data))
-        // }).catch(e => console.log(e?.response?.data))
+    }
+    const clearError = () => {
+        setError(null)
     }
     return (
         <div className='form_bg'>
             <Header/>
-            {error&& JSON.stringify(error,2,null)}
+            {error && <ErrorModal error={error} clearError={clearError}/>}
             <FormCard title='Hey, Welcome Back!' subtitle='We are very happy to see you back!'>
                 <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                     <div className={classes.form__inputs}>

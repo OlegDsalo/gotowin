@@ -11,6 +11,7 @@ import {yupResolver} from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import {useAppNavigation} from "../../hook/useAppNavigation";
 import {useParams} from "react-router-dom";
+import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
 
 const schema = yup.object({
     fullName: yup.string().required('Full Name is required'),
@@ -43,17 +44,16 @@ const Register = () => {
             await accountServiceInstance.register(user);
             navigateToLogin()
         } catch (error) {
-            console.log(error)
             setError(error)
         }
-
-
     }
-
+    const clearError = () => {
+        setError(null)
+    }
     return (
         <div className='form_bg'>
             <Header/>
-            {error&& JSON.stringify(error,2,null)}
+            {error && <ErrorModal error={error} clearError={clearError}/>}
             <FormCard title='Create Account' subtitle='Lorem ipsum dolor sit amet, con'>
                 <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                     <div className={classes.form__inputs}>
