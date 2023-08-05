@@ -10,7 +10,7 @@ import Footer from "../../components-ui/Footer/Footer";
 import {useAppNavigation} from "../../hook/useAppNavigation";
 
 const Login = () => {
-    const {navigateToResetPassword, navigateToUser} = useAppNavigation()
+    const {navigateToResetPassword, navigateToProfile} = useAppNavigation()
 
     const [error, setError] = useState(null);
     const {
@@ -22,19 +22,19 @@ const Login = () => {
         try {
             console.log(data);
             const loginResponse = await accountServiceInstance.login(data);
-            // console.log('token', loginResponse.data.idToken)
-            localStorage.setItem('token', loginResponse.data.idToken);
+            console.log('token', loginResponse)
+            localStorage.setItem('token', loginResponse);
 
             const userResponse = await accountServiceInstance.getUser();
             console.log('user', userResponse.data);
 
-            navigateToUser();
+            navigateToProfile();
         } catch (error) {
             console.log('test', error)
             // console.error('Error:', error?.response?.data || error.message);
             setError(error)
         }
-        console.log('dog', error)
+        // console.log('dog', error)
         // accountServiceInstance.login(data).then(res => {
         //     console.log('token', res.data.idToken)
         // localStorage.setItem('token', res)
