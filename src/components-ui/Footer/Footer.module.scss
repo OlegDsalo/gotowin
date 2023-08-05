@@ -67,6 +67,9 @@
   justify-content: center;
   position: absolute;
   top:-30px;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 
@@ -107,5 +110,9 @@
     font-size: 10px;
     line-height: 15px;
     color: #FFFFFF;
+  }
+  .block_icon{
+    width: 24px;
+    height: 24px;
   }
 }

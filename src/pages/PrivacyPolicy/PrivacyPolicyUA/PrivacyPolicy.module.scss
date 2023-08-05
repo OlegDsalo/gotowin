@@ -64,3 +64,61 @@
 .wrapper {
   background: #0D0D2B;
 }
+
+
+@media only screen and (max-width: 1200px) {
+  .content {
+    padding: 88px 100px 184px;
+
+    &_section {
+      gap: 16px;
+    }
+
+    &_title {
+      font-size: 25px;
+      line-height: 30px;
+      margin-top: 24px;
+
+    }
+
+    &_text {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+
+  .title {
+    margin-bottom: 0;
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .content {
+
+    padding: 50px 50px 100px
+
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .content {
+    padding: 24px 16px 64px;
+
+    &_title {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    &_text {
+      font-size: 15px;
+      line-height: 23px;
+    }
+  }
+  .title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}

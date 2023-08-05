@@ -12,9 +12,9 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.block_icons}>
-                <Group onClick={navigateToPrivacyPolicy}/>
-                <DocumentText onClick={navigateToPrivacyPolicyUA}/>
-                <ShieldCheck onClick={navigateToUserAgreement}/>
+                <Group className={styles.block_icon} onClick={navigateToPrivacyPolicy}/>
+                <DocumentText className={styles.block_icon} onClick={navigateToPrivacyPolicyUA}/>
+                <ShieldCheck className={styles.block_icon} onClick={navigateToUserAgreement}/>
             </div>
             <div className={styles.footer__left}>
                 <div className={styles.footer__left__row}>
