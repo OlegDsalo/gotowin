@@ -10,6 +10,7 @@ import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import UserAgreement from "./pages/UserAgreement/UserAgreement";
 import PrivacyPolicyUA from "./pages/PrivacyPolicy/PrivacyPolicyUA/PrivacyPolicyUA";
+import Error404 from "./pages/404/Error404";
 
 
 const ProtectedRoute = ({children}) => {
@@ -37,52 +38,59 @@ export const routes = {
 
 const router = createBrowserRouter([
     {
-        path: routes.home,
-        index: true,
-        element: <Home/>
+        path: '',
+        errorElement:<Error404/>,
+        children: [
+            {
+                path: routes.home,
+                index: true,
+                element: <Home/>
+            },
+            {
+                path: routes.login,
+                element: <Login/>
+            },
+            {
+                path: routes.register,
+                element: <Register/>
+            },
+            {
+                path: routes.registerReferral,
+                element: <Register/>
+            },
+            {
+                path: routes.resetMail,
+                element: <ForgotPassword/>
+            },
+            {
+                path: routes.forgotPassword,
+                element: <ResetPassword/>
+            },
+            {
+                path: routes.profile,
+                element: <ProtectedRoute>
+                    <User/>
+                </ProtectedRoute>
+            },
+            {
+                path: routes.confirmMail,
+                element: <ConfirmEmail/>
+            },
+            {
+                path: routes.privacyPolicy,
+                element: <PrivacyPolicy/>
+            },
+            {
+                path: routes.privacyPolicyUA,
+                element: <PrivacyPolicyUA/>
+            },
+            {
+                path: routes.userAgreement,
+                element: <UserAgreement/>
+            },
+        ]
     },
-    {
-        path: routes.login,
-        element: <Login/>
-    },
-    {
-        path: routes.register,
-        element: <Register/>
-    },
-    {
-        path: routes.registerReferral,
-        element: <Register/>
-    },
-    {
-        path: routes.resetMail,
-        element: <ForgotPassword/>
-    },
-    {
-        path: routes.forgotPassword,
-        element: <ResetPassword/>
-    },
-    {
-        path: routes.profile,
-        element: <ProtectedRoute>
-            <User/>
-        </ProtectedRoute>
-    },
-    {
-        path: routes.confirmMail,
-        element: <ConfirmEmail/>
-    },
-    {
-        path: routes.privacyPolicy,
-        element: <PrivacyPolicy/>
-    },
-    {
-        path: routes.privacyPolicyUA,
-        element: <PrivacyPolicyUA/>
-    },
-    {
-        path: routes.userAgreement,
-        element: <UserAgreement/>
-    }
+
 ]);
 
 function App() {

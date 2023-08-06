@@ -11,7 +11,7 @@ const ErrorModal = ({error, clearError}) => {
                 <img className={classes.error_img} src={errorImg}
                      alt="error"/>
                 <div className={classes.status_code}>Oops!</div>
-                <div className={classes.message}>{error?.response?.statusText}</div>
+                <div className={classes.message}>{error?.response?.data?.message}</div>
                 <Button
                     className={classes.test}
                     size='small'

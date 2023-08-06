@@ -1,0 +1,67 @@
+.wrapper {
+  height: 100vh;
+  background: #0D0D2B;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.code {
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 220px;
+  text-align: center;
+  background: url('../../assets/404.png') no-repeat;
+  width: 384px;
+  height: 150px;
+  background-size: 384px 150px;
+  margin-bottom: 40px;
+}
+
+.title {
+  color: #FFFFFF;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: center;
+  margin-bottom: 24px
+}
+
+
+.error_bg {
+  background: url('../../assets/404img.png') center center no-repeat;
+  background-size: 100% 300px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+}
+.action{
+  width: 20%;
+}
+@media only screen and (max-width: 1440px) {
+  .action{
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .code {
+    background: url('../../assets/404.png') no-repeat;
+    background-size: 343px 192px;
+    height: 192px;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}

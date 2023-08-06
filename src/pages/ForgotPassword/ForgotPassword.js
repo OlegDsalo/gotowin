@@ -30,7 +30,6 @@ const ForgotPassword = () => {
         resolver: yupResolver(schema),
     });
     const onSubmit = async (data) => {
-        console.log(data);
         try {
             await accountServiceInstance.resetPasswordMessage(data)
             setCondition(false);

@@ -65,7 +65,7 @@ const Register = () => {
                         <Input placeholder='Password' error={errors?.password?.message} type='password'
                                args={{...register("password")}}/>
                         <Input placeholder='Confirm Password' error={errors?.confirmPassword?.message}
-                               type='password'
+                               type='password' autocomplete="new-password"
                                args={{...register("confirmPassword")}}/>
                     </div>
                     <div className={classes.form__actions}>

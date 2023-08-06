@@ -22,6 +22,7 @@ const Input = ({
                        value={value}
                        onChange={onChange}
                        {...args}
+                        autoComplete={type === 'password'? 'new-paswrod':null}
                 >{prefix && <span>{prefix}</span>}</input>
             </div>
             {error && <div className='input-error'>{error}</div>}
