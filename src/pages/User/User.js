@@ -13,7 +13,6 @@ import {useAppNavigation} from "../../hook/useAppNavigation";
 
 const User = () => {
     const [user, setUser] = useState(null)
-
     const {navigateToLogin, navigateToHome} = useAppNavigation();
 
     const fetchUser = async () => {

@@ -22,18 +22,11 @@ const Login = () => {
 
     const onSubmit = async (data) => {
         try {
-            console.log(data);
             const loginResponse = await accountServiceInstance.login(data);
-            console.log('token', loginResponse)
             localStorage.setItem('token', loginResponse);
-
-            const userResponse = await accountServiceInstance.getUser();
-            console.log('user', userResponse.data);
 
             navigateToProfile();
         } catch (error) {
-            console.log('test', error)
-            // console.error('Error:', error?.response?.data || error.message);
             setError(error)
         }
     }

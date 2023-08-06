@@ -1,30 +1,60 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
 .wrapper {
-  padding: 30px;
-  width: 300px;
+  width: 556px;
+  padding: 56px 100px;
+  z-index: 2;
   background: #FFFFFF;
   position: absolute;
   top: 50%;
   left: 50%;
   border-radius: 20px;
   transform: translate(-50%, -50%);
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 }
 
 .message {
-  font-size: 20px;
-  line-height: 30px;
+  color: #999;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+  letter-spacing: -0.36px;
 }
 
 .status_code {
-  font-size: 20px;
-  line-height: 30px;
+  color: #0D0D0D;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
 }
 
-.test{
+.test {
+  margin-top: 30px;
   width: 100px;
+}
+
+
+.error_img {
+  //width: 100px;
+  //height: 100px;
 }

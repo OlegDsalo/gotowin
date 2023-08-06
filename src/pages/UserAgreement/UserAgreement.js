@@ -1,15 +1,28 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Footer from "../../components-ui/Footer/Footer";
 import Header from "../../components-ui/Header/Header";
 import classes from "./UserAgreement.module.scss"
+import useAsyncEffect from "../../utils/AsyncEffect";
+import accountServiceInstance from "../../service/AccountService";
 
 const UserAgreement = () => {
+    const [user, setUser] = useState(null)
+    useAsyncEffect(() => {
+        if (localStorage.getItem('token')) {
+            try {
+                const responce = accountServiceInstance.getUser();
+                setUser(responce)
+            } catch (e) {
+                localStorage.removeItem('token')
+            }
+        }
+    }, [])
     useEffect(() => {
         window.scrollTo(0,0)
     }, []);
     return (
         <div className={classes.wrapper}>
-            <Header/>
+            <Header user={user}/>
             <div className={classes.content}>
                 <div className={classes.title}>
                     User agreement

@@ -14,14 +14,14 @@ const Home = () => {
     const [user, setUser] = useState(null)
     useAsyncEffect(() => {
         if (localStorage.getItem('token')) {
-            accountServiceInstance.getUser().then(res =>
-                setUser(res)
-            ).catch(e => {
-                console.log(e)
+            try {
+                const responce = accountServiceInstance.getUser();
+                setUser(responce)
+            } catch (e) {
                 localStorage.removeItem('token')
-            })
+            }
         }
-    },[])
+    }, [])
     return (
         <div className={classes.home}>
             <div className={classes.wrapper}>
