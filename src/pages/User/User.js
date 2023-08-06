@@ -10,14 +10,26 @@ import BlockChain from "../../components/BlockChain/BlockChain";
 import accountServiceInstance from "../../service/AccountService";
 import useAsyncEffect from "../../utils/AsyncEffect";
 import {useAppNavigation} from "../../hook/useAppNavigation";
+import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
 
 const User = () => {
     const [user, setUser] = useState(null)
+    const [error, setError] = useState(null);
     const {navigateToLogin, navigateToHome} = useAppNavigation();
 
     const fetchUser = async () => {
-        const response = await accountServiceInstance.getUser()
-        setUser(response);
+        try{
+            const response = await accountServiceInstance.getUser()
+            setUser(response);
+        }catch (e){
+            setError(e)
+        }
+
+    }
+    const clearError = ()=>{
+        localStorage.removeItem('token');
+        setError(null)
+        navigateToLogin()
     }
 
     useAsyncEffect(async () => {
@@ -31,6 +43,7 @@ const User = () => {
     return (user ?
             <div className='user-container'>
                 <Header user={user}/>
+                {error && <ErrorModal error={error} clearError={clearError}/>}
                 <div className='user user__bg'>
                     <div className='user__border'>
                         <div className='user_box'>
