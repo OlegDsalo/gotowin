@@ -9,6 +9,12 @@ import FormCard from "../../components-ui/FormCard/FormCard";
 import Footer from "../../components-ui/Footer/Footer";
 import {useAppNavigation} from "../../hook/useAppNavigation";
 import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
+import * as yup from "yup";
+import {yupResolver} from "@hookform/resolvers/yup";
+
+const schema = yup.object({
+    email: yup.string().required('Email is required').email('Email is not valid!.'),
+})
 
 const ForgotPassword = () => {
     const {navigateToLogin} = useAppNavigation()
@@ -17,8 +23,12 @@ const ForgotPassword = () => {
 
     const {
         register,
-        handleSubmit
-    } = useForm();
+        handleSubmit,
+        formState: {errors}
+    } = useForm({
+        mode: "onBlur",
+        resolver: yupResolver(schema),
+    });
     const onSubmit = async (data) => {
         console.log(data);
         try {
@@ -35,14 +45,13 @@ const ForgotPassword = () => {
         <div className='form_bg'>
             <Header/>
             {error && <ErrorModal error={error} clearError={clearError}/>}
-
             {condition ? (
                     <FormCard
                         title='Recovery Email Sent!'
                         subtitle='Type in your registered email address to reset password'>
                         <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                             <div className={classes.form__inputs}>
-                                <Input placeholder='Email Address'
+                                <Input placeholder='Email Address'  error={errors?.email?.message}
                                        args={{...register("email", {required: 'Email is required'})}}/>
                             </div>
                             <div className={classes.form__actions}>

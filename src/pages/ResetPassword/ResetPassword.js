@@ -9,6 +9,13 @@ import { useParams} from "react-router-dom";
 import FormCard from "../../components-ui/FormCard/FormCard";
 import Footer from "../../components-ui/Footer/Footer";
 import {useAppNavigation} from "../../hook/useAppNavigation";
+import {yupResolver} from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+const schema = yup.object({
+    password: yup.string().required('Password is required').min(4, "Password must be at least 4 characters"),
+    newPasswordConfirm: yup.string().oneOf([yup.ref('password')], "Password must be match."),
+})
 
 const ResetPassword = () => {
 const {navigateToLogin} = useAppNavigation();
@@ -16,13 +23,17 @@ const {navigateToLogin} = useAppNavigation();
 
     const {
         register,
-        handleSubmit
-    } = useForm();
-    const onSubmit = data => {
+        handleSubmit,
+        formState: {errors}
+    } = useForm({
+        mode: "onBlur",
+        resolver: yupResolver(schema),
+    });
+
+    const onSubmit = async(data) => {
         let obj = {...data, key}
-        accountServiceInstance.resetPassword(obj).then(
-            navigateToLogin()
-        )
+        await accountServiceInstance.resetPassword(obj)
+        navigateToLogin()
     }
     return (
         <div className='form_bg'>
@@ -30,9 +41,9 @@ const {navigateToLogin} = useAppNavigation();
             <FormCard title='Reset your password' subtitle='Type in your new password'>
                 <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                     <div className={classes.form__inputs}>
-                        <Input placeholder='New password *' type='password'
+                        <Input placeholder='New password *' type='password'  error={errors?.password?.message}
                                args={{...register("newPassword", {required: 'Email is required'})}}/>
-                        <Input placeholder='Retry new password *' type='password'
+                        <Input placeholder='Retry new password *' type='password'  error={errors?.newPasswordConfirm?.message}
                                args={{...register("newPasswordConfirm")}}/>
                     </div>
                     <div className={classes.form__actions}>

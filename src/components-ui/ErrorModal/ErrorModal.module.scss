@@ -1,4 +1,4 @@
-.container{
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,4 +57,23 @@
 .error_img {
   //width: 100px;
   //height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    width: 330px;
+    padding: 42px 29px;
+  }
+  .message{
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .status_code {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .error_img {
+    height: 187px;
+    width: 250px;
+  }
 }

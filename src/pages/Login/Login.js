@@ -9,7 +9,14 @@ import FormCard from "../../components-ui/FormCard/FormCard";
 import Footer from "../../components-ui/Footer/Footer";
 import {useAppNavigation} from "../../hook/useAppNavigation";
 import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
+import * as yup from "yup";
+import {yupResolver} from "@hookform/resolvers/yup";
 
+
+const schema = yup.object({
+    email: yup.string().required('Email is required').email('Email is not valid!.'),
+    password: yup.string().required('Password is required').min(4, "Password must be at least 4 characters"),
+})
 const Login = () => {
     const {navigateToResetPassword, navigateToProfile} = useAppNavigation()
     const [error, setError] = useState(null);
@@ -17,8 +24,12 @@ const Login = () => {
 
     const {
         register,
-        handleSubmit
-    } = useForm();
+        handleSubmit,
+        formState: {errors}
+    } = useForm({
+        mode: "onBlur",
+        resolver: yupResolver(schema),
+    });
 
     const onSubmit = async (data) => {
         try {
@@ -40,9 +51,9 @@ const Login = () => {
             <FormCard title='Hey, Welcome Back!' subtitle='We are very happy to see you back!'>
                 <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                     <div className={classes.form__inputs}>
-                        <Input placeholder='Email Address'
+                        <Input placeholder='Email Address' error={errors?.email?.message}
                                args={{...register("email", {required: 'Email is required'})}}/>
-                        <Input placeholder='Password' type='password'
+                        <Input placeholder='Password' type='password' error={errors?.password?.message}
                                args={{...register("password")}}/>
                     </div>
                     <div className={classes.form__actions}>
