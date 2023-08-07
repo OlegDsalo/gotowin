@@ -8,13 +8,6 @@ export class AccountService {
         return await axios.post(`${this.BASE_URL}/register`, user)
     }
 
-    // async registerReferral(user,referralCode) {
-    //     console.log(user);
-        // return await axios.post(`${this.BASE_URL}/register/${referralCode}`, user).catch((e) => {
-        //     console.log(e)
-        // })
-    // }
-
     async login(user) {
         let response = await axios.post(`${this.BASE_URL}/authenticate`, user)
         return response.data.idToken

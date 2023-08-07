@@ -68,6 +68,35 @@
     &_link {
       padding: 24px 24px;
       background: linear-gradient(71.96deg, #005FCF 18.36%, #23B3E0 71.04%);
+      position: relative;
+
+      &_tooltip {
+        top: 54%;
+        left: 23%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 85px;
+        height: 40px;
+        background: #759EF0;
+        border-radius: 8px;
+        color: #FFFFFF;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: calc(50% - 4.5px);
+          top: 100%;
+          width: 1px;
+          height: 1px;
+          border-width: 5px;
+          border-style: solid;
+          border-color:  #759EF0 transparent transparent transparent;
+        }
+      }
 
       &_text {
         font-weight: 400;
@@ -122,4 +151,7 @@
       flex-wrap: wrap;
     }
   }
+}
+.tooltip-content {
+  opacity: 1; /* When active class is applied, show the tooltip with opacity 1 */
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import cardEthereum from "../../assets/coins/cardCoinEthereum.png";
 import cardBitcoin from "../../assets/coins/cardCoinBitcoin.png";
 import classes from './Referral.module.scss'
@@ -7,9 +7,14 @@ import {ReactComponent as Copy} from "../../assets/icons/copy.svg";
 
 
 const Referral = ({referralEarnedBalance = 0, invited = 0, refCode = ''}) => {
+    const [notification, setNotificaiton] = useState(false);
     const basesUrl = 'http://localhost:3000/register/'
     const copyRefCode = () => {
         clipboardCopy(basesUrl + refCode)
+        setNotificaiton(true)
+        setTimeout(() => {
+            setNotificaiton(false);
+        }, 3000)
     }
     return (
         <div className={classes.referral}>
@@ -21,6 +26,10 @@ const Referral = ({referralEarnedBalance = 0, invited = 0, refCode = ''}) => {
                     <div className={classes.referral__card_link_title}>And Win</div>
                     <div className={classes.referral__card_link_button} onClick={copyRefCode}>
                         Refer Now<Copy/>
+                        {notification &&
+                        <div className={`${classes.referral__card_link_tooltip} ${classes.tooltipContent}`}>
+                            Copied
+                        </div>}
                     </div>
                     <img className={classes.referral__card_img} src={cardEthereum} alt=""/>
                 </div>
