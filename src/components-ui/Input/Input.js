@@ -12,6 +12,7 @@ const Input = ({
                    value,
                    onChange,
                    args,
+                   min=undefined,
 
                }) => {
     return (<>

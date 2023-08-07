@@ -11,16 +11,21 @@ import ethereum from '../../assets/coins/ethereumUser.png'
 import cardano from '../../assets/coins/cardanoUser.png'
 
 const BlockChain = () => {
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState(null);
     const [resultValue, setResultValue] = useState(0);
     const multiply = 1000
 
     const inputChangeHandler = (e) => {
-        console.log(e.target.value)
-        setInput(e.target.value)
-        console.log('input', input);
-        let result = Number(e.target.value) * multiply
-        setResultValue(result)
+        const inputValue = e.target.value;
+
+        setInput(inputValue)
+        let result = Number(inputValue) * multiply;
+        if (result < 0) {
+            setInput('0'); // Set input to '0' if the result is negative
+            setResultValue(0);
+        } else {
+            setResultValue(result);
+        }
     }
     return (
         <div className={classes.purchase}>
@@ -39,7 +44,7 @@ const BlockChain = () => {
                     <hr className={classes.purchase__line}/>
                     <div className={classes.purchase__label}>Chose price</div>
                     <div className={classes.purchase__inputs}>
-                        <Input type='number' color='transparent' className={classes.purchase__input} value={input}
+                        <Input type='number' color='transparent' className={classes.purchase__input} value={input} min={0}
                                onChange={inputChangeHandler}/>
                         <div className={classes.purchase__input_result}>
                             {resultValue} GOW
