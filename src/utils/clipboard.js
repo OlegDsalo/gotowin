@@ -1,6 +1,5 @@
 
-module.exports = clipboardCopy
-
+export default clipboardCopy;
 function makeError () {
     return new DOMException('The request is not allowed', 'NotAllowedError')
 }
