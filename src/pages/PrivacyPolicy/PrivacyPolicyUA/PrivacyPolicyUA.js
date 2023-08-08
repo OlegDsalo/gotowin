@@ -4,6 +4,7 @@ import Header from "../../../components-ui/Header/Header";
 import Footer from "../../../components-ui/Footer/Footer";
 import useAsyncEffect from "../../../utils/AsyncEffect";
 import accountServiceInstance from "../../../service/AccountService";
+import PageTitle from "../../../utils/pageTitle";
 
 const PrivacyPolicyUA = () => {
     const [user, setUser] = useState(null)
@@ -22,6 +23,7 @@ const PrivacyPolicyUA = () => {
     }, []);
     return (
         <div className={classes.wrapper}>
+            <PageTitle title='Privacy Policy UA'></PageTitle>
             <Header user={user}/>
             <div className={classes.content}>
                 <div className={classes.title}>Договір публічної оферти</div>

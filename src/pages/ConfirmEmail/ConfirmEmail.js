@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import accountServiceInstance from "../../service/AccountService";
 import classes from './ConfirmEmail.module.scss'
 import {useParams} from "react-router-dom";
 import {useAppNavigation} from "../../hook/useAppNavigation";
 import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
 import useAsyncEffect from "../../utils/AsyncEffect";
+import PageTitle from "../../utils/pageTitle";
 
 const ConfirmEmail = () => {
     const {navigateToLogin} = useAppNavigation()
@@ -29,6 +30,7 @@ const ConfirmEmail = () => {
 
     return (
         <div className='form_bg'>
+            <PageTitle title='Confirm Email'></PageTitle>
             {error && <ErrorModal error={error} clearError={clearError}/>}
             <div className={classes.wrapper}>
                 <div className={classes.wrapper_text}>

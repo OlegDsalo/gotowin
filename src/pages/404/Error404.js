@@ -4,11 +4,13 @@ import Footer from "../../components-ui/Footer/Footer";
 import classes from'./Error404.module.scss'
 import Button from "../../components-ui/Button/Button";
 import {useAppNavigation} from "../../hook/useAppNavigation";
+import PageTitle from "../../utils/pageTitle";
 
 const Error404 = () => {
     const {navigateToHome} = useAppNavigation()
     return (
         <div className={classes.wrapper}>
+            <PageTitle title='404'></PageTitle>
             <Header/>
             <div className={classes.content}>
                 <div className={classes.code}>

@@ -11,6 +11,7 @@ import {useAppNavigation} from "../../hook/useAppNavigation";
 import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
 import * as yup from "yup";
 import {yupResolver} from "@hookform/resolvers/yup";
+import PageTitle from "../../utils/pageTitle";
 
 
 const schema = yup.object({
@@ -46,6 +47,7 @@ const Login = () => {
     }
     return (
         <div className='form_bg'>
+            <PageTitle title='Login In'></PageTitle>
             <Header/>
             {error && <ErrorModal error={error} clearError={clearError}/>}
             <FormCard title='Hey, Welcome Back!' subtitle='We are very happy to see you back!'>

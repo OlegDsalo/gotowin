@@ -12,6 +12,7 @@ import * as yup from "yup"
 import {useAppNavigation} from "../../hook/useAppNavigation";
 import {useParams} from "react-router-dom";
 import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
+import PageTitle from "../../utils/pageTitle";
 
 const schema = yup.object({
     fullName: yup.string().required('Full Name is required'),
@@ -52,6 +53,7 @@ const Register = () => {
     }
     return (
         <div className='form_bg'>
+            <PageTitle title='Sign up'></PageTitle>
             <Header/>
             {error && <ErrorModal error={error} clearError={clearError}/>}
             <FormCard title='Create Account' subtitle='Lorem ipsum dolor sit amet, con'>

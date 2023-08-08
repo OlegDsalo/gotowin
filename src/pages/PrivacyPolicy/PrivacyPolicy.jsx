@@ -4,6 +4,7 @@ import Footer from "../../components-ui/Footer/Footer";
 import classes from './PrivacPolicy.module.scss'
 import useAsyncEffect from "../../utils/AsyncEffect";
 import accountServiceInstance from "../../service/AccountService";
+import PageTitle from "../../utils/pageTitle";
 
 const PrivacyPolicy = () => {
     const [user, setUser] = useState(null)
@@ -22,6 +23,7 @@ const PrivacyPolicy = () => {
     }, []);
     return (
         <div className={classes.wrapper}>
+            <PageTitle title='Privacy Policy'></PageTitle>
             <Header user={user}/>
             <div className={classes.content}>
                 <div className={classes.title}>Privacy Policy</div>

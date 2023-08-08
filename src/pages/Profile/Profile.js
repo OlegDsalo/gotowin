@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Footer from "../../components-ui/Footer/Footer";
 import Header from "../../components-ui/Header/Header";
 import {ReactComponent as ChevronLeft} from "../../assets/icons/chevron-left.svg";
-import classes from './User.module.scss'
+import classes from './Profile.module.scss'
 import Referral from "../../components/Referral/Referral";
 import Wallet from "../../components/Wallet/Wallet";
 import Cases from "../../components/Cases/Cases";
@@ -11,8 +11,9 @@ import accountServiceInstance from "../../service/AccountService";
 import useAsyncEffect from "../../utils/AsyncEffect";
 import {useAppNavigation} from "../../hook/useAppNavigation";
 import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
+import PageTitle from "../../utils/pageTitle";
 
-const User = () => {
+const Profile = () => {
     const [user, setUser] = useState(null)
     const [error, setError] = useState(null);
     const {navigateToLogin, navigateToHome} = useAppNavigation();
@@ -42,6 +43,7 @@ const User = () => {
 
     return (user ?
             <div className={classes.user_container}>
+                <PageTitle title='Profile'></PageTitle>
                 <Header user={user}/>
                 {error && <ErrorModal error={error} clearError={clearError}/>}
                 <div className={`${classes.user} ${classes.user__bg}`}>
@@ -65,4 +67,4 @@ const User = () => {
     );
 };
 
-export default User;
+export default Profile;

@@ -9,6 +9,7 @@ import Header from "../../components-ui/Header/Header";
 import Footer from "../../components-ui/Footer/Footer";
 import useAsyncEffect from "../../utils/AsyncEffect";
 import accountServiceInstance from "../../service/AccountService";
+import PageTitle from "../../utils/pageTitle";
 
 const Home = () => {
     const [user, setUser] = useState(null)
@@ -24,6 +25,7 @@ const Home = () => {
     }, [])
     return (
         <div className={classes.home}>
+            <PageTitle title='Home'></PageTitle>
             <div className={classes.wrapper}>
                 <Header user={user}></Header>
                 <Hero/>

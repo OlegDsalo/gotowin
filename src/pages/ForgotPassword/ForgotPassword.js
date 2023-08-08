@@ -11,6 +11,7 @@ import {useAppNavigation} from "../../hook/useAppNavigation";
 import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
 import * as yup from "yup";
 import {yupResolver} from "@hookform/resolvers/yup";
+import PageTitle from "../../utils/pageTitle";
 
 const schema = yup.object({
     email: yup.string().required('Email is required').email('Email is not valid!.'),
@@ -43,6 +44,8 @@ const ForgotPassword = () => {
     return (
         <div className='form_bg'>
             <Header/>
+            <PageTitle title='Forgot Password'></PageTitle>
+
             {error && <ErrorModal error={error} clearError={clearError}/>}
             {condition ? (
                     <FormCard

@@ -3,7 +3,7 @@ import Home from "./pages/Home/Home";
 import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
-import User from "./pages/User/User";
+import Profile from "./pages/Profile/Profile";
 import ConfirmEmail from "./pages/ConfirmEmail/ConfirmEmail";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
             {
                 path: routes.profile,
                 element: <ProtectedRoute>
-                    <User/>
+                    <Profile/>
                 </ProtectedRoute>
             },
             {
