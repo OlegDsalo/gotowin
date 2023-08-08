@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Footer from "../../components-ui/Footer/Footer";
 import Header from "../../components-ui/Header/Header";
 import {ReactComponent as ChevronLeft} from "../../assets/icons/chevron-left.svg";
-import './User.scss'
+import classes from './User.module.scss'
 import Referral from "../../components/Referral/Referral";
 import Wallet from "../../components/Wallet/Wallet";
 import Cases from "../../components/Cases/Cases";
@@ -41,17 +41,17 @@ const User = () => {
 
 
     return (user ?
-            <div className='user-container'>
+            <div className={classes.user_container}>
                 <Header user={user}/>
                 {error && <ErrorModal error={error} clearError={clearError}/>}
-                <div className='user user__bg'>
-                    <div className='user__border'>
-                        <div className='user_box'>
-                            <div className='user-back'><ChevronLeft onClick={navigateToHome}/></div>
-                            <img className='user-avatar'
+                <div className={`${classes.user} ${classes.user__bg}`}>
+                    <div className={classes.user__border}>
+                        <div className={classes.user_box}>
+                            <div className={classes.user_back}><ChevronLeft onClick={navigateToHome}/></div>
+                            <img className={classes.user_avatar}
                                  src="https://img.freepik.com/free-icon/user_318-159711.jpg" alt=""/>
-                            <div className='user-name'>{user.fullName}</div>
-                            <div className='user-text'>Lorem</div>
+                            <div className={classes.user_name}>{user.fullName}</div>
+                            <div className={classes.user_text}>Lorem</div>
                         </div>
                     </div>
                 </div>

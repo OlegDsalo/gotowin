@@ -1,4 +1,4 @@
-.user-container {
+.user_container {
   background-color: #0D0D2B;
 }
 
@@ -39,7 +39,7 @@
     background-position: center;
   }
 
-  &-back {
+  &_back {
     top: 105px;
     left: 25%;
     position: absolute;
@@ -57,19 +57,19 @@
     }
   }
 
-  &-avatar {
+  &_avatar {
     width: 200px;
     height: 200px;
   }
 
-  &-text {
+  &_text {
     font-weight: 500;
     font-size: 24px;
     line-height: 18px;
     color: #D1DFFA;
   }
 
-  &-name {
+  &_name {
     margin: 20px 0 12px;
     font-weight: 600;
     font-size: 48px;
@@ -81,7 +81,7 @@
 
 @media only screen and (max-width: 1024px) {
   .user {
-    &-back {
+    &_back {
       left: 200px;
     }
     &__border {
@@ -93,7 +93,7 @@
 
 @media only screen and (max-width: 768px) {
   .user {
-    &-back {
+    &_back {
       width: 38px;
       height: 38px;
       left: 150px;
@@ -114,21 +114,21 @@
       background-image: url("../../assets/mobilebgUser.png");
     }
 
-    &-back {
+    &_back {
       left: 50px;
     }
 
-    &-avatar {
+    &_avatar {
       width: 135px;
       height: 135px;
     }
 
-    &-text {
+    &_text {
       font-size: 14px;
       line-height: 24px;
     }
 
-    &-name {
+    &_name {
       font-size: 20px;
       line-height: 30px;
     }

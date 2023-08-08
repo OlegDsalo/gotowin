@@ -11,7 +11,7 @@ import ethereum from '../../assets/coins/ethereumUser.png'
 import cardano from '../../assets/coins/cardanoUser.png'
 
 const BlockChain = () => {
-    const [input, setInput] = useState(null);
+    const [input, setInput] = useState('');
     const [resultValue, setResultValue] = useState(0);
     const multiply = 1000
 

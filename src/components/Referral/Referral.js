@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import cardEthereum from "../../assets/coins/cardCoinEthereum.png";
 import cardBitcoin from "../../assets/coins/cardCoinBitcoin.png";
 import classes from './Referral.module.scss'
-import clipboardCopy from "../../utils/clipboard";
 import {ReactComponent as Copy} from "../../assets/icons/copy.svg";
+import clipboardCopy from "../../utils/clipboard";
 
 
 const Referral = ({referralEarnedBalance = 0, invited = 0, refCode = ''}) => {

@@ -1,5 +1,4 @@
 
-export default clipboardCopy;
 function makeError () {
     return new DOMException('The request is not allowed', 'NotAllowedError')
 }
@@ -58,3 +57,6 @@ async function clipboardCopy (text) {
         }
     }
 }
+
+
+export default clipboardCopy;
