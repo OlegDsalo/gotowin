@@ -6,9 +6,9 @@ import {ReactComponent as Copy} from "../../assets/icons/copy.svg";
 import clipboardCopy from "../../utils/clipboard";
 
 
-const Referral = ({referralEarnedBalance = 0, invited = 0, refCode = ''}) => {
+const Referral = ({referralEarnedBalance = 0, referralCount = 0, refCode = ''}) => {
     const [notification, setNotificaiton] = useState(false);
-    const basesUrl = 'http://localhost:3000/register/'
+    const basesUrl = process.env.REFERRAL_URL
     const copyRefCode = () => {
         clipboardCopy(basesUrl + refCode)
         setNotificaiton(true)
@@ -38,7 +38,7 @@ const Referral = ({referralEarnedBalance = 0, invited = 0, refCode = ''}) => {
                     <div className={classes.referral__card_info_column}>
                         <div className={classes.referral__card_info_box}>
                             <div className={classes.referral__card_info_label}>Invited:</div>
-                            <div className={classes.referral__card_info_value}>{invited}</div>
+                            <div className={classes.referral__card_info_value}>{referralCount}</div>
                         </div>
                         <div className={classes.referral__card_info_box}>
                             <div className={classes.referral__card_info_label}>Earned:</div>

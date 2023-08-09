@@ -60,7 +60,7 @@ const Profile = () => {
                 <Wallet user={user} fetchUser={fetchUser}/>
                 <Cases/>
                 <Referral referralEarnedBalance={user.referralEarnedBalance} refCode={user.referralCode}
-                          invited={user.invited}/>
+                          referralCount={user.referralCount}/>
                 <BlockChain/>
                 <Footer/>
             </div> : null
