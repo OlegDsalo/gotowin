@@ -8,7 +8,7 @@ import clipboardCopy from "../../utils/clipboard";
 
 const Referral = ({referralEarnedBalance = 0, referralCount = 0, refCode = ''}) => {
     const [notification, setNotificaiton] = useState(false);
-    const basesUrl = process.env.REFERRAL_URL
+    const basesUrl = process.env.REFERRAL_URL;
     const copyRefCode = () => {
         clipboardCopy(basesUrl + refCode)
         setNotificaiton(true)

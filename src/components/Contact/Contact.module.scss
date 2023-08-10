@@ -34,7 +34,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    margin: 0 auto;
+    width: 1140px;
     height: 258px;
     background: rgba(54, 113, 233, 0.01);
 
@@ -79,10 +80,29 @@
   }
 }
 
+@media only screen and (max-width: 1440px) {
+  .contact__content {
+    width: 90%;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .contact {
     padding-top: 100px;
 
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__button {
+      font-size: 16px;
+      line-height: 24px;
+    }
     &__coin {
       &_etherium {
         top: 10px;
