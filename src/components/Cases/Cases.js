@@ -8,7 +8,7 @@ import classes from  './Cases.module.scss'
 const Cases = () => {
     return (
         <div className={classes.cases}>
-            <div className='title'>My Cases</div>
+            <div className={classes.title}>My Cases</div>
             <div className={classes.cases_cards}>
                 <Card label='Limited' title='GOLDCASE' coin='Bitcoin' icon={bitcoinCoin}></Card>
                 <Card label='Premium' title='SILVER CASE' coin='BNB' icon={bnbCoin}></Card>

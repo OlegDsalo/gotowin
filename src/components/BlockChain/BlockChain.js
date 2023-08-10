@@ -42,9 +42,9 @@ const BlockChain = () => {
                     <div className={classes.purchase__title}>Blockchain</div>
                     <div className={classes.purchase__button_icon}><img src={binanceCoin} alt=""/>BSC</div>
                     <hr className={classes.purchase__line}/>
-                    <div className={classes.purchase__label}>Chose price</div>
+                    <div className={classes.purchase__label}>Enter quantity</div>
                     <div className={classes.purchase__inputs}>
-                        <Input type='number' color='transparent' className={classes.purchase__input} value={input} min={0}
+                        <Input placeholder='Enter value' type='number' color='transparent' className={classes.purchase__input} value={input} min={0}
                                onChange={inputChangeHandler}/>
                         <div className={classes.purchase__input_result}>
                             {resultValue} GOW

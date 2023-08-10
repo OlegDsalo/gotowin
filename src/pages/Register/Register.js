@@ -13,6 +13,7 @@ import {useAppNavigation} from "../../hook/useAppNavigation";
 import {useParams} from "react-router-dom";
 import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
 import PageTitle from "../../utils/pageTitle";
+import {ReactComponent as Checked} from "../../assets/icons/Check2.svg";
 
 const schema = yup.object({
     fullName: yup.string().required('Full Name is required'),
@@ -26,22 +27,30 @@ const Register = () => {
     const {
         register,
         handleSubmit,
-        formState: {errors}
+        formState: {errors},
     } = useForm({
         mode: "onBlur",
         resolver: yupResolver(schema),
     });
-
+    const [checked, setChecked] = useState(false)
+    const [checkedError, setCheckedError] = useState(null)
     const [error, setError] = useState(null);
+    const onCheckBoxChangeHandler = (event) => {
+        setChecked(event.target.checked)
+        setCheckedError(false)
+    }
 
     let {key} = useParams();
 
     const onSubmit = async (data) => {
-        console.log('key', key)
+        console.log(data);
+        if (checked === false) {
+            setCheckedError(true);
+            return;
+        }
         try {
             let refferalCode = key ? key : "";
             let user = {...data, referralCode: refferalCode};
-            console.log(user)
             await accountServiceInstance.register(user);
             navigateToLogin()
         } catch (error) {
@@ -69,6 +78,15 @@ const Register = () => {
                         <Input placeholder='Confirm Password' error={errors?.confirmPassword?.message}
                                type='password' autocomplete="new-password"
                                args={{...register("confirmPassword")}}/>
+                        <label className={classes.checkbox_label}>
+                            <input className={classes.checkbox_input} checked={checked}  type='checkbox'
+                                   onChange={onCheckBoxChangeHandler}></input>
+                            <Checked class={classes.checkbox_checked}></Checked>
+                            <div className={classes.checkbox_title}>
+                                I agree to the Terms & Conditions
+                            </div>
+                        </label>
+                        {checkedError && <span className={classes.checkbox_error}>This field is required</span>}
                     </div>
                     <div className={classes.form__actions}>
                         <Button click='submit'>Create account</Button>

@@ -20,6 +20,7 @@
     &_link {
       margin-left: 10px;
       color: #3672E9;
+
       &:hover {
         cursor: pointer;
         color: #00a5d5;
@@ -44,5 +45,59 @@
       font-size: 14px;
       line-height: 24px;
     }
+  }
+}
+
+.checkbox {
+
+  &_label {
+    display: flex;
+    position: relative;
+  }
+
+  &_checked {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    z-index: 2;
+  }
+
+  &_input {
+    height: 24px;
+    width: 24px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 8px;
+    border: 2px solid #B3B3B3; /* Change the border color */
+    cursor: pointer; /* Show pointer cursor */
+    position: relative;
+
+    &[type="checkbox"]:checked::before {
+      visibility: visible; /* Show the check mark when checked */
+    }
+
+    &[type="checkbox"]:checked {
+      background-color: #007bff; /* Change the background when checked */
+      border-color: #007bff; /* Change the border color when checked */
+    }
+  }
+
+  &_title {
+    margin-left: 8px;
+    color: #999;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.176px;
+  }
+
+  &_error {
+    color: #DC3545;
+    font-size: 14px;
+    line-height: 14px;
   }
 }

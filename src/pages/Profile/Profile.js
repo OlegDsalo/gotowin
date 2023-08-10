@@ -19,15 +19,15 @@ const Profile = () => {
     const {navigateToLogin, navigateToHome} = useAppNavigation();
 
     const fetchUser = async () => {
-        try{
+        try {
             const response = await accountServiceInstance.getUser()
             setUser(response);
-        }catch (e){
+        } catch (e) {
             setError(e)
         }
 
     }
-    const clearError = ()=>{
+    const clearError = () => {
         localStorage.removeItem('token');
         setError(null)
         navigateToLogin()
@@ -41,29 +41,30 @@ const Profile = () => {
     }, []);
 
 
-    return (user ?
-            <div className={classes.user_container}>
-                <PageTitle title='Profile'></PageTitle>
-                <Header user={user}/>
-                {error && <ErrorModal error={error} clearError={clearError}/>}
-                <div className={`${classes.user} ${classes.user__bg}`}>
-                    <div className={classes.user__border}>
-                        <div className={classes.user_box}>
-                            <div className={classes.user_back}><ChevronLeft onClick={navigateToHome}/></div>
-                            <img className={classes.user_avatar}
-                                 src="https://img.freepik.com/free-icon/user_318-159711.jpg" alt=""/>
-                            <div className={classes.user_name}>{user.fullName}</div>
-                            <div className={classes.user_text}>Lorem</div>
-                        </div>
+    return (
+        <div className={classes.user_container}>
+            <PageTitle title='Profile'></PageTitle>
+            <Header user={user}/>
+            {error && <ErrorModal error={error} clearError={clearError}/>}
+            <div className={`${classes.user} ${classes.user__bg}`}>
+                <div className={classes.user__border}>
+                    <div className={classes.user_box}>
+                        <div className={classes.user_back}><ChevronLeft onClick={navigateToHome}/></div>
+                        <img className={classes.user_avatar}
+                             src="https://img.freepik.com/free-icon/user_318-159711.jpg" alt=""/>
+                        <div className={classes.user_name}>{user.fullName}</div>
+                        <div className={classes.user_text}>Lorem</div>
+
                     </div>
                 </div>
-                <Wallet user={user} fetchUser={fetchUser}/>
-                <Cases/>
-                <Referral referralEarnedBalance={user.referralEarnedBalance} refCode={user.referralCode}
-                          referralCount={user.referralCount}/>
-                <BlockChain/>
-                <Footer/>
-            </div> : null
+            </div>
+            <Wallet user={user} fetchUser={fetchUser}/>
+            <Cases/>
+            <Referral referralEarnedBalance={user.referralEarnedBalance} refCode={user.referralCode}
+                      referralCount={user.referralCount}/>
+            <BlockChain/>
+            <Footer/>
+        </div>
     );
 };
 
