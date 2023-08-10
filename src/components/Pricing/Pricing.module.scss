@@ -63,7 +63,7 @@
 
 
     &__item {
-      width: 154px;
+      min-width: 154px;
       height: 192px;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 12px;
@@ -80,7 +80,7 @@
 
     &__name {
       font-weight: 500;
-      font-size: 14px;
+      font-size: 11px;
       line-height: 21px;
       color: #E8EFFC;
       text-wrap: nowrap;
