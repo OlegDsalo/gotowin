@@ -14,8 +14,8 @@ import * as yup from "yup";
 import PageTitle from "../../utils/pageTitle";
 
 const schema = yup.object({
-    password: yup.string().required('Password is required').min(4, "Password must be at least 4 characters"),
-    newPasswordConfirm: yup.string().oneOf([yup.ref('password')], "Password must be match."),
+    newPassword: yup.string().required('Password is required').min(4, "Password must be at least 4 characters"),
+    newPasswordConfirm: yup.string().oneOf([yup.ref('newPassword')], "Password must be match."),
 })
 
 const ResetPassword = () => {
@@ -43,7 +43,7 @@ const {navigateToLogin} = useAppNavigation();
             <FormCard title='Reset your password' subtitle='Type in your new password'>
                 <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
                     <div className={classes.form__inputs}>
-                        <Input placeholder='New password *' type='password'  error={errors?.password?.message}
+                        <Input placeholder='New password *' type='password'  error={errors?.newPassword?.message}
                                args={{...register("newPassword", {required: 'Email is required'})}}/>
                         <Input placeholder='Retry new password *' type='password'  error={errors?.newPasswordConfirm?.message}
                                args={{...register("newPasswordConfirm")}}/>

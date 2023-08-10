@@ -4,7 +4,6 @@ export class AccountService {
     BASE_URL = '/api'
 
     async register(user) {
-        console.log(user);
         return await axios.post(`${this.BASE_URL}/register`, user)
     }
 
@@ -24,7 +23,6 @@ export class AccountService {
 
     async resetPasswordMessage(data) {
         return await axios.post(`${this.BASE_URL}/account/reset-password/init?mail=${data.email}`)
-            .catch(e => console.log(e))
     }
 
     async resetPassword(obj) {
