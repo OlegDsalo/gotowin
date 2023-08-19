@@ -15,12 +15,17 @@ const Hero = () => {
                     <Button size='xl'>See More</Button>
                 </div>
                 <div className={classes.content__social}>
-                    <div className={classes.content__social_box}><img className={classes.content__social_icon} src={twitter} alt=""/>
-                    </div>
-                    <div className={classes.content__social_box}><img className={classes.content__social_icon} src={facebook} alt=""/>
-                    </div>
-                    <div className={classes.content__social_box}><img className={classes.content__social_icon} src={linkedin} alt=""/>
-                    </div>
+                    <a href="https://twitter.com/GoToWin_">
+                        <div className={classes.content__social_box}>
+                            <img className={classes.content__social_icon} src={twitter} alt=""/>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/go-to-win-350380268/">
+                        <div className={classes.content__social_box}>
+                            <img className={classes.content__social_icon} src={linkedin} alt=""/>
+                        </div>
+                    </a>
+
                 </div>
             </div>
             <div className={classes.featured}>

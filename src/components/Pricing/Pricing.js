@@ -37,47 +37,33 @@ const avatarObj = [
 ]
 
 const Pricing = () => {
-    const autoScrollContainerRef = useRef(null);
-
-    useEffect(() => {
-        if (window.innerWidth <= 1440) {
-            const scrollSpeed = 1; // Adjust the scroll speed as needed
-            let interval;
-
-            const flavoursContainer = autoScrollContainerRef.current;
-            const flavoursScrollWidth = flavoursContainer.scrollWidth;
-            const scrollStep = () => {
-
-                if (flavoursContainer.scrollLeft + flavoursContainer.clientWidth === flavoursScrollWidth) {
-                    // When scrolling reaches the end, reset to 0
-                    flavoursContainer.scrollTo(0, 0);
-                } else {
-                    // Scroll horizontally by scrollSpeed pixels
-                    flavoursContainer.scrollTo(flavoursContainer.scrollLeft + scrollSpeed, 0);
-                }
-            };
-
-            interval = setInterval(scrollStep, 15);
-
-            // Clear the interval when the component unmounts
-            return () => {
-                clearInterval(interval);
-            };
-        }
-    }, []);
     return (
         <div className={styles.pricing}>
-            <div className={styles.winer__list} ref={autoScrollContainerRef}>
-                {avatarObj.map((it, id) =>
-                    <div className={styles.winer__list__item} key={it.name}>
-                        <img className={styles.winer__item__avatar} src={it.img} alt=""/>
-                        <p className={styles.winer__item__name}>{it.name}</p>
-                        <div className={styles.winer__item__money}>
-                            <div className={styles.winer__item__label}>Value:</div>
-                            <div className={styles.winer__item__value}>{it.value} USDT</div>
+            <div className={styles.winer__list}>
+                <div className={styles.winer__wrapper}>
+                    {avatarObj.map((it, id) =>
+                        <div className={styles.winer__list__item} key={it.name}>
+                            <img className={styles.winer__item__avatar} src={it.img} alt=""/>
+                            <p className={styles.winer__item__name}>{it.name}</p>
+                            <div className={styles.winer__item__money}>
+                                <div className={styles.winer__item__label}>Value:</div>
+                                <div className={styles.winer__item__value}>{it.value} USDT</div>
+                            </div>
                         </div>
-                    </div>
-                )}
+                    )}
+                </div>
+                <div className={styles.winer__wrapper}>
+                    {avatarObj.map((it, id) =>
+                        <div className={styles.winer__list__item} key={it.name}>
+                            <img className={styles.winer__item__avatar} src={it.img} alt=""/>
+                            <p className={styles.winer__item__name}>{it.name}</p>
+                            <div className={styles.winer__item__money}>
+                                <div className={styles.winer__item__label}>Value:</div>
+                                <div className={styles.winer__item__value}>{it.value} USDT</div>
+                            </div>
+                        </div>
+                    )}
+                </div>
             </div>
             <div className={styles.pricing__headline}>
                 <div className={styles.pricing__header}>What’s new ?

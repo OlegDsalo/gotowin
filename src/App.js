@@ -11,6 +11,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import UserAgreement from "./pages/UserAgreement/UserAgreement";
 import PrivacyPolicyUA from "./pages/PrivacyPolicy/PrivacyPolicyUA/PrivacyPolicyUA";
 import Error404 from "./pages/404/Error404";
+import {Suspense} from "react";
 
 
 const ProtectedRoute = ({children}) => {
@@ -39,7 +40,7 @@ export const routes = {
 const router = createBrowserRouter([
     {
         path: '',
-        errorElement:<Error404/>,
+        errorElement: <Error404/>,
         children: [
             {
                 path: routes.home,
@@ -94,8 +95,9 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-    return (
-        <RouterProvider router={router}/>
+    return (<Suspense fallback={<div>...Is loading</div>}>
+            <RouterProvider router={router}/>
+        </Suspense>
     );
 }
 

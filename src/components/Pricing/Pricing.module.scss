@@ -47,19 +47,26 @@
     gap: 34px;
     justify-content: center;
   }
-
 }
 
 .winer {
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    animation: scrollItems 30s linear infinite;
+    user-select: none;
+
+  }
+
   &__list {
     top: -75px;
     position: relative;
     gap: 2px;
-    margin: 0 19px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    justify-content: center;
+    width: 1400px;
+    overflow: hidden;
+    user-select: none;
 
 
     &__item {
@@ -117,24 +124,26 @@
 }
 
 @media only screen and (max-width: 1440px) {
-  .winer {
-    &__list {
-      overflow: auto;
-      justify-content: normal;
-
-    }
-  }
 }
 
 @media only screen and (max-width: 1024px) {
+  .wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   .winer {
     &__list {
+      width: 900px;
+      margin: 0 auto;
 
+    }
 
+    &__wrapper {
+      width: auto;
     }
   }
   .pricing {
-
     &__wrapper {
       padding: 43px 0 40px;
     }
@@ -144,6 +153,17 @@
     }
   }
 }
+@media only screen and (max-width: 768px) {
+  .winer {
+    &__list {
+      width: 90%;
+      margin: 0 auto;
+
+    }
+
+  }
+}
+
 
 @media only screen and (max-width: 425px) {
   .pricing {
@@ -162,20 +182,16 @@
 
 }
 
-#auto-scroll-container {
-  overflow: hidden;
-  white-space: nowrap;
-}
 
 @keyframes scrollItems {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-100%);
   }
 }
 
-.scroll-animation {
-  animation: scrollItems 15s linear infinite;
-}
+//.scroll-animation {
+//  animation: scrollItems 15s linear infinite;
+//}
