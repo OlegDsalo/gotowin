@@ -12,8 +12,8 @@ import cardano from '../../assets/coins/cardanoUser.png'
 
 const BlockChain = () => {
     const [input, setInput] = useState('');
-    const [resultValue, setResultValue] = useState(0);
     const multiply = 1000
+    const resultValue = Math.max( Number(input) * multiply,0).toFixed(0)
 
     const inputChangeHandler = (e) => {
         const inputValue = e.target.value;
@@ -22,9 +22,6 @@ const BlockChain = () => {
         let result = Number(inputValue) * multiply;
         if (result < 0) {
             setInput('0'); // Set input to '0' if the result is negative
-            setResultValue(0);
-        } else {
-            setResultValue(result);
         }
     }
     return (

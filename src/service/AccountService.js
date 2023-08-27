@@ -34,7 +34,6 @@ export class AccountService {
     }
 }
 
-
 const accountServiceInstance = new AccountService()
 export default accountServiceInstance;
 

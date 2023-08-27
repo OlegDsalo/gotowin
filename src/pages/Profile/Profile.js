@@ -44,11 +44,10 @@ const Profile = () => {
     return (
         <div className={classes.user_container}>
             <PageTitle title='Profile'></PageTitle>
+            {error && <ErrorModal error={error} clearError={clearError}/>}
             {user &&
                 <>
-
                     <Header user={user}/>
-                    {error && <ErrorModal error={error} clearError={clearError}/>}
                     <div className={`${classes.user} ${classes.user__bg}`}>
                         <div className={classes.user__border}>
                             <div className={classes.user_box}>

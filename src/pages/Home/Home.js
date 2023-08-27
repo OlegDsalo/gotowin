@@ -10,21 +10,34 @@ import Footer from "../../components-ui/Footer/Footer";
 import useAsyncEffect from "../../utils/AsyncEffect";
 import accountServiceInstance from "../../service/AccountService";
 import PageTitle from "../../utils/pageTitle";
+import ErrorModal from "../../components-ui/ErrorModal/ErrorModal";
+import {useAppNavigation} from "../../hook/useAppNavigation";
 
 const Home = () => {
     const [user, setUser] = useState(null)
-    useAsyncEffect(() => {
+    const [error, setError] = useState(null);
+    const {navigateToLogin} = useAppNavigation();
+
+    const clearError = () => {
+        localStorage.removeItem('token');
+        setError(null)
+        navigateToLogin()
+    }
+
+    useAsyncEffect(async () => {
         if (localStorage.getItem('token')) {
             try {
-                const responce = accountServiceInstance.getUser();
-                setUser(responce)
+                const response = await accountServiceInstance.getUser();
+                setUser(response)
             } catch (e) {
+                setError(e)
                 localStorage.removeItem('token')
             }
         }
     }, [])
     return (
         <div className={classes.home}>
+            {error && <ErrorModal error={error} clearError={clearError}/>}
             <PageTitle title='Home'></PageTitle>
             <div className={classes.wrapper}>
                 <Header user={user}></Header>
