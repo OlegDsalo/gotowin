@@ -32,6 +32,10 @@ export class AccountService {
     async addWalletAddress(user) {
         return await $api.post(`/account/change-wallet-address`, user)
     }
+    async buyCoins(amount){
+        const response = await $api.post(`/wallet/deposit?amount=${amount}`)
+        return response.data
+    }
 }
 
 const accountServiceInstance = new AccountService()

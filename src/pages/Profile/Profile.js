@@ -64,9 +64,11 @@ const Profile = () => {
                     <Cases/>
                     <Referral referralEarnedBalance={user.referralEarnedBalance} refCode={user.referralCode}
                               referralCount={user.referralCount}/>
+                    <BlockChain walletAddress={user.walletAddress}/>
+
+
                 </>
             }
-            <BlockChain/>
             <Footer/>
         </div>
     );

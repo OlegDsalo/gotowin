@@ -4,7 +4,9 @@
   font-weight: 600;
   border: none;
   color: #FFFFFF;
-
+  &:disabled{
+    background: rgba(54, 114, 233, 0.5)!important;
+  }
   &:hover {
     cursor: pointer;
   }

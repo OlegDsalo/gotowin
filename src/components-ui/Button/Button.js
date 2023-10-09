@@ -9,10 +9,12 @@ const Button = ({
                     className='',
                     onClick,
                     click = "button",
+                    disabled
                 }) => {
+    console.log(disabled)
     const buttonClassName = `button ${type} ${size} ${className}`
     return (
-        <button onClick={onClick} className={buttonClassName} type={click}>
+        <button disabled={disabled} onClick={onClick} className={buttonClassName} type={click}>
             {children}
         </button>
     );
