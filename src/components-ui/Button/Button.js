@@ -11,7 +11,6 @@ const Button = ({
                     click = "button",
                     disabled
                 }) => {
-    console.log(disabled)
     const buttonClassName = `button ${type} ${size} ${className}`
     return (
         <button disabled={disabled} onClick={onClick} className={buttonClassName} type={click}>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import binanceCoin from "../../assets/coins/BinanceCoin2.png";
 import Input from "../../components-ui/Input/Input";
 import Button from "../../components-ui/Button/Button";
@@ -10,27 +10,33 @@ import stellar from '../../assets/coins/stellarUser.png'
 import ethereum from '../../assets/coins/ethereumUser.png'
 import cardano from '../../assets/coins/cardanoUser.png'
 import accountService from "../../service/AccountService";
-import {useNavigate} from "react-router-dom";
+import {useForm} from "react-hook-form";
+import {yupResolver} from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
+const schema = yup.object({
+    amount: yup.number().min(300, "Amount must be at least 300"),
+})
 const BlockChain = ({walletAddress}) => {
-    const navigation = useNavigate();
-    const [input, setInput] = useState('');
-    const multiply = 1000
-    const resultValue = Math.max( Number(input) * multiply,0).toFixed(0)
-    const inputChangeHandler = (e) => {
-        const inputValue = e.target.value;
 
-        setInput(inputValue)
-        let result = Number(inputValue) * multiply;
-        if (result < 500) {
-            setInput('500'); // Set input to '0' if the result is negative
-        }
-    }
+    const {
+        watch,
+        register,
+        formState: {errors}
+    } = useForm({
+        defaultValues: {amount:300},
+        mode: "onBlur",
+        resolver: yupResolver(schema),
+    });
+    const amount = watch('amount');
+
+    const multiply = 25;
+    const resultValue = Math.max( amount * multiply,0).toFixed(0)
+
+
     const buyCoins = async () => {
-        let result = await accountService.buyCoins(input)
+        let result = await accountService.buyCoins(Number(amount));
         window.location.replace(result.paymentUrl);
-
-
     }
 
     return (
@@ -50,9 +56,14 @@ const BlockChain = ({walletAddress}) => {
                     <hr className={classes.purchase__line}/>
                     <div className={classes.purchase__label}>Enter quantity</div>
                     <div className={classes.purchase__inputs}>
-                        <Input placeholder='Enter value' type='number' color='transparent' className={classes.purchase__input} value={input} min={500}
-                               onChange={inputChangeHandler}/>
+                        {/*<Input placeholder='Enter value' type='number' color='transparent' className={classes.purchase__input} value={input} min={300}*/}
+                        {/* onChange={inputChangeHandler} />*/}
+                        <div className={classes.purchase__test}>
+                            <Input placeholder='Enter value' type='number' color='transparent' className={classes.purchase__input}  defaultValue="300" //
+                                   error={errors?.amount?.message}  args={{...register("amount")}}/>
+                        </div>
                         <div className={classes.purchase__input_result}>
+                            {/*{amount * 25}*/}
                             {resultValue} GOW
                         </div>
                     </div>

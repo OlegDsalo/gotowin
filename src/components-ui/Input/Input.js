@@ -12,8 +12,7 @@ const Input = ({
                    value,
                    onChange,
                    args,
-                   min=undefined,
-
+                   min,
                }) => {
     return (<>
         <div className={`input-container ${color} ${error ? 'error' : ''}`}>
@@ -23,6 +22,7 @@ const Input = ({
                        value={value}
                        onChange={onChange}
                        {...args}
+                        min={min}
                         autoComplete={type === 'password'? 'new-paswrod':null}
                 >{prefix && <span>{prefix}</span>}</input>
             </div>
