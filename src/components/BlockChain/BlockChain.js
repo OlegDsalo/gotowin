@@ -56,14 +56,11 @@ const BlockChain = ({walletAddress}) => {
                     <hr className={classes.purchase__line}/>
                     <div className={classes.purchase__label}>Enter quantity</div>
                     <div className={classes.purchase__inputs}>
-                        {/*<Input placeholder='Enter value' type='number' color='transparent' className={classes.purchase__input} value={input} min={300}*/}
-                        {/* onChange={inputChangeHandler} />*/}
                         <div className={classes.purchase__test}>
                             <Input placeholder='Enter value' type='number' color='transparent' className={classes.purchase__input}  defaultValue="300" //
                                    error={errors?.amount?.message}  args={{...register("amount")}}/>
                         </div>
                         <div className={classes.purchase__input_result}>
-                            {/*{amount * 25}*/}
                             {resultValue} GOW
                         </div>
                     </div>
