@@ -15,7 +15,7 @@ import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 const schema = yup.object({
-    amount: yup.number().min(300, "Amount must be at least 300"),
+    amount: yup.number().min(500, "Amount must be at least 500"),
 })
 const BlockChain = ({walletAddress}) => {
 
@@ -24,7 +24,7 @@ const BlockChain = ({walletAddress}) => {
         register,
         formState: {errors}
     } = useForm({
-        defaultValues: {amount:300},
+        defaultValues: {amount:500},
         mode: "onBlur",
         resolver: yupResolver(schema),
     });
@@ -35,8 +35,10 @@ const BlockChain = ({walletAddress}) => {
 
 
     const buyCoins = async () => {
-        let result = await accountService.buyCoins(Number(amount));
-        window.location.replace(result.paymentUrl);
+        if (amount >= 500) {
+            let result = await accountService.buyCoins(Number(amount));
+            window.location.replace(result.paymentUrl);
+        }
     }
 
     return (
@@ -66,7 +68,7 @@ const BlockChain = ({walletAddress}) => {
                     </div>
                     <hr className={classes.purchase__line} style={{marginTop: 26}}/>
                     <div className={classes.purchase__button}>
-                        <Button onClick={buyCoins} disabled={!walletAddress}>Buy</Button>
+                        <Button onClick={buyCoins}>Buy</Button>
                     </div>
                 </div>
             </div>

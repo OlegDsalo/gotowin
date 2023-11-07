@@ -9,16 +9,15 @@ import * as yup from "yup";
 import accountService from "../../service/AccountService";
 
 const schema = yup.object({
-    walletAddress: yup.string().required('Wallet Address is required').min(16, "Wallet Address must be at least 16 characters").max(16, "Wallet Address can't exceed 16 characters"),
+    walletAddress: yup.string().required('Wallet Address is required').min(16, "Wallet Address must be at least 16 characters").max(64, "Wallet Address can't exceed 64 characters"),
 });
 
 
 const Wallet = ({user, fetchUser}) => {
     const transformString = (input) => {
-        const digitsOnly = input.replace(/\D/g, "");
-        const lastFourDigits = digitsOnly.slice(-4);
-        const transformedString = "**** **** **** " + lastFourDigits;
-        return transformedString;
+        const firstFiveSymbols = input.substring(0, 5);
+        const lastFourSymbols = input.slice(-4);
+        return firstFiveSymbols + " *********** " + lastFourSymbols;
     };
 
     const [edit, setEdit] = useState(false);

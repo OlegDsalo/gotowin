@@ -8,12 +8,11 @@ const Button = ({
                     size = 'large',
                     className='',
                     onClick,
-                    click = "button",
-                    disabled
+                    click = "button"
                 }) => {
     const buttonClassName = `button ${type} ${size} ${className}`
     return (
-        <button disabled={disabled} onClick={onClick} className={buttonClassName} type={click}>
+        <button onClick={onClick} className={buttonClassName} type={click}>
             {children}
         </button>
     );
